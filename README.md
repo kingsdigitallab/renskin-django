@@ -1,2 +1,2 @@
-# renskin
-Repository for Renaissance Skin Django Project
+# renskin-django
+Repository for Renaissance Skin django project.
