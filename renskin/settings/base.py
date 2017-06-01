@@ -174,6 +174,8 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = PROJECT_NAME + '.urls'
 
+WAGTAIL_SITE_NAME = PROJECT_TITLE
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = ''
 
