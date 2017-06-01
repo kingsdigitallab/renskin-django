@@ -96,3 +96,5 @@ ENV/
 # Vagrant
 .vagrant/
 playbook.retry
+
+renskin/settings/local.py
