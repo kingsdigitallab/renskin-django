@@ -1,0 +1,1124 @@
+WARNING 2017-06-13 14:40:23,373 base 17614 140416109848320 Not Found: /souvenirs/collectors/
+WARNING 2017-06-13 14:40:23,374 basehttp 17614 140416109848320 "GET /souvenirs/collectors/ HTTP/1.1" 404 1719
+ERROR 2017-06-13 15:01:00,835 exception 17696 140139691976448 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 152, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 149, in get_parent
+    return self.find_template(parent, context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 129, in find_template
+    template_name, skip=history,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: 'compress' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+cms_tags
+gravatar
+grp_tags
+highlighting
+i18n
+indent_text
+l10n
+log
+require
+static
+staticfiles
+syntax_color
+truncate_letters
+tz
+wagtailadmin_tags
+wagtailcore_tags
+wagtailembeds_tags
+wagtailimages_tags
+wagtailroutablepage_tags
+wagtailuserbar
+wagtailusers_tags
+widont
+ERROR 2017-06-13 15:01:00,947 basehttp 17696 140139691976448 "GET / HTTP/1.1" 500 164512
+ERROR 2017-06-13 15:05:06,748 exception 17696 140139717154560 Internal Server Error: /about/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 152, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 149, in get_parent
+    return self.find_template(parent, context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 129, in find_template
+    template_name, skip=history,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: 'compress' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+cms_tags
+gravatar
+grp_tags
+highlighting
+i18n
+indent_text
+l10n
+log
+require
+static
+staticfiles
+syntax_color
+truncate_letters
+tz
+wagtailadmin_tags
+wagtailcore_tags
+wagtailembeds_tags
+wagtailimages_tags
+wagtailroutablepage_tags
+wagtailuserbar
+wagtailusers_tags
+widont
+ERROR 2017-06-13 15:05:06,848 basehttp 17696 140139717154560 "GET /about/ HTTP/1.1" 500 164709
+WARNING 2017-06-13 15:06:29,169 base 17696 140139683583744 Not Found: /wagtail/pages/1/None/
+WARNING 2017-06-13 15:06:29,173 basehttp 17696 140139683583744 "GET /wagtail/pages/1/None/ HTTP/1.1" 404 1719
+WARNING 2017-06-13 15:09:24,353 base 17696 140139708761856 Not Found: /
+WARNING 2017-06-13 15:09:24,353 basehttp 17696 140139708761856 "GET / HTTP/1.1" 404 1677
+WARNING 2017-06-13 15:09:44,658 base 17696 140139708761856 Not Found: /
+WARNING 2017-06-13 15:09:44,659 basehttp 17696 140139708761856 "GET / HTTP/1.1" 404 1677
+ERROR 2017-06-13 15:10:00,895 exception 17696 140139708761856 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 152, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 149, in get_parent
+    return self.find_template(parent, context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 129, in find_template
+    template_name, skip=history,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: 'compress' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+cms_tags
+gravatar
+grp_tags
+highlighting
+i18n
+indent_text
+l10n
+log
+require
+static
+staticfiles
+syntax_color
+truncate_letters
+tz
+wagtailadmin_tags
+wagtailcore_tags
+wagtailembeds_tags
+wagtailimages_tags
+wagtailroutablepage_tags
+wagtailuserbar
+wagtailusers_tags
+widont
+ERROR 2017-06-13 15:10:01,004 basehttp 17696 140139708761856 "GET / HTTP/1.1" 500 164852
+ERROR 2017-06-13 15:10:19,628 exception 17696 140139708761856 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 152, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 149, in get_parent
+    return self.find_template(parent, context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 129, in find_template
+    template_name, skip=history,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: 'compress' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+cms_tags
+gravatar
+grp_tags
+highlighting
+i18n
+indent_text
+l10n
+log
+require
+static
+staticfiles
+syntax_color
+truncate_letters
+tz
+wagtailadmin_tags
+wagtailcore_tags
+wagtailembeds_tags
+wagtailimages_tags
+wagtailroutablepage_tags
+wagtailuserbar
+wagtailusers_tags
+widont
+ERROR 2017-06-13 15:10:19,731 basehttp 17696 140139708761856 "GET / HTTP/1.1" 500 164852
+ERROR 2017-06-13 15:10:51,119 exception 17696 140139708761856 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 152, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 149, in get_parent
+    return self.find_template(parent, context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 129, in find_template
+    template_name, skip=history,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: 'compress' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+cms_tags
+gravatar
+grp_tags
+highlighting
+i18n
+indent_text
+l10n
+log
+require
+static
+staticfiles
+syntax_color
+truncate_letters
+tz
+wagtailadmin_tags
+wagtailcore_tags
+wagtailembeds_tags
+wagtailimages_tags
+wagtailroutablepage_tags
+wagtailuserbar
+wagtailusers_tags
+widont
+ERROR 2017-06-13 15:10:51,223 basehttp 17696 140139708761856 "GET / HTTP/1.1" 500 164852
+ERROR 2017-06-13 15:11:19,225 exception 17696 140139708761856 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 152, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 149, in get_parent
+    return self.find_template(parent, context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 129, in find_template
+    template_name, skip=history,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: 'compress' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+cms_tags
+gravatar
+grp_tags
+highlighting
+i18n
+indent_text
+l10n
+log
+require
+static
+staticfiles
+syntax_color
+truncate_letters
+tz
+wagtailadmin_tags
+wagtailcore_tags
+wagtailembeds_tags
+wagtailimages_tags
+wagtailroutablepage_tags
+wagtailuserbar
+wagtailusers_tags
+widont
+ERROR 2017-06-13 15:11:19,326 basehttp 17696 140139708761856 "GET / HTTP/1.1" 500 164852
+ERROR 2017-06-13 15:12:09,132 exception 18165 139855809308416 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 99, in render_compressed
+    cache_key, cache_content = self.render_cached(compressor, kind, mode)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 78, in render_cached
+    cache_key = get_templatetag_cachekey(compressor, mode, kind)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/cache.py", line 94, in get_templatetag_cachekey
+    "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 176, in cachekey
+    [self.content] + self.mtimes).encode(self.charset), 12)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 170, in mtimes
+    for kind, value, basename, elem in self.split_contents()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 21, in split_contents
+    filename = self.get_filename(basename)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 138, in get_filename
+    self.finders and " or with staticfiles." or "."))
+UncompressableFileError: 'scss/font-awesome.scss' could not be found in the COMPRESS_ROOT '/vagrant/static' or with staticfiles.
+ERROR 2017-06-13 15:12:09,261 basehttp 18165 139855809308416 "GET / HTTP/1.1" 500 187705
+ERROR 2017-06-13 15:12:11,132 exception 18165 139855809308416 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 99, in render_compressed
+    cache_key, cache_content = self.render_cached(compressor, kind, mode)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 78, in render_cached
+    cache_key = get_templatetag_cachekey(compressor, mode, kind)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/cache.py", line 94, in get_templatetag_cachekey
+    "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 176, in cachekey
+    [self.content] + self.mtimes).encode(self.charset), 12)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 170, in mtimes
+    for kind, value, basename, elem in self.split_contents()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 21, in split_contents
+    filename = self.get_filename(basename)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 138, in get_filename
+    self.finders and " or with staticfiles." or "."))
+UncompressableFileError: 'scss/font-awesome.scss' could not be found in the COMPRESS_ROOT '/vagrant/static' or with staticfiles.
+ERROR 2017-06-13 15:12:11,245 basehttp 18165 139855809308416 "GET / HTTP/1.1" 500 187705
+ERROR 2017-06-13 15:12:12,151 exception 18165 139855800915712 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 99, in render_compressed
+    cache_key, cache_content = self.render_cached(compressor, kind, mode)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 78, in render_cached
+    cache_key = get_templatetag_cachekey(compressor, mode, kind)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/cache.py", line 94, in get_templatetag_cachekey
+    "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 176, in cachekey
+    [self.content] + self.mtimes).encode(self.charset), 12)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 170, in mtimes
+    for kind, value, basename, elem in self.split_contents()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 21, in split_contents
+    filename = self.get_filename(basename)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 138, in get_filename
+    self.finders and " or with staticfiles." or "."))
+UncompressableFileError: 'scss/font-awesome.scss' could not be found in the COMPRESS_ROOT '/vagrant/static' or with staticfiles.
+ERROR 2017-06-13 15:12:12,274 basehttp 18165 139855800915712 "GET / HTTP/1.1" 500 187705
+ERROR 2017-06-13 15:14:22,045 exception 18165 139855809308416 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 99, in render_compressed
+    cache_key, cache_content = self.render_cached(compressor, kind, mode)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 78, in render_cached
+    cache_key = get_templatetag_cachekey(compressor, mode, kind)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/cache.py", line 94, in get_templatetag_cachekey
+    "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 176, in cachekey
+    [self.content] + self.mtimes).encode(self.charset), 12)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 170, in mtimes
+    for kind, value, basename, elem in self.split_contents()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 21, in split_contents
+    filename = self.get_filename(basename)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 138, in get_filename
+    self.finders and " or with staticfiles." or "."))
+UncompressableFileError: 'scss/font-awesome.scss' could not be found in the COMPRESS_ROOT '/vagrant/static' or with staticfiles.
+ERROR 2017-06-13 15:14:22,157 basehttp 18165 139855809308416 "GET / HTTP/1.1" 500 187731
+ERROR 2017-06-13 15:14:30,572 exception 18165 139855800915712 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 99, in render_compressed
+    cache_key, cache_content = self.render_cached(compressor, kind, mode)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 78, in render_cached
+    cache_key = get_templatetag_cachekey(compressor, mode, kind)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/cache.py", line 94, in get_templatetag_cachekey
+    "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 176, in cachekey
+    [self.content] + self.mtimes).encode(self.charset), 12)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 170, in mtimes
+    for kind, value, basename, elem in self.split_contents()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 21, in split_contents
+    filename = self.get_filename(basename)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 138, in get_filename
+    self.finders and " or with staticfiles." or "."))
+UncompressableFileError: 'scss/font-awesome.scss' could not be found in the COMPRESS_ROOT '/vagrant/static' or with staticfiles.
+ERROR 2017-06-13 15:14:30,685 basehttp 18165 139855800915712 "GET / HTTP/1.1" 500 187915
+ERROR 2017-06-13 15:15:01,468 exception 18165 139855809308416 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 99, in render_compressed
+    cache_key, cache_content = self.render_cached(compressor, kind, mode)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 78, in render_cached
+    cache_key = get_templatetag_cachekey(compressor, mode, kind)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/cache.py", line 94, in get_templatetag_cachekey
+    "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 176, in cachekey
+    [self.content] + self.mtimes).encode(self.charset), 12)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 170, in mtimes
+    for kind, value, basename, elem in self.split_contents()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 21, in split_contents
+    filename = self.get_filename(basename)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 138, in get_filename
+    self.finders and " or with staticfiles." or "."))
+UncompressableFileError: 'scss/font-awesome.scss' could not be found in the COMPRESS_ROOT '/vagrant/static' or with staticfiles.
+ERROR 2017-06-13 15:15:01,578 basehttp 18165 139855809308416 "GET / HTTP/1.1" 500 187917
+ERROR 2017-06-13 15:15:21,527 exception 18165 139855800915712 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 68, in resolve_template
+    return get_template(template, using=self.using)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Unclosed tag on line 9: 'block'. Looking for one of: endblock.
+ERROR 2017-06-13 15:15:21,607 basehttp 18165 139855800915712 "GET / HTTP/1.1" 500 127584
+ERROR 2017-06-13 15:15:40,606 exception 18165 139855809308416 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 99, in render_compressed
+    cache_key, cache_content = self.render_cached(compressor, kind, mode)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 78, in render_cached
+    cache_key = get_templatetag_cachekey(compressor, mode, kind)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/cache.py", line 94, in get_templatetag_cachekey
+    "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 176, in cachekey
+    [self.content] + self.mtimes).encode(self.charset), 12)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 170, in mtimes
+    for kind, value, basename, elem in self.split_contents()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 21, in split_contents
+    filename = self.get_filename(basename)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 138, in get_filename
+    self.finders and " or with staticfiles." or "."))
+UncompressableFileError: 'scss/font-awesome.scss' could not be found in the COMPRESS_ROOT '/vagrant/static' or with staticfiles.
+ERROR 2017-06-13 15:15:40,711 basehttp 18165 139855809308416 "GET / HTTP/1.1" 500 186216
+ERROR 2017-06-13 15:16:43,615 exception 18165 139855800915712 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 99, in render_compressed
+    cache_key, cache_content = self.render_cached(compressor, kind, mode)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 78, in render_cached
+    cache_key = get_templatetag_cachekey(compressor, mode, kind)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/cache.py", line 94, in get_templatetag_cachekey
+    "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 176, in cachekey
+    [self.content] + self.mtimes).encode(self.charset), 12)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 170, in mtimes
+    for kind, value, basename, elem in self.split_contents()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 21, in split_contents
+    filename = self.get_filename(basename)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 138, in get_filename
+    self.finders and " or with staticfiles." or "."))
+UncompressableFileError: 'scss/font-awesome.scss' could not be found in the COMPRESS_ROOT '/vagrant/static' or with staticfiles.
+ERROR 2017-06-13 15:16:43,721 basehttp 18165 139855800915712 "GET / HTTP/1.1" 500 186216
+ERROR 2017-06-13 15:17:13,651 exception 18165 139855800915712 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 99, in render_compressed
+    cache_key, cache_content = self.render_cached(compressor, kind, mode)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 78, in render_cached
+    cache_key = get_templatetag_cachekey(compressor, mode, kind)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/cache.py", line 94, in get_templatetag_cachekey
+    "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 176, in cachekey
+    [self.content] + self.mtimes).encode(self.charset), 12)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 170, in mtimes
+    for kind, value, basename, elem in self.split_contents()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 21, in split_contents
+    filename = self.get_filename(basename)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 138, in get_filename
+    self.finders and " or with staticfiles." or "."))
+UncompressableFileError: 'scss/font-awesome.scss' could not be found in the COMPRESS_ROOT '/vagrant/static' or with staticfiles.
+ERROR 2017-06-13 15:17:13,762 basehttp 18165 139855800915712 "GET / HTTP/1.1" 500 185793
+ERROR 2017-06-13 15:24:08,565 exception 18165 139855809308416 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 99, in render_compressed
+    cache_key, cache_content = self.render_cached(compressor, kind, mode)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 78, in render_cached
+    cache_key = get_templatetag_cachekey(compressor, mode, kind)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/cache.py", line 94, in get_templatetag_cachekey
+    "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 176, in cachekey
+    [self.content] + self.mtimes).encode(self.charset), 12)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 170, in mtimes
+    for kind, value, basename, elem in self.split_contents()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 21, in split_contents
+    filename = self.get_filename(basename)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 138, in get_filename
+    self.finders and " or with staticfiles." or "."))
+UncompressableFileError: 'scss/font-awesome.scss' could not be found in the COMPRESS_ROOT '/vagrant/static' or with staticfiles.
+ERROR 2017-06-13 15:24:08,677 basehttp 18165 139855809308416 "GET / HTTP/1.1" 500 185793

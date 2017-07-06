@@ -7,16 +7,11 @@
   <title>{% block meta_title %}{% endblock %} | PREOJECT_TITLE</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   {% compress css %}
   {# SCSS compilation relies on django compressor #}
   <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/main.scss' %}">
-  <!-- FontAwesome -->
-  {#
-    Copy _variable.scss and font-awesome.scss and change the @import paths
-    to point to the project ones rather than to the vendor folder
-  #}
-  <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/font-awesome.scss' %}">
+
   {% endcompress %}
 </head>
 <body>
@@ -24,7 +19,7 @@
     {% include 'includes/header.html' %}
   </header>
 
-  <nav>
+  <nav id="nav" role="navigation"> 
     {% include 'includes/navigation.html' %}
   </nav>
 

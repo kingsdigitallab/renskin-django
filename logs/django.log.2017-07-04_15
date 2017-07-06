@@ -1,0 +1,397 @@
+WARNING 2017-07-04 15:50:54,010 basehttp 3604 139789526877952 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:50:54,024 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:50:54,117 base 3604 139789518485248 Not Found: /favicon.ico
+WARNING 2017-07-04 15:50:54,118 basehttp 3604 139789518485248 "GET /favicon.ico HTTP/1.1" 404 3264
+WARNING 2017-07-04 15:52:37,042 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:52:37,051 basehttp 3604 139789499926272 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:53:19,974 basehttp 3604 139789499926272 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:53:19,982 basehttp 3604 139789526877952 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:54:02,828 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:54:02,836 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:54:50,760 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:54:50,769 basehttp 3604 139789526877952 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:55:12,377 basehttp 3604 139789526877952 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:55:12,386 basehttp 3604 139789499926272 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:55:31,930 basehttp 3604 139789499926272 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:55:31,941 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:56:40,083 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:56:40,090 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:58:58,684 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 15:58:58,692 basehttp 3604 139789499926272 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:01:20,805 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:01:20,814 basehttp 3604 139789499926272 "GET /static/images/KCL-logo-white.svg HTTP/1.1" 404 1802
+WARNING 2017-07-04 16:01:20,819 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:02:27,505 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:03:04,787 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:03:13,355 basehttp 3604 139789499926272 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:03:13,363 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:05:01,328 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:06:57,676 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:07:17,739 basehttp 3604 139789499926272 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:07:17,748 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:18:20,430 basehttp 3604 139789499926272 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:18:20,439 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:22:56,291 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:25:03,290 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:25:23,359 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:29:54,972 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:30:15,392 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:30:15,401 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:30:52,476 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:31:10,553 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:31:10,561 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:31:12,068 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:31:12,076 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:31:33,515 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:31:49,936 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:31:49,944 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:31:56,779 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:31:56,789 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:34:48,874 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:35:14,045 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:35:14,053 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:35:27,431 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:35:27,439 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:35:48,364 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:35:48,372 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:37:08,226 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:39:45,960 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:40:06,329 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:40:19,482 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:40:19,488 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:40:29,069 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:40:38,133 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:40:50,608 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:40:57,671 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:40:57,678 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:41:24,772 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:43:00,826 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:43:00,834 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:43:23,774 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:43:43,120 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:43:57,780 basehttp 3604 139789491533568 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:43:57,789 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:45:16,762 basehttp 3604 139789518485248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+ERROR 2017-07-04 16:46:07,093 exception 3604 139789518485248 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 103, in render_compressed
+    rendered_output = compressor.output(mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 49, in output
+    ret.append(subnode.output(*args, **kwargs))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 51, in output
+    return super(CssCompressor, self).output(*args, **kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 292, in output
+    output = '\n'.join(self.filter_input(forced))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 232, in filter_input
+    for hunk in self.hunks(forced):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 204, in hunks
+    precompiled, value = self.precompile(value, **options)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 273, in precompile
+    return True, filter.input(**kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django_libsass.py", line 140, in input
+    source_comments=SOURCE_COMMENTS)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django_libsass.py", line 125, in compile
+    output = sass.compile(**kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/sass.py", line 643, in compile
+    raise CompileError(v)
+CompileError: Error: File to import not found or unreadable: font-awesome-sprockets.
+       Parent style sheet: /vagrant/assets/scss/main.scss
+        on line 13 of assets/scss/main.scss
+>> @import "font-awesome-sprockets";
+   ^
+
+ERROR 2017-07-04 16:46:07,227 basehttp 3604 139789518485248 "GET / HTTP/1.1" 500 208703
+ERROR 2017-07-04 16:47:24,895 exception 3604 139789518485248 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 99, in render_compressed
+    cache_key, cache_content = self.render_cached(compressor, kind, mode)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 78, in render_cached
+    cache_key = get_templatetag_cachekey(compressor, mode, kind)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/cache.py", line 94, in get_templatetag_cachekey
+    "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 176, in cachekey
+    [self.content] + self.mtimes).encode(self.charset), 12)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 170, in mtimes
+    for kind, value, basename, elem in self.split_contents()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 20, in split_contents
+    basename = self.get_basename(elem_attribs['href'])
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 84, in get_basename
+    "compressed" % (url, base_url))
+UncompressableFileError: 'path/to/font-awesome/css/font-awesome.min.css' isn't accessible via COMPRESS_URL ('/static/') and can't be compressed
+ERROR 2017-07-04 16:47:25,033 basehttp 3604 139789518485248 "GET / HTTP/1.1" 500 188092
+ERROR 2017-07-04 16:47:29,079 exception 3604 139789491533568 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 99, in render_compressed
+    cache_key, cache_content = self.render_cached(compressor, kind, mode)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 78, in render_cached
+    cache_key = get_templatetag_cachekey(compressor, mode, kind)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/cache.py", line 94, in get_templatetag_cachekey
+    "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 176, in cachekey
+    [self.content] + self.mtimes).encode(self.charset), 12)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 170, in mtimes
+    for kind, value, basename, elem in self.split_contents()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 20, in split_contents
+    basename = self.get_basename(elem_attribs['href'])
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 84, in get_basename
+    "compressed" % (url, base_url))
+UncompressableFileError: 'path/to/font-awesome/css/font-awesome.min.css' isn't accessible via COMPRESS_URL ('/static/') and can't be compressed
+ERROR 2017-07-04 16:47:29,199 basehttp 3604 139789491533568 "GET / HTTP/1.1" 500 188092
+ERROR 2017-07-04 16:47:30,516 exception 3604 139789474748160 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 99, in render_compressed
+    cache_key, cache_content = self.render_cached(compressor, kind, mode)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 78, in render_cached
+    cache_key = get_templatetag_cachekey(compressor, mode, kind)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/cache.py", line 94, in get_templatetag_cachekey
+    "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 176, in cachekey
+    [self.content] + self.mtimes).encode(self.charset), 12)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 170, in mtimes
+    for kind, value, basename, elem in self.split_contents()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 20, in split_contents
+    basename = self.get_basename(elem_attribs['href'])
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 84, in get_basename
+    "compressed" % (url, base_url))
+UncompressableFileError: 'path/to/font-awesome/css/font-awesome.min.css' isn't accessible via COMPRESS_URL ('/static/') and can't be compressed
+ERROR 2017-07-04 16:47:30,631 basehttp 3604 139789474748160 "GET / HTTP/1.1" 500 188092
+WARNING 2017-07-04 16:47:42,428 basehttp 3604 139789526877952 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:47:42,442 basehttp 3604 139789526877952 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+ERROR 2017-07-04 16:47:51,062 exception 3604 139789526877952 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 99, in render_compressed
+    cache_key, cache_content = self.render_cached(compressor, kind, mode)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 78, in render_cached
+    cache_key = get_templatetag_cachekey(compressor, mode, kind)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/cache.py", line 94, in get_templatetag_cachekey
+    "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 176, in cachekey
+    [self.content] + self.mtimes).encode(self.charset), 12)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/utils/decorators.py", line 39, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 170, in mtimes
+    for kind, value, basename, elem in self.split_contents()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 20, in split_contents
+    basename = self.get_basename(elem_attribs['href'])
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 84, in get_basename
+    "compressed" % (url, base_url))
+UncompressableFileError: 'path/to/font-awesome/css/font-awesome.min.css' isn't accessible via COMPRESS_URL ('/static/') and can't be compressed
+ERROR 2017-07-04 16:47:51,179 basehttp 3604 139789526877952 "GET / HTTP/1.1" 500 188092
+WARNING 2017-07-04 16:48:02,787 basehttp 3604 139789483140864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-04 16:48:02,799 base 3604 139789526877952 Not Found: /path/to/font-awesome/css/font-awesome.min.css
+WARNING 2017-07-04 16:48:02,800 basehttp 3604 139789526877952 "GET /path/to/font-awesome/css/font-awesome.min.css HTTP/1.1" 404 3366
+WARNING 2017-07-04 16:48:02,810 basehttp 3604 139789526877952 "GET /static/js/config-built.js HTTP/1.1" 404 1781
