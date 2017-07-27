@@ -1,0 +1,211 @@
+WARNING 2017-07-27 10:15:40,557 basehttp 20335 139848612783872 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:16:33,790 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:16:41,499 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:17:24,885 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:27:47,187 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:27:47,195 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:27:48,831 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:27:48,840 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:28:45,357 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:28:45,368 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:29:15,467 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:30:01,728 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:30:01,739 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:30:59,704 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:32:13,604 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:32:13,614 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+ERROR 2017-07-27 10:34:06,079 exception 20335 139848574969600 Internal Server Error: /chapters/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 103, in render_compressed
+    rendered_output = compressor.output(mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 49, in output
+    ret.append(subnode.output(*args, **kwargs))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 51, in output
+    return super(CssCompressor, self).output(*args, **kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 292, in output
+    output = '\n'.join(self.filter_input(forced))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 232, in filter_input
+    for hunk in self.hunks(forced):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 204, in hunks
+    precompiled, value = self.precompile(value, **options)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 273, in precompile
+    return True, filter.input(**kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django_libsass.py", line 140, in input
+    source_comments=SOURCE_COMMENTS)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django_libsass.py", line 125, in compile
+    output = sass.compile(**kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/sass.py", line 643, in compile
+    raise CompileError(v)
+CompileError: Error: Invalid CSS after "}": expected 1 selector or at-rule, was ".item-wrapper .expa"
+        on line 336 of assets/scss/main.scss
+>> }
+   -^
+
+ERROR 2017-07-27 10:34:06,232 basehttp 20335 139848574969600 "GET /chapters/ HTTP/1.1" 500 208891
+ERROR 2017-07-27 10:34:21,266 exception 20335 139848574969600 Internal Server Error: /chapters/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 103, in render_compressed
+    rendered_output = compressor.output(mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 49, in output
+    ret.append(subnode.output(*args, **kwargs))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 51, in output
+    return super(CssCompressor, self).output(*args, **kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 292, in output
+    output = '\n'.join(self.filter_input(forced))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 232, in filter_input
+    for hunk in self.hunks(forced):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 204, in hunks
+    precompiled, value = self.precompile(value, **options)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 273, in precompile
+    return True, filter.input(**kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django_libsass.py", line 140, in input
+    source_comments=SOURCE_COMMENTS)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django_libsass.py", line 125, in compile
+    output = sass.compile(**kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/sass.py", line 643, in compile
+    raise CompileError(v)
+CompileError: Error: Invalid CSS after "}": expected 1 selector or at-rule, was ".item-wrapper .expa"
+        on line 336 of assets/scss/main.scss
+>> }
+   -^
+
+ERROR 2017-07-27 10:34:21,394 basehttp 20335 139848574969600 "GET /chapters/ HTTP/1.1" 500 208891
+WARNING 2017-07-27 10:34:37,191 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:34:37,214 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:34:50,455 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:34:50,464 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:35:04,439 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:35:04,449 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:35:33,058 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:35:33,065 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:36:05,822 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:36:05,832 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:36:21,258 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:36:21,265 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:36:30,930 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:36:30,939 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:37:04,029 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:37:04,037 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:37:27,668 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:39:05,909 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:39:05,919 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:43:55,440 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:43:55,450 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:46:27,726 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:46:27,736 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:48:56,806 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:48:56,815 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:50:19,267 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:50:19,275 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:50:35,674 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:51:15,717 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:51:15,729 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:51:49,359 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:52:29,368 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:52:29,376 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:53:59,464 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:53:59,474 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:55:24,318 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:55:24,328 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:55:43,157 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:55:43,165 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:57:36,713 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:57:36,723 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:58:00,366 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:58:00,375 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:59:20,364 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 10:59:20,373 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 11:00:24,734 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 11:01:09,343 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 11:01:09,353 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 11:01:18,134 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 11:01:18,144 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 11:03:40,519 basehttp 20335 139848591755008 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 11:03:40,528 basehttp 20335 139848583362304 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 11:04:03,990 basehttp 20335 139848583362304 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 11:04:03,998 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 11:05:12,270 basehttp 20335 139848604391168 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 11:05:12,281 basehttp 20335 139848566576896 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 11:05:24,704 basehttp 20335 139848612783872 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 11:05:32,576 basehttp 20335 139848574969600 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 11:05:34,480 basehttp 20335 139848612783872 "GET /static/js/config-built.js HTTP/1.1" 404 1781
