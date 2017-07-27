@@ -98,3 +98,5 @@ ENV/
 playbook.retry
 
 renskin/settings/local.py
+
+*.log
