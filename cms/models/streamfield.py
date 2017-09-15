@@ -85,7 +85,7 @@ class PullQuoteBlock(StructBlock):
 
 
 class CMSStreamBlock(StreamBlock):
-    home = HomePageBlock(icon='grip', label='Homepage Block')
+    # home = HomePageBlock(icon='grip', label='Homepage Block')
 
     h2 = CharBlock(icon='title', classname='title')
     h3 = CharBlock(icon='title', classname='title')

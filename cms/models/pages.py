@@ -36,6 +36,52 @@ def _paginate(request, items):
     return items
 
 
+class ChapterIndexPage(Page):
+    subpage_types = ['Chapter', ]
+
+
+ChapterIndexPage.content_panels = [
+    FieldPanel('title', classname='full title'),
+]
+
+ChapterIndexPage.promote_panels = Page.promote_panels
+
+
+class Chapter(Page):
+    search_fields = Page.search_fields + [
+    ]
+
+    subpage_types = ['ImagePage', ]
+
+
+Chapter.content_panels = [
+    FieldPanel('title', classname='full title'),
+]
+
+Chapter.promote_panels = Page.promote_panels
+
+
+class ImagePage(Page, WithStreamField):
+    search_fields = Page.search_fields + [
+        index.SearchField('body'),
+    ]
+
+    image = models.ForeignKey(
+        'wagtailimages.Image',
+        on_delete=models.PROTECT,
+    )
+    subpage_types = []
+
+
+ImagePage.content_panels = [
+    FieldPanel('title', classname='full title'),
+    ImageChooserPanel('image'),
+    StreamFieldPanel('body'),
+]
+
+ImagePage.promote_panels = Page.promote_panels
+
+
 class HomePage(Page, WithStreamField):
     search_fields = Page.search_fields + [
         index.SearchField('body'),
@@ -43,8 +89,19 @@ class HomePage(Page, WithStreamField):
 
     subpage_types = [
         'BlogIndexPage', 'EventIndexPage', 'IndexPage',
-        'NewsIndexPage', 'PastEventIndexPage', 'RichTextPage'
+        'NewsIndexPage', 'PastEventIndexPage', 'RichTextPage',
+        'ChapterIndexPage'
     ]
+
+    def get_chapters(self):
+        return Chapter.objects.all()
+
+    def get_events(self):
+        # Events that have not ended.
+        today = date.today()
+        events = Event.objects.live().filter(date_from__gte=today).order_by(
+            'date_from')
+        return events
 
 
 HomePage.content_panels = [
@@ -352,6 +409,11 @@ class EventTag(TaggedItemBase):
 
 
 class Event(Page, WithStreamField, WithFeedImage):
+
+    image = models.ForeignKey(
+        'wagtailimages.Image',
+        on_delete=models.PROTECT,
+    )
     date_from = models.DateField(verbose_name="Start Date")
     date_to = models.DateField(verbose_name="End Date (Leave blank if\
                                not required)", blank=True, null=True)
@@ -382,6 +444,8 @@ class Event(Page, WithStreamField, WithFeedImage):
 
 Event.content_panels = [
     FieldPanel('title', classname='full title'),
+
+    ImageChooserPanel('image'),
     FieldPanel('date_from'),
     FieldPanel('date_to'),
     FieldPanel('time'),

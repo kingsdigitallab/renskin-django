@@ -1,0 +1,29 @@
+{% extends "cms/base.html" %}
+{% load cms_tags wagtailimages_tags wagtailcore_tags wagtailroutablepage_tags %}
+
+{% block main %}
+
+<div class="row">
+    <div class="content-wrapper">
+        <div class="content">
+            <div class="content-padding">
+                <h2>{{ self.title }}</h2>
+                <div class="row">
+                    {% for chapter in self.get_children.all %}
+                    <div class="item col-1-3 tab-1-2 mob-full">
+                        <a href="{% pageurl chapter %}">
+                                {% image chapter.get_children.all.0.specific.image original %}
+                                <div class="overlay">
+                                    <h3>{{ chapter.title }}</h3>
+                                </div>
+                                </a>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

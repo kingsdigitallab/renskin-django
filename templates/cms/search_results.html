@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block meta_title %}Search Results{% endblock %}
+
+{% block main %}
+
+<div class="row">
+    <div class="content-wrapper">
+        <div class="content">
+            <div class="content-padding">
+                <h2>Search Results: {{query_string}} </h2>
+                
+                {% if search_results %}
+                <ul>
+                   {% for result in search_results %}
+                   <li>
+                       <h4><a href="{% pageurl result.specific %}">{{ result.specific }}</a></h4>
+                       {% if result.specific.search_description %}
+                           {{ result.specific.search_description|safe }}
+                       {% endif %}
+                   </li>
+                   {% endfor %}
+                </ul>
+                {% else %}
+                    <div class="rich-text">
+                        <p>No results found.</p>
+                    </div>
+
+                {% endif %}
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

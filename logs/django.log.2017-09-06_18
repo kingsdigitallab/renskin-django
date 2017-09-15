@@ -1,0 +1,712 @@
+WARNING 2017-09-06 15:51:52,660 basehttp 4099 139896888080128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 15:58:37,241 basehttp 4099 139896898586368 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:01:22,794 basehttp 4099 139896898586368 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:01:24,224 basehttp 4099 139896888080128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:01:27,253 basehttp 4099 139896888080128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:01:28,350 basehttp 4099 139896888080128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:02:29,586 base 4099 139896888080128 Not Found: /chapters.html
+WARNING 2017-09-06 16:02:29,586 basehttp 4099 139896888080128 "GET /chapters.html HTTP/1.1" 404 3378
+WARNING 2017-09-06 16:11:29,012 basehttp 4749 139844823308032 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:12:22,170 basehttp 4749 139844814915328 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:13:18,964 basehttp 4749 139844814915328 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:16:37,935 basehttp 4749 139844823308032 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:16:46,785 basehttp 4749 139844806522624 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:16:48,528 basehttp 4749 139844806522624 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:17:06,860 base 4749 139844806522624 Not Found: /search/chapters.html
+WARNING 2017-09-06 16:17:06,861 basehttp 4749 139844806522624 "GET /search/chapters.html HTTP/1.1" 404 3672
+WARNING 2017-09-06 16:17:13,774 basehttp 4749 139844806522624 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:17:17,361 basehttp 4749 139844806522624 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:17:17,412 basehttp 4749 139844823308032 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:17:44,398 base 4749 139844823308032 Not Found: /search/about.html
+WARNING 2017-09-06 16:17:44,399 basehttp 4749 139844823308032 "GET /search/about.html HTTP/1.1" 404 3663
+WARNING 2017-09-06 16:18:34,738 basehttp 4749 139844841867008 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:21:47,136 basehttp 4940 139778278307584 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:21:48,901 basehttp 4940 139778286700288 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:21:54,000 basehttp 4940 139778261522176 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:22:04,462 base 4940 139778261522176 Not Found: /search/about.html
+WARNING 2017-09-06 16:22:04,463 basehttp 4940 139778261522176 "GET /search/about.html HTTP/1.1" 404 3663
+WARNING 2017-09-06 16:26:04,892 basehttp 4940 139778286700288 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:28:17,060 basehttp 4940 139778286700288 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:28:19,933 basehttp 4940 139778295092992 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:28:23,356 basehttp 4940 139778295092992 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:28:25,565 basehttp 4940 139778295092992 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:28:27,747 basehttp 4940 139778295092992 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:28:31,112 basehttp 4940 139778295092992 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:28:37,114 base 4940 139778295092992 Not Found: /home.html
+WARNING 2017-09-06 16:28:37,115 basehttp 4940 139778295092992 "GET /home.html HTTP/1.1" 404 3366
+WARNING 2017-09-06 16:29:55,856 base 4940 139778295092992 Not Found: /home.html
+WARNING 2017-09-06 16:29:55,856 basehttp 4940 139778295092992 "GET /home.html HTTP/1.1" 404 3366
+WARNING 2017-09-06 16:29:57,281 base 4940 139778295092992 Not Found: /home.html
+WARNING 2017-09-06 16:29:57,282 basehttp 4940 139778295092992 "GET /home.html HTTP/1.1" 404 3366
+WARNING 2017-09-06 16:29:58,111 base 4940 139778295092992 Not Found: /home.html
+WARNING 2017-09-06 16:29:58,111 basehttp 4940 139778295092992 "GET /home.html HTTP/1.1" 404 3366
+WARNING 2017-09-06 16:30:00,064 basehttp 4940 139778261522176 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:30:01,375 basehttp 4940 139778261522176 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:30:02,676 basehttp 4940 139778261522176 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:30:03,950 basehttp 4940 139778261522176 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+ERROR 2017-09-06 16:35:47,445 exception 5201 140236589995776 Internal Server Error: /events/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/wagtail/wagtailcore/views.py", line 26, in serve
+    return page.serve(request, *args, **kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/wagtail/contrib/wagtailroutablepage/models.py", line 103, in serve
+    return view(request, *args, **kwargs)
+  File "/vagrant/cms/models/pages.py", line 277, in all_events
+    {'self': self, 'events': _paginate(request, events)})
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/library.py", line 236, in render
+    t = context.template.engine.get_template(self.filename)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Invalid block tag on line 6: 'sub_menu', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+ERROR 2017-09-06 16:35:47,600 basehttp 5201 140236589995776 "GET /events/ HTTP/1.1" 500 215848
+ERROR 2017-09-06 16:36:05,876 exception 5201 140236589995776 Internal Server Error: /events/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/wagtail/wagtailcore/views.py", line 26, in serve
+    return page.serve(request, *args, **kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/wagtail/contrib/wagtailroutablepage/models.py", line 103, in serve
+    return view(request, *args, **kwargs)
+  File "/vagrant/cms/models/pages.py", line 277, in all_events
+    {'self': self, 'events': _paginate(request, events)})
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/library.py", line 245, in render
+    return t.render(new_context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/library.py", line 225, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/vagrant/cms/templatetags/cms_tags.py", line 103, in sub_menu
+    menu_pages = root.get_children().live().in_menu()
+AttributeError: 'str' object has no attribute 'get_children'
+ERROR 2017-09-06 16:36:06,030 basehttp 5201 140236589995776 "GET /events/ HTTP/1.1" 500 223672
+ERROR 2017-09-06 16:37:46,728 exception 5240 140585164576512 Internal Server Error: /events/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/wagtail/wagtailcore/views.py", line 26, in serve
+    return page.serve(request, *args, **kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/wagtail/contrib/wagtailroutablepage/models.py", line 103, in serve
+    return view(request, *args, **kwargs)
+  File "/vagrant/cms/models/pages.py", line 277, in all_events
+    {'self': self, 'events': _paginate(request, events)})
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/library.py", line 245, in render
+    return t.render(new_context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/library.py", line 225, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/vagrant/cms/templatetags/cms_tags.py", line 104, in sub_menu
+    menu_pages = root.get_children().live().in_menu()
+AttributeError: 'str' object has no attribute 'get_children'
+ERROR 2017-09-06 16:37:46,891 basehttp 5240 140585164576512 "GET /events/ HTTP/1.1" 500 223603
+ERROR 2017-09-06 16:37:55,302 exception 5240 140585164576512 Internal Server Error: /events/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/wagtail/wagtailcore/views.py", line 26, in serve
+    return page.serve(request, *args, **kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/wagtail/contrib/wagtailroutablepage/models.py", line 103, in serve
+    return view(request, *args, **kwargs)
+  File "/vagrant/cms/models/pages.py", line 277, in all_events
+    {'self': self, 'events': _paginate(request, events)})
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/library.py", line 245, in render
+    return t.render(new_context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/library.py", line 225, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/vagrant/cms/templatetags/cms_tags.py", line 104, in sub_menu
+    menu_pages = root.get_children().live().in_menu()
+AttributeError: 'str' object has no attribute 'get_children'
+ERROR 2017-09-06 16:37:55,462 basehttp 5240 140585164576512 "GET /events/ HTTP/1.1" 500 223603
+WARNING 2017-09-06 16:38:25,334 basehttp 5240 140585137624832 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:38:36,031 basehttp 5240 140585129232128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:38:52,382 basehttp 5240 140585129232128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:39:00,853 basehttp 5240 140585129232128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:39:16,214 basehttp 5290 140543492572928 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:41:20,260 basehttp 5290 140543484180224 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:41:21,757 basehttp 5290 140543511131904 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:42:06,665 basehttp 5290 140543484180224 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:43:09,512 basehttp 5290 140543484180224 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:43:13,439 basehttp 5290 140543511131904 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:43:38,256 basehttp 5290 140543484180224 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:43:41,269 basehttp 5290 140543484180224 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:43:41,969 basehttp 5290 140543484180224 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:43:44,561 basehttp 5290 140543484180224 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:44:06,413 basehttp 5290 140543492572928 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:44:09,928 basehttp 5290 140543475787520 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:46:12,580 basehttp 5290 140543475787520 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 16:57:12,292 basehttp 5290 140543511131904 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 17:38:41,594 basehttp 5290 140543492572928 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 17:38:44,004 basehttp 5290 140543475787520 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+ERROR 2017-09-06 17:47:50,174 exception 6006 140181438850816 Internal Server Error: /chapters/chapter-1/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 68, in resolve_template
+    return get_template(template, using=self.using)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: cms/chapter.html
+ERROR 2017-09-06 17:47:50,251 basehttp 6006 140181438850816 "GET /chapters/chapter-1/ HTTP/1.1" 500 101471
+ERROR 2017-09-06 17:47:53,781 exception 6006 140181438850816 Internal Server Error: /chapters/chapter-1/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 68, in resolve_template
+    return get_template(template, using=self.using)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: cms/chapter.html
+ERROR 2017-09-06 17:47:53,847 basehttp 6006 140181438850816 "GET /chapters/chapter-1/ HTTP/1.1" 500 101471
+WARNING 2017-09-06 17:47:55,035 base 6006 140181438850816 Not Found: /chapters.html
+WARNING 2017-09-06 17:47:55,036 basehttp 6006 140181438850816 "GET /chapters.html HTTP/1.1" 404 3378
+WARNING 2017-09-06 17:47:55,944 basehttp 6006 140181438850816 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 17:47:56,034 basehttp 6006 140181413672704 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+ERROR 2017-09-06 17:47:58,277 exception 6006 140181413672704 Internal Server Error: /chapters/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 68, in resolve_template
+    return get_template(template, using=self.using)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: cms/chapter_index_page.html
+ERROR 2017-09-06 17:47:58,354 basehttp 6006 140181413672704 "GET /chapters/ HTTP/1.1" 500 101991
+ERROR 2017-09-06 17:56:30,673 exception 6006 140181413672704 Internal Server Error: /chapters/chapter-1/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 68, in resolve_template
+    return get_template(template, using=self.using)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: cms/chapter.html
+ERROR 2017-09-06 17:56:30,750 basehttp 6006 140181413672704 "GET /chapters/chapter-1/ HTTP/1.1" 500 101629
+WARNING 2017-09-06 17:57:09,747 basehttp 6006 140181438850816 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:00:50,049 basehttp 6006 140181422065408 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:01:10,667 basehttp 6006 140181413672704 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:02:09,539 basehttp 6006 140181430458112 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:02:36,413 basehttp 6006 140181422065408 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:03:05,213 basehttp 6006 140181438850816 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:03:30,634 basehttp 6006 140181430458112 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:04:55,624 basehttp 6006 140181438850816 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:05:50,123 basehttp 6006 140181422065408 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:06:18,333 basehttp 6006 140181430458112 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:06:39,054 basehttp 6006 140181413672704 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:06:50,221 basehttp 6006 140181413672704 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:07:32,177 basehttp 6006 140181413672704 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:07:35,557 basehttp 6006 140181413672704 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:07:45,680 basehttp 6006 140181430458112 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:08:06,164 basehttp 6006 140181422065408 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:08:12,586 basehttp 6006 140181430458112 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:08:13,124 base 6006 140181438850816 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-09-06 18:08:13,127 basehttp 6006 140181438850816 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3435
+WARNING 2017-09-06 18:08:13,129 base 6006 140181430458112 Not Found: /favicon.ico
+WARNING 2017-09-06 18:08:13,130 basehttp 6006 140181430458112 "GET /favicon.ico HTTP/1.1" 404 3372
+WARNING 2017-09-06 18:08:13,178 base 6006 140181430458112 Not Found: /apple-touch-icon.png
+WARNING 2017-09-06 18:08:13,179 basehttp 6006 140181430458112 "GET /apple-touch-icon.png HTTP/1.1" 404 3399
+WARNING 2017-09-06 18:08:49,885 basehttp 6006 140181438850816 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:08:51,947 basehttp 6006 140181413672704 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:08:54,804 base 6006 140181430458112 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-09-06 18:08:54,805 basehttp 6006 140181430458112 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3435
+WARNING 2017-09-06 18:08:54,832 base 6006 140181430458112 Not Found: /apple-touch-icon.png
+WARNING 2017-09-06 18:08:54,833 basehttp 6006 140181430458112 "GET /apple-touch-icon.png HTTP/1.1" 404 3399
+WARNING 2017-09-06 18:08:54,859 base 6006 140181430458112 Not Found: /favicon.ico
+WARNING 2017-09-06 18:08:54,860 basehttp 6006 140181430458112 "GET /favicon.ico HTTP/1.1" 404 3372
+WARNING 2017-09-06 18:08:54,889 base 6006 140181430458112 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-09-06 18:08:54,891 basehttp 6006 140181430458112 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3435
+WARNING 2017-09-06 18:08:54,922 base 6006 140181430458112 Not Found: /apple-touch-icon.png
+WARNING 2017-09-06 18:08:54,923 basehttp 6006 140181430458112 "GET /apple-touch-icon.png HTTP/1.1" 404 3399
+WARNING 2017-09-06 18:08:54,951 base 6006 140181430458112 Not Found: /favicon.ico
+WARNING 2017-09-06 18:08:54,952 basehttp 6006 140181430458112 "GET /favicon.ico HTTP/1.1" 404 3372
+WARNING 2017-09-06 18:08:55,113 base 6006 140181430458112 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-09-06 18:08:55,114 basehttp 6006 140181430458112 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3435
+WARNING 2017-09-06 18:08:55,148 base 6006 140181430458112 Not Found: /apple-touch-icon.png
+WARNING 2017-09-06 18:08:55,149 basehttp 6006 140181430458112 "GET /apple-touch-icon.png HTTP/1.1" 404 3399
+WARNING 2017-09-06 18:08:55,179 base 6006 140181430458112 Not Found: /favicon.ico
+WARNING 2017-09-06 18:08:55,181 basehttp 6006 140181430458112 "GET /favicon.ico HTTP/1.1" 404 3372
+WARNING 2017-09-06 18:08:55,217 base 6006 140181430458112 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-09-06 18:08:55,218 basehttp 6006 140181430458112 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3435
+WARNING 2017-09-06 18:08:55,252 base 6006 140181430458112 Not Found: /apple-touch-icon.png
+WARNING 2017-09-06 18:08:55,253 basehttp 6006 140181430458112 "GET /apple-touch-icon.png HTTP/1.1" 404 3399
+WARNING 2017-09-06 18:08:55,279 base 6006 140181430458112 Not Found: /favicon.ico
+WARNING 2017-09-06 18:08:55,280 basehttp 6006 140181430458112 "GET /favicon.ico HTTP/1.1" 404 3372
+WARNING 2017-09-06 18:09:35,738 basehttp 6006 140181430458112 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:09:35,893 base 6006 140181430458112 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-09-06 18:09:35,895 basehttp 6006 140181430458112 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3435
+WARNING 2017-09-06 18:09:35,929 base 6006 140181430458112 Not Found: /apple-touch-icon.png
+WARNING 2017-09-06 18:09:35,931 basehttp 6006 140181430458112 "GET /apple-touch-icon.png HTTP/1.1" 404 3399
+WARNING 2017-09-06 18:09:39,897 basehttp 6006 140181413672704 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:10:04,691 basehttp 6006 140181422065408 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:12:55,284 basehttp 6006 140181422065408 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:13:09,631 basehttp 6541 139638789392128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:13:24,230 basehttp 6541 139638789392128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:13:34,768 basehttp 6541 139638770833152 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:13:53,290 basehttp 6541 139638789392128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:13:56,173 basehttp 6541 139638762440448 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:14:06,235 basehttp 6541 139638789392128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:14:14,798 basehttp 6541 139638789392128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:14:21,512 basehttp 6541 139638789392128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:15:31,765 basehttp 6541 139638754047744 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:15:58,202 basehttp 6541 139638789392128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:16:07,805 basehttp 6541 139638754047744 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:16:22,278 basehttp 6541 139638770833152 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:16:34,521 basehttp 6541 139638789392128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:16:44,366 basehttp 6541 139638770833152 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:17:17,067 basehttp 6541 139638770833152 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:17:46,886 basehttp 6541 139638770833152 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:18:15,140 basehttp 6541 139638789392128 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:18:21,015 basehttp 6541 139638754047744 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:18:25,340 basehttp 6541 139638762440448 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:18:39,449 basehttp 6541 139638762440448 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:18:48,577 basehttp 6541 139638754047744 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:20:11,474 basehttp 6778 140524850951936 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:20:30,439 basehttp 6778 140524834166528 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:22:23,874 basehttp 6817 140185019832064 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:25:05,281 basehttp 7230 139933291235072 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:25:07,317 basehttp 7230 139933255890688 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+ERROR 2017-09-06 18:32:59,410 exception 7349 140570413692672 Internal Server Error: /chapters/chapter-1/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 68, in resolve_template
+    return get_template(template, using=self.using)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Invalid block tag on line 21: 'image', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+ERROR 2017-09-06 18:32:59,529 basehttp 7349 140570413692672 "GET /chapters/chapter-1/ HTTP/1.1" 500 138136
+WARNING 2017-09-06 18:35:42,422 basehttp 7349 140570413692672 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:37:21,632 basehttp 7349 140570377824000 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+ERROR 2017-09-06 18:38:04,814 exception 7349 140570386216704 Internal Server Error: /chapters/chapter-1/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/wagtail/wagtailimages/templatetags/wagtailimages_tags.py", line 88, in render
+    rendition = get_rendition_or_not_found(image, self.filter)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/wagtail/wagtailimages/shortcuts.py", line 16, in get_rendition_or_not_found
+    return image.get_rendition(specs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/wagtail/wagtailimages/models.py", line 261, in get_rendition
+    cache_key = filter.get_cache_key(self)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/wagtail/wagtailimages/models.py", line 413, in get_cache_key
+    for operation in self.operations:
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/wagtail/wagtailimages/models.py", line 360, in operations
+    raise InvalidFilterSpecError("Unrecognised operation: %s" % op_spec_parts[0])
+InvalidFilterSpecError: Unrecognised operation: 
+ERROR 2017-09-06 18:38:04,983 basehttp 7349 140570386216704 "GET /chapters/chapter-1/ HTTP/1.1" 500 197949
+WARNING 2017-09-06 18:38:11,139 basehttp 7349 140570369431296 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:39:09,001 basehttp 7349 140570377824000 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:39:33,130 basehttp 7349 140570386216704 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:43:50,171 basehttp 7349 140570369431296 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:44:39,288 basehttp 7349 140570361038592 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:44:40,193 basehttp 7349 140570369431296 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:44:40,253 basehttp 7349 140570386216704 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:45:58,402 basehttp 7349 140570386216704 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:46:02,502 basehttp 7349 140570386216704 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:46:04,868 basehttp 7349 140570386216704 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:47:26,178 basehttp 7593 140083693971200 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:47:29,544 basehttp 7593 140083677185792 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:48:23,271 basehttp 7593 140083693971200 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:48:24,501 basehttp 7593 140083685578496 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:48:26,023 basehttp 7593 140083677185792 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:48:41,821 basehttp 7593 140083693971200 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:49:13,059 basehttp 7593 140083677185792 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:50:18,319 basehttp 7593 140083677185792 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:51:12,987 basehttp 7593 140083712530176 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:51:47,170 basehttp 7593 140083712530176 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:51:48,247 basehttp 7593 140083677185792 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:52:08,631 basehttp 7593 140083693971200 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:52:43,858 basehttp 7593 140083677185792 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:53:00,169 basehttp 7593 140083693971200 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:53:15,522 basehttp 7593 140083685578496 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:53:34,997 basehttp 7593 140083668793088 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:53:44,500 basehttp 7593 140083712530176 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:54:09,052 basehttp 7593 140083712530176 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:54:33,471 basehttp 7593 140083712530176 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:54:34,761 basehttp 7593 140083685578496 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:54:37,720 basehttp 7593 140083685578496 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:55:56,126 basehttp 7593 140083668793088 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:57:37,414 basehttp 7593 140083685578496 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:58:17,026 basehttp 7593 140083668793088 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 18:58:44,298 basehttp 7593 140083668793088 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+ERROR 2017-09-06 18:58:51,458 exception 7593 140083677185792 Internal Server Error: /chapters/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 68, in resolve_template
+    return get_template(template, using=self.using)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: cms/chapter_index_page.html
+ERROR 2017-09-06 18:58:51,539 basehttp 7593 140083677185792 "GET /chapters/ HTTP/1.1" 500 102011
+WARNING 2017-09-06 19:29:58,011 basehttp 7593 140083668793088 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 19:30:02,171 basehttp 7593 140083685578496 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+ERROR 2017-09-06 19:30:07,654 exception 7593 140083668793088 Internal Server Error: /chapters/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 84, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 68, in resolve_template
+    return get_template(template, using=self.using)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: cms/chapter_index_page.html
+ERROR 2017-09-06 19:30:07,730 basehttp 7593 140083668793088 "GET /chapters/ HTTP/1.1" 500 102011
+WARNING 2017-09-06 19:31:15,638 basehttp 7593 140083668793088 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 19:31:18,203 basehttp 7593 140083685578496 "GET /static/js/config-built.js HTTP/1.1" 404 1781

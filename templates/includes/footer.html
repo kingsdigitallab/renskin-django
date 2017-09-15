@@ -1,33 +1,36 @@
 {% load staticfiles %}
-    <ul>
-
-     <li>
-        <div class="logo">
-          <a href="https://wellcome.ac.uk" title="Wellcome">
-            <img src="/static/images/wellcome-logo-white.svg" alt="Wellcome" height="70">
+  <div class="row">
+            <div class="row">
+                <div class="col-full tab-full">
+                    <p>
+                        <a href="https://wellcome.ac.uk" title="Wellcome">
+            <img src="{% static 'images/wellcome-logo-white.svg' %}" alt="Wellcome" >
           </a>
-          <a href="http://www.kcl.ac.uk/" title="King's College London">
-            <img src="/static/images/KCL-logo-white.svg" alt="King's College London" height="70">
+                        <a href="http://www.kcl.ac.uk/" title="King's College London">
+            <img src="{% static 'images/KCL-logo-white.svg' %}" alt="King's College London" >
           </a>
-        </div>
-      </li>
-      <li>
-      <a href="">
-          <i class="fa fa-twitter" aria-hidden="true"></i>@RenSkinKCL
-        </a>
-      </li>
-      <li>
-      <a href="">
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-full tab-full">
+                    <p>
+                        <a href="https://twitter.com/RenSkinKCL">
+          <i class="fa fa-twitter" aria-hidden="true"></i>@RenSkinKCL</a>
+                        <a href="mailto:renaissanceskin@kcl.ac.uk?subject=Hello!">
           <i class="fa fa-envelope-o" aria-hidden="true"></i>renaissanceskin@kcl.ac.uk
-        </a>
-      </li>
-
-      <li>
-      King’s College London, Virginia Woolf Building, 22 Kingsway, WC2B 6LE
-      </li>
-      <!--<li>
-        Designed and developed by <a href="https://www.kdl.kcl.ac.uk/" title="King's Digital Lab"><strong>King's Digital Lab</strong></a>
-      </li>-->
-
-    </ul>
-
+                    </a>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-full tab-full">
+                    <p>
+                        King’s College London, Virginia Woolf Building, 22 Kingsway, WC2B 6LE
+                    </p>
+                    <p>
+                        Designed and developed by <a href="https://www.kdl.kcl.ac.uk/" title="King's Digital Lab"><strong>King's Digital Lab</strong></a>
+                    </p>
+                </div>
+            </div>
+        </div>

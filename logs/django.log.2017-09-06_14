@@ -1,0 +1,164 @@
+WARNING 2017-09-06 14:13:21,403 base 3272 140446448293632 Not Found: /favicon.ico
+WARNING 2017-09-06 14:13:21,408 basehttp 3272 140446448293632 "GET /favicon.ico HTTP/1.1" 404 3264
+WARNING 2017-09-06 14:13:21,424 base 3272 140446439900928 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-09-06 14:13:21,424 basehttp 3272 140446439900928 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3327
+WARNING 2017-09-06 14:13:21,444 base 3272 140446439900928 Not Found: /apple-touch-icon.png
+WARNING 2017-09-06 14:13:21,446 basehttp 3272 140446439900928 "GET /apple-touch-icon.png HTTP/1.1" 404 3291
+WARNING 2017-09-06 14:13:25,582 base 3272 140446439900928 Not Found: /auth/login/
+WARNING 2017-09-06 14:13:25,582 basehttp 3272 140446439900928 "GET /auth/login/ HTTP/1.1" 404 1699
+WARNING 2017-09-06 14:13:25,977 base 3272 140446439900928 Not Found: /about-us/
+WARNING 2017-09-06 14:13:25,978 basehttp 3272 140446439900928 "GET /about-us/ HTTP/1.1" 404 1695
+WARNING 2017-09-06 14:13:26,558 base 3272 140446439900928 Not Found: /about-us/
+WARNING 2017-09-06 14:13:26,559 basehttp 3272 140446439900928 "GET /about-us/ HTTP/1.1" 404 1695
+WARNING 2017-09-06 14:17:29,247 backend 3373 140492476729088 Caught LDAPError while authenticating vagrant: SERVER_DOWN({'info': 'Transport endpoint is not connected', 'errno': 107, 'desc': "Can't contact LDAP server"},)
+ERROR 2017-09-06 14:40:33,095 exception 3373 140492441036544 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 152, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 149, in get_parent
+    return self.find_template(parent, context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 129, in find_template
+    template_name, skip=history,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: 'block' tag with name 'meta_title' appears more than once
+ERROR 2017-09-06 14:40:33,226 basehttp 3373 140492441036544 "GET / HTTP/1.1" 500 174053
+WARNING 2017-09-06 14:40:47,218 basehttp 3373 140492449429248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 14:40:47,239 base 3373 140492466214656 Not Found: /img/wellcome-logo-white.svg
+WARNING 2017-09-06 14:40:47,241 basehttp 3373 140492466214656 "GET /img/wellcome-logo-white.svg HTTP/1.1" 404 3312
+WARNING 2017-09-06 14:40:47,240 base 3373 140492441036544 Not Found: /img/KCL-logo-white.svg
+WARNING 2017-09-06 14:40:47,245 basehttp 3373 140492441036544 "GET /img/KCL-logo-white.svg HTTP/1.1" 404 3297
+WARNING 2017-09-06 14:42:36,838 basehttp 3373 140492457821952 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 14:42:36,862 base 3373 140492466214656 Not Found: /img/wellcome-logo-white.svg
+WARNING 2017-09-06 14:42:36,864 basehttp 3373 140492466214656 "GET /img/wellcome-logo-white.svg HTTP/1.1" 404 3312
+WARNING 2017-09-06 14:42:36,863 base 3373 140492449429248 Not Found: /img/KCL-logo-white.svg
+WARNING 2017-09-06 14:42:36,866 basehttp 3373 140492449429248 "GET /img/KCL-logo-white.svg HTTP/1.1" 404 3297
+WARNING 2017-09-06 14:42:40,324 basehttp 3373 140492441036544 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 14:42:40,338 base 3373 140492466214656 Not Found: /img/wellcome-logo-white.svg
+WARNING 2017-09-06 14:42:40,340 basehttp 3373 140492466214656 "GET /img/wellcome-logo-white.svg HTTP/1.1" 404 3312
+WARNING 2017-09-06 14:42:40,350 base 3373 140492457821952 Not Found: /img/KCL-logo-white.svg
+WARNING 2017-09-06 14:42:40,351 basehttp 3373 140492457821952 "GET /img/KCL-logo-white.svg HTTP/1.1" 404 3297
+WARNING 2017-09-06 14:42:41,012 base 3373 140492457821952 Not Found: /favicon.ico
+WARNING 2017-09-06 14:42:41,013 basehttp 3373 140492457821952 "GET /favicon.ico HTTP/1.1" 404 3264
+WARNING 2017-09-06 14:42:41,012 base 3373 140492466214656 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-09-06 14:42:41,016 basehttp 3373 140492466214656 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3327
+WARNING 2017-09-06 14:42:41,038 base 3373 140492466214656 Not Found: /apple-touch-icon.png
+WARNING 2017-09-06 14:42:41,039 basehttp 3373 140492466214656 "GET /apple-touch-icon.png HTTP/1.1" 404 3291
+WARNING 2017-09-06 14:43:27,110 base 3373 140492466214656 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-09-06 14:43:27,111 basehttp 3373 140492466214656 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3327
+WARNING 2017-09-06 14:43:27,132 base 3373 140492466214656 Not Found: /apple-touch-icon.png
+WARNING 2017-09-06 14:43:27,133 basehttp 3373 140492466214656 "GET /apple-touch-icon.png HTTP/1.1" 404 3291
+WARNING 2017-09-06 14:43:27,153 base 3373 140492466214656 Not Found: /favicon.ico
+WARNING 2017-09-06 14:43:27,154 basehttp 3373 140492466214656 "GET /favicon.ico HTTP/1.1" 404 3264
+WARNING 2017-09-06 14:43:27,174 base 3373 140492466214656 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-09-06 14:43:27,175 basehttp 3373 140492466214656 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3327
+WARNING 2017-09-06 14:43:27,194 base 3373 140492466214656 Not Found: /apple-touch-icon.png
+WARNING 2017-09-06 14:43:27,195 basehttp 3373 140492466214656 "GET /apple-touch-icon.png HTTP/1.1" 404 3291
+WARNING 2017-09-06 14:43:27,215 base 3373 140492466214656 Not Found: /favicon.ico
+WARNING 2017-09-06 14:43:27,216 basehttp 3373 140492466214656 "GET /favicon.ico HTTP/1.1" 404 3264
+WARNING 2017-09-06 14:43:27,319 base 3373 140492466214656 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-09-06 14:43:27,320 basehttp 3373 140492466214656 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3327
+WARNING 2017-09-06 14:43:27,339 base 3373 140492466214656 Not Found: /apple-touch-icon.png
+WARNING 2017-09-06 14:43:27,340 basehttp 3373 140492466214656 "GET /apple-touch-icon.png HTTP/1.1" 404 3291
+WARNING 2017-09-06 14:43:27,360 base 3373 140492466214656 Not Found: /favicon.ico
+WARNING 2017-09-06 14:43:27,361 basehttp 3373 140492466214656 "GET /favicon.ico HTTP/1.1" 404 3264
+WARNING 2017-09-06 14:43:27,380 base 3373 140492466214656 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-09-06 14:43:27,381 basehttp 3373 140492466214656 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3327
+WARNING 2017-09-06 14:43:27,400 base 3373 140492466214656 Not Found: /apple-touch-icon.png
+WARNING 2017-09-06 14:43:27,401 basehttp 3373 140492466214656 "GET /apple-touch-icon.png HTTP/1.1" 404 3291
+WARNING 2017-09-06 14:43:27,421 base 3373 140492466214656 Not Found: /favicon.ico
+WARNING 2017-09-06 14:43:27,422 basehttp 3373 140492466214656 "GET /favicon.ico HTTP/1.1" 404 3264
+WARNING 2017-09-06 14:43:45,573 basehttp 3373 140492449429248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 14:43:45,605 base 3373 140492457821952 Not Found: /img/KCL-logo-white.svg
+WARNING 2017-09-06 14:43:45,609 basehttp 3373 140492457821952 "GET /img/KCL-logo-white.svg HTTP/1.1" 404 3297
+WARNING 2017-09-06 14:43:45,610 base 3373 140492441036544 Not Found: /img/wellcome-logo-white.svg
+WARNING 2017-09-06 14:43:45,612 basehttp 3373 140492441036544 "GET /img/wellcome-logo-white.svg HTTP/1.1" 404 3312
+WARNING 2017-09-06 14:43:46,302 base 3373 140492441036544 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-09-06 14:43:46,303 basehttp 3373 140492441036544 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3327
+WARNING 2017-09-06 14:43:46,338 base 3373 140492441036544 Not Found: /apple-touch-icon.png
+WARNING 2017-09-06 14:43:46,339 basehttp 3373 140492441036544 "GET /apple-touch-icon.png HTTP/1.1" 404 3291
+WARNING 2017-09-06 14:44:06,664 basehttp 3373 140492466214656 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 14:44:06,705 base 3373 140492457821952 Not Found: /img/wellcome-logo-white.svg
+WARNING 2017-09-06 14:44:06,706 base 3373 140492449429248 Not Found: /img/KCL-logo-white.svg
+WARNING 2017-09-06 14:44:06,710 basehttp 3373 140492457821952 "GET /img/wellcome-logo-white.svg HTTP/1.1" 404 3312
+WARNING 2017-09-06 14:44:06,710 basehttp 3373 140492449429248 "GET /img/KCL-logo-white.svg HTTP/1.1" 404 3297
+WARNING 2017-09-06 14:45:13,085 basehttp 3373 140492449429248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 14:45:13,122 base 3373 140492441036544 Not Found: /img/wellcome-logo-white.svg
+WARNING 2017-09-06 14:45:13,123 basehttp 3373 140492441036544 "GET /img/wellcome-logo-white.svg HTTP/1.1" 404 3312
+WARNING 2017-09-06 14:45:13,124 base 3373 140492466214656 Not Found: /img/KCL-logo-white.svg
+WARNING 2017-09-06 14:45:13,127 basehttp 3373 140492466214656 "GET /img/KCL-logo-white.svg HTTP/1.1" 404 3297
+WARNING 2017-09-06 14:45:40,694 basehttp 3373 140492457821952 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 14:45:40,713 base 3373 140492466214656 Not Found: /img/wellcome-logo-white.svg
+WARNING 2017-09-06 14:45:40,714 basehttp 3373 140492466214656 "GET /img/wellcome-logo-white.svg HTTP/1.1" 404 3312
+WARNING 2017-09-06 14:45:40,717 base 3373 140492441036544 Not Found: /img/KCL-logo-white.svg
+WARNING 2017-09-06 14:45:40,720 basehttp 3373 140492441036544 "GET /img/KCL-logo-white.svg HTTP/1.1" 404 3297
+WARNING 2017-09-06 14:47:11,786 basehttp 3373 140492457821952 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 14:47:11,801 base 3373 140492466214656 Not Found: /img/KCL-logo-white.svg
+WARNING 2017-09-06 14:47:11,802 basehttp 3373 140492466214656 "GET /img/KCL-logo-white.svg HTTP/1.1" 404 3297
+WARNING 2017-09-06 14:47:11,813 base 3373 140492449429248 Not Found: /img/wellcome-logo-white.svg
+WARNING 2017-09-06 14:47:11,814 basehttp 3373 140492449429248 "GET /img/wellcome-logo-white.svg HTTP/1.1" 404 3312
+WARNING 2017-09-06 14:47:31,017 basehttp 3373 140492441036544 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 14:47:31,043 base 3373 140492457821952 Not Found: /img/wellcome-logo-white.svg
+WARNING 2017-09-06 14:47:31,044 basehttp 3373 140492457821952 "GET /img/wellcome-logo-white.svg HTTP/1.1" 404 3312
+WARNING 2017-09-06 14:47:31,043 base 3373 140492466214656 Not Found: /img/KCL-logo-white.svg
+WARNING 2017-09-06 14:47:31,046 basehttp 3373 140492466214656 "GET /img/KCL-logo-white.svg HTTP/1.1" 404 3297
+WARNING 2017-09-06 14:47:31,882 basehttp 3373 140492449429248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 14:47:31,901 base 3373 140492457821952 Not Found: /img/wellcome-logo-white.svg
+WARNING 2017-09-06 14:47:31,903 basehttp 3373 140492457821952 "GET /img/wellcome-logo-white.svg HTTP/1.1" 404 3312
+WARNING 2017-09-06 14:47:31,902 base 3373 140492441036544 Not Found: /img/KCL-logo-white.svg
+WARNING 2017-09-06 14:47:31,907 basehttp 3373 140492441036544 "GET /img/KCL-logo-white.svg HTTP/1.1" 404 3297
+WARNING 2017-09-06 14:48:37,187 basehttp 3373 140492441036544 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 14:49:00,921 basehttp 3373 140492449429248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 14:49:10,784 basehttp 3373 140492466214656 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 14:49:59,854 basehttp 3373 140492449429248 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 14:50:22,444 basehttp 3373 140492441036544 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 14:50:26,095 base 3373 140492441036544 Not Found: /search/
+WARNING 2017-09-06 14:50:26,095 basehttp 3373 140492441036544 "GET /search/?q=hello HTTP/1.1" 404 1699
+WARNING 2017-09-06 15:00:24,782 basehttp 4099 139896915031808 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 15:00:24,800 basehttp 4099 139896915031808 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 15:00:26,449 basehttp 4099 139896898586368 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 15:00:54,395 base 4099 139896879687424 Not Found: /chapters.html
+WARNING 2017-09-06 15:00:54,395 basehttp 4099 139896879687424 "GET /chapters.html HTTP/1.1" 404 3378
+WARNING 2017-09-06 15:06:05,361 base 4099 139896879687424 Not Found: /chapters.html
+WARNING 2017-09-06 15:06:05,362 basehttp 4099 139896879687424 "GET /chapters.html HTTP/1.1" 404 3378
+WARNING 2017-09-06 15:06:08,854 basehttp 4099 139896898586368 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 15:46:54,782 basehttp 4099 139896898586368 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-09-06 15:50:30,176 basehttp 4099 139896888080128 "GET /static/js/config-built.js HTTP/1.1" 404 1781

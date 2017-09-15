@@ -96,6 +96,16 @@ def main_menu(context, root, current_page=None):
             'current_page': current_page, 'menu_pages': menu_pages}
 
 
+@register.inclusion_tag('cms/tags/sub_menu.html', takes_context=True)
+def sub_menu(context, root):
+    """Returns the sub menu items, the children of the root page. Only live
+    pages that have the show_in_menus setting on are returned."""
+    menu_pages = root.get_children().live().in_menu()
+
+    return {'request': context['request'], 'root': root,
+            'menu_pages': menu_pages}
+
+
 @register.inclusion_tag('cms/tags/footer_menu.html', takes_context=True)
 def footer_menu(context, root, current_page=None):
     """Returns the main menu items, the children of the root page. Only live

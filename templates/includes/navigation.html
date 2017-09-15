@@ -1,56 +1,16 @@
 {% load staticfiles cms_tags %}
-
-<!--<div class="row">
-  <div class="large-12 columns">
-    <div class="title-bar" data-responsive-toggle="top-menu" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle></button>
-      <div class="title-bar-title">Menu</div>
-    </div>
-
-    <div class="top-bar" id="top-menu">
-      <div class="top-bar-left">
-
-        {% block main_menu %}
+    <h1><a href="/">Renaissance Skin</a></h1>
+    <a href="#nav" title="Show navigation">☰</a>
+    <a class="hide-nav" href="#" title="Hide navigation">×</a>
+    <ul>
         {% get_site_root as site_root %}
+
         {% main_menu root=site_root current_page=self %}
-        {% endblock %}
-
-      </div>
-      <div class="top-bar-right">
-      </div>
-    </div>
-  </div>
-</div>-->
-
-
-  <h1>Renaissance Skin</h1>
-  <a href="#nav" title="Show navigation">&#9776</a> 
-  <a class="hide-nav" href="#" title="Hide navigation">&times;</a>
-      <ul>
-    <li class="active"><a href="">Home</a></li>
-    <li> <a href="">Chapters</a>
-    <!--<ul>
-        <li><a href="">Defining</a></li>
-        <li><a href="">Protecting</a></li>
-        <li><a href="">Breaking</a></li>
-        <li><a href="">Erupting</a></li>
-        <li><a href="">Excrements</a></li>
-        <li><a href="">Cataloguing</a></li>
-      </ul></li>-->
-
-        <li> <a href="">Updates</a></li>
-    <li> <a href=""><span>Events</span></a>
-          <ul>
-        <li><a href="">Current</a></li>
-        <li><a href="">Past</a></li>
-        <li><a href="">All</a></li>
-      </ul>
+        <li>
+            <form action="/search" method="get">
+                <input class="search expandright" id="searchright" type="search" name="q" {% if query_string %} value="{{query_string}}" {% endif %} placeholder="Search the site">
+                <label class="button searchbutton" for="searchright">Search</label>
+            </form>
+            </div>
         </li>
-    <li><a href="">About</a></li>
-    <li><a href="">Contact</a></li>
-    <li><a href="">Search</a></li>
-
-  </ul>
-
-
-
+    </ul>
