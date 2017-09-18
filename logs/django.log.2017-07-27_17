@@ -1,0 +1,232 @@
+WARNING 2017-07-27 17:02:22,992 basehttp 24640 140511808259840 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:02:23,002 basehttp 24640 140511808259840 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:04:16,171 basehttp 24640 140511808259840 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:13:08,223 base 24640 140511789700864 Not Found: /index/
+WARNING 2017-07-27 17:13:08,223 basehttp 24640 140511789700864 "GET /index/ HTTP/1.1" 404 1689
+WARNING 2017-07-27 17:13:18,758 basehttp 24640 140511756130048 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:13:18,770 basehttp 24640 140511781308160 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:13:35,958 basehttp 24640 140511764522752 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:19:03,604 basehttp 24640 140511808259840 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:19:03,616 basehttp 24640 140511772915456 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:19:15,991 basehttp 24640 140511808259840 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:19:16,001 basehttp 24640 140511808259840 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:20:40,464 basehttp 24640 140511772915456 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:20:40,476 basehttp 24640 140511808259840 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+ERROR 2017-07-27 17:21:07,339 exception 24640 140511808259840 Internal Server Error: /chapters/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 103, in render_compressed
+    rendered_output = compressor.output(mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 49, in output
+    ret.append(subnode.output(*args, **kwargs))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 51, in output
+    return super(CssCompressor, self).output(*args, **kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 292, in output
+    output = '\n'.join(self.filter_input(forced))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 232, in filter_input
+    for hunk in self.hunks(forced):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 204, in hunks
+    precompiled, value = self.precompile(value, **options)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 273, in precompile
+    return True, filter.input(**kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django_libsass.py", line 140, in input
+    source_comments=SOURCE_COMMENTS)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django_libsass.py", line 125, in compile
+    output = sass.compile(**kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/sass.py", line 643, in compile
+    raise CompileError(v)
+CompileError: Error: Invalid CSS after "}": expected "}", was ""
+        on line 735 of assets/scss/main.scss
+>> }
+   -^
+
+ERROR 2017-07-27 17:21:07,485 basehttp 24640 140511808259840 "GET /chapters/ HTTP/1.1" 500 209104
+ERROR 2017-07-27 17:21:24,039 exception 24640 140511808259840 Internal Server Error: /chapters/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 103, in render_compressed
+    rendered_output = compressor.output(mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 49, in output
+    ret.append(subnode.output(*args, **kwargs))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 51, in output
+    return super(CssCompressor, self).output(*args, **kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 292, in output
+    output = '\n'.join(self.filter_input(forced))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 232, in filter_input
+    for hunk in self.hunks(forced):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 204, in hunks
+    precompiled, value = self.precompile(value, **options)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 273, in precompile
+    return True, filter.input(**kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django_libsass.py", line 140, in input
+    source_comments=SOURCE_COMMENTS)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django_libsass.py", line 125, in compile
+    output = sass.compile(**kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/sass.py", line 643, in compile
+    raise CompileError(v)
+CompileError: Error: Invalid CSS after "}": expected "}", was ""
+        on line 735 of assets/scss/main.scss
+>> }
+   -^
+
+ERROR 2017-07-27 17:21:24,156 basehttp 24640 140511808259840 "GET /chapters/ HTTP/1.1" 500 209104
+ERROR 2017-07-27 17:21:41,242 exception 24640 140511808259840 Internal Server Error: /about/
+Traceback (most recent call last):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/test/utils.py", line 94, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 127, in render
+    return self.render_compressed(context, self.kind, self.mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/templatetags/compress.py", line 103, in render_compressed
+    rendered_output = compressor.output(mode, forced=forced)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 49, in output
+    ret.append(subnode.output(*args, **kwargs))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/css.py", line 51, in output
+    return super(CssCompressor, self).output(*args, **kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 292, in output
+    output = '\n'.join(self.filter_input(forced))
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 232, in filter_input
+    for hunk in self.hunks(forced):
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 204, in hunks
+    precompiled, value = self.precompile(value, **options)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/compressor/base.py", line 273, in precompile
+    return True, filter.input(**kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django_libsass.py", line 140, in input
+    source_comments=SOURCE_COMMENTS)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/django_libsass.py", line 125, in compile
+    output = sass.compile(**kwargs)
+  File "/home/vagrant/venv/local/lib/python2.7/site-packages/sass.py", line 643, in compile
+    raise CompileError(v)
+CompileError: Error: Invalid CSS after "}": expected "}", was ""
+        on line 735 of assets/scss/main.scss
+>> }
+   -^
+
+ERROR 2017-07-27 17:21:41,402 basehttp 24640 140511808259840 "GET /about/ HTTP/1.1" 500 205413
+WARNING 2017-07-27 17:21:49,835 basehttp 24640 140511772915456 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:21:49,852 basehttp 24640 140511808259840 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:21:57,556 basehttp 24640 140511789700864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:21:57,569 basehttp 24640 140511756130048 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:22:02,583 basehttp 24640 140511756130048 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:22:02,598 basehttp 24640 140511772915456 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:23:22,320 basehttp 24640 140511789700864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:23:22,331 basehttp 24640 140511808259840 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:28:42,353 basehttp 24640 140511789700864 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:28:42,361 basehttp 24640 140511808259840 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:29:47,591 basehttp 24640 140511808259840 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:29:47,601 basehttp 24640 140511772915456 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:30:58,171 basehttp 24640 140511764522752 "GET /static/js/config-built.js HTTP/1.1" 404 1781
+WARNING 2017-07-27 17:30:58,181 basehttp 24640 140511789700864 "GET /static/js/config-built.js HTTP/1.1" 404 1781

@@ -1,36 +1,62 @@
-/*  @import 'settings'; /*  copy the _settings file from the vendor scss folder to the project one */
+/* Renskin main scss */
 
-/*  @import '../vendor/foundation-sites/scss/foundation';
 
-/* @import '../vendor/motion-ui/motion-ui';
+/* Table of contents
+ *
+ * 1. ----- Webfonts
+ * 2. ----- Mixins and Variables
+ * 3. ----- Grid
+ * 4. ----- Base style overrides
+ * 5. ----- Typography/Links
+ * 6. ----- Background
+ * 7. ----- Menu
+ * 8. ----- Search
+ * 9. ----- Sidebar Nav
+ * 10. ---- Image Overlay
+ * 11. ---- Image Crop
+ * 12. ---- Content
+ * 13. ---- Modal
+ * 14. ---- Footer
+*/
 
-/** Your custom scss here **/
 
-/**@include foundation-everything;**/
+/* 1. Webfonts  */
 
-@import url("https://fonts.googleapis.com/css?family=Abel|Didact+Gothic|Dosis|News+Cycle|Open+Sans+Condensed:300|Oswald:300,400|Quattrocento");
+@import url("https://fonts.googleapis.com/css?family=Abel");
 
-@mixin calc($prop, $val) {
-    @each $pre in -webkit-, -moz-, -o- {
-        #{$prop}: $pre + calc(#{$val});
+
+
+/* 2. Mixins  */
+
+@mixin calc($prop,
+$val) {
+    @each $pre in -webkit-,
+    -moz-,
+    -o- {
+        #{$prop}: $pre+calc(#{$val});
     }
 
     #{$prop}: calc(#{$val});
 }
 
-@mixin translate3d($x, $y, $z) {
+@mixin translate3d($x,
+$y,
+$z) {
     -webkit-transform: translate3d($x, $y, $z);
     -moz-transform: translate3d($x, $y, $z);
     -o-transform: translate3d($x, $y, $z);
     transform: translate3d($x, $y, $z);
 }
 
-/** 
- * ===================================================================
- * grid
- *
- * ------------------------------------------------------------------- 
- */
+$gold:#cdb586;
+;
+$black:#000;
+$white:#fff;
+
+
+
+
+/* Grid */
 
 .row {
     width: 94%;
@@ -50,10 +76,8 @@
 
 .row .row {
     width: auto;
-    max-width: none;
-    margin-left: -20px;
-    margin-right: -20px;
-    padding: 2% 0;
+    max-width: none; //margin-left: -20px;
+    //margin-right: -20px;
 }
 
 [class*="col-"],
@@ -61,7 +85,7 @@
     float: left;
 }
 
-[class*="col-"] + [class*="col-"]:last-child {
+[class*="col-"]+[class*="col-"]:last-child {
     float: right;
 }
 
@@ -125,124 +149,92 @@
     width: 100%;
 }
 
-/**
- * small screens
- * --------------------------------------------------------------- 
- */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width:1024px) {
     .row .row {
-        margin-left: -18px;
-        margin-right: -18px;
+        //margin-left: -18px;
+        //margin-right: -18px;
     }
-
     [class*="col-"] {
         padding: 0 18px;
     }
 }
 
-/**
- * tablets
- * --------------------------------------------------------------- 
- */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width:768px) {
     .row {
         width: auto;
         padding-left: 30px;
         padding-right: 30px;
+        margin-top: 80px;
     }
-
     .row .row {
-        padding: 2% 0;
-        margin-left: -15px;
-        margin-right: -15px;
+        padding-left: 0;
+        padding-right: 0; //margin-left: -15px;
+        //margin-right: -15px;
     }
-
     [class*="col-"] {
         padding: 0 15px;
     }
-
     .tab-1-4 {
         width: 25%;
     }
-
     .tab-1-3 {
         width: 33.33333%;
     }
-
     .tab-1-2 {
         width: 50%;
     }
-
     .tab-2-3 {
         width: 66.66667%;
     }
-
     .tab-3-4 {
         width: 75%;
     }
-
     .tab-full {
         width: 100%;
     }
 }
 
-/**
- * large mobile devices
- * --------------------------------------------------------------- 
- */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width:600px) {
     .row {
         padding-left: 25px;
         padding-right: 25px;
     }
-
     .row .row {
         margin-left: -10px;
         margin-right: -10px;
     }
-
     [class*="col-"] {
         padding: 0 10px;
     }
-
     .mob-1-4 {
         width: 25%;
     }
-
     .mob-1-2 {
         width: 50%;
     }
-
     .mob-3-4 {
         width: 75%;
     }
-
     .mob-full {
         width: 100%;
     }
 }
 
-/**
- * small mobile devices
- * --------------------------------------------------------------- 
- */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width:400px) {
     .row {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 0;
+        padding-right: 0;
     }
-
     .row .row {
         padding-left: 0;
         padding-right: 0;
         margin-left: 0;
         margin-right: 0;
     }
-
     [class*="col-"] {
         width: 100% !important;
         float: none !important;
@@ -251,15 +243,13 @@
         margin-right: 0;
         padding: 0;
     }
-
-    [class*="col-"] + [class*="col-"]:last-child {
+    [class*="col-"]+[class*="col-"]:last-child {
         float: none;
     }
 }
 
-/* End grid */
 
-/* General */
+/* Base style overrides */
 
 html {
     -webkit-box-sizing: border-box;
@@ -278,8 +268,21 @@ html {
 body {
     font-family: 'Abel', sans-serif;
     margin: 0 auto;
-    background: black;
+    background: $black;
 }
+
+@media screen and (max-width: 800px) {
+    body {
+        margin: 0;
+    }
+
+    html {
+        font-size: 75%;
+    }
+}
+
+
+/* Typography/Links */
 
 a {
     text-decoration: none;
@@ -291,23 +294,22 @@ a {
 }
 
 h1 {
-    color: #cdb586;
+    color: $gold;
 }
 
-@media screen and (max-width: 800px) {
-    body {
-        margin: 0;
-    }
-
-    html {
-        font-size: 75%;
-
-        /* 12 */
-    }
+img {
+    width: 100%;
 }
+
+img:hover {
+    opacity: 0.7;
+}
+
+
+/* Background*/
 
 #renskin-background:before {
-    background: #000 url("https://lostandtaken.com/wp-content/uploads/edd/2016/02/brown-abstract-bubble-texture-5-780x520.jpg") (center / cover);
+    background: $black url("https://lostandtaken.com/wp-content/uploads/edd/2016/02/brown-abstract-bubble-texture-5-780x520.jpg") (center / cover);
     content: '';
     position: fixed;
     left: 0;
@@ -318,53 +320,8 @@ h1 {
     opacity: 0.3;
 }
 
-/*#background {
-    position: relative;
-    background: rgba(0, 0, 0, 0.5);
-    overflow: hidden;
 
-    @include translate3d(0, 0, 0);
-
-    &:before {
-        background: #000 url("https://lostandtaken.com/wp-content/uploads/edd/2016/02/brown-abstract-bubble-texture-5-780x520.jpg") (center / cover);
-        content: '';
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: -1;
-        opacity: 1;
-    }
-}*/
-
-/*#background-overlay {
-    position: relative;
-    background: rgba(255, 255, 255, 0.93);
-    overflow: hidden;
-
-    &:before {
-        background: #000 url("https://lostandtaken.com/wp-content/uploads/edd/2016/02/brown-abstract-bubble-texture-5-780x520.jpg") (center / cover);
-        content: '';
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 100vh;
-        z-index: -1;
-        opacity: 1;
-    }
-}*/
-
-img {
-    width: 100%;
-}
-
-img:hover {
-    opacity: 0.7;
-}
-
-/* Menu */
+/* Menu*/
 
 #nav {
     width: 100%;
@@ -373,7 +330,7 @@ img:hover {
     font-size: 0.8rem;
 
     h1 {
-        color: #cdb586;
+        color: $gold;
         font-size: 2rem;
         padding: 2rem 0 0 0;
         margin: 0;
@@ -381,7 +338,7 @@ img:hover {
         font-weight: bold;
     }
 
-    > a {
+    >a {
         display: none;
     }
 
@@ -390,7 +347,7 @@ img:hover {
         list-style-type: none;
 
         a {
-            color: #fff;
+            color: $white;
             display: block;
         }
     }
@@ -400,7 +357,7 @@ img:hover {
         height: 0;
         border: 0.313em solid transparent;
         border-bottom: none;
-        border-top-color: #cdb586;
+        border-top-color: $gold;
         content: '';
         vertical-align: middle;
         display: inline-block;
@@ -409,21 +366,21 @@ img:hover {
     }
 }
 
-/* first level */
-
-#nav > ul {
+//first level
+#nav>ul {
     height: 3.75em;
     margin: 0 0 0 -40px;
 
-    > li {
+
+    >li {
         height: 100%;
         display: inline-block;
 
         &.active {
-            border-bottom: 0.3rem solid #cdb586;
+            border-bottom: 0.2rem solid $gold;
         }
 
-        > a {
+        >a {
             height: 100%;
             font-size: 1.2em;
             line-height: 3em;
@@ -435,33 +392,32 @@ img:hover {
     }
 }
 
-#nav > ul > li:hover > a,
-#nav > ul:not(:hover) > a {
+#nav>ul>li:hover>a,
+#nav>ul:not(:hover)>a {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* second level */
-
+//second level
 #nav li ul {
-    //display: none;
     position: absolute;
     top: 100%;
     z-index: 1;
     opacity: 0;
-
     li {
         margin-left: -40px;
     }
 
     a {
         font-size: 0.85rem;
-        padding: 0.2rem;
+        padding:0.5rem 0.2rem;
+        color: #cdb586;
     }
 }
 
 #nav li ul li a:hover,
 #nav li ul:not(:hover) li.active a {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: $black;
 }
 
 #nav li:hover ul {
@@ -481,12 +437,11 @@ img:hover {
 @media screen and (max-width: 768px) {
     #nav {
         top: 0;
-        z-index: 1;
+        z-index: 2;
         background: rgba(0, 0, 0, 1);
         width: 100%;
         height: 50px;
         position: fixed;
-
         h1 {
             text-align: left;
             width: 50%;
@@ -494,8 +449,7 @@ img:hover {
             padding: 1rem 0 0 1rem;
             font-size: 1.7rem;
         }
-
-        > a {
+        >a {
             width: 100%;
             height: 4.125rem;
             text-align: right;
@@ -510,21 +464,19 @@ img:hover {
         }
     }
 
-    #nav:not(:target) > a:first-of-type,
-    #nav:target > a:last-of-type {
+    #nav:not(:target)>a:first-of-type,
+    #nav:target>a:last-of-type {
         display: block;
-        color: #cdb586;
-    }
-
-    /* first level */
-    #nav > ul {
+        color: $gold;
+    } //first level
+    #nav>ul {
         height: auto;
         display: none;
         position: absolute;
         width: 100%;
         margin: 0;
 
-        > li {
+        >li {
             width: 100%;
             margin-left: -40px;
 
@@ -533,35 +485,34 @@ img:hover {
                 background: rgba(205, 181, 134, 0.8);
             }
 
-            > a {
+            >a {
                 height: auto;
                 text-align: left;
                 padding: 1rem;
 
-                /* 20 (24) */
                 transition: none;
                 background-color: rgba(255, 255, 255, 0);
             }
         }
     }
 
-    #nav:not(:target) > ul {
+    #nav:not(:target)>ul {
         display: block;
         background-color: rgba(0, 0, 0, 0.8);
         transition: 1s ease;
         top: -700%;
     }
 
-    #nav:target > ul {
+    #nav:target>ul {
         display: block;
         background-color: rgba(0, 0, 0, 0.8);
         transition: 1s ease;
         top: 50px;
     }
 
-    #nav > ul > li:not(:last-child) > a {}
+    #nav>ul>li:not(:last-child)>a {}
 
-    /* second level */
+    //second level
     #nav li {
         &:hover ul a {
             transition: none;
@@ -570,8 +521,6 @@ img:hover {
         ul {
             position: static;
             padding: 1.25em;
-
-            /* 20 */
             padding-top: 0;
             opacity: 1;
             display: none;
@@ -591,14 +540,12 @@ img:hover {
 @media screen and (max-width: 400px) {
     #nav {
         h1 {
-            font-size: 1rem;
+            font-size: 1.5rem;
         }
     }
 }
 
-/* Menu End */
 
-/* Search */
 
 /* Search */
 
@@ -627,7 +574,7 @@ img:hover {
     -o-transition-duration: 0.4s;
 }
 
-.search:focus + .searchbutton {
+.search:focus+.searchbutton {
     transition-duration: 0.4s;
     -moz-transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
@@ -638,15 +585,14 @@ img:hover {
 
 .search {
     position: absolute;
-
-    /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
     background-color: white;
     outline: none;
     border: none;
     padding: 0;
     width: 0;
 
-    @include calc(height, "100% + 2px");
+    @include calc(height,
+    "100% + 2px");
 
     z-index: 10;
     transition-duration: 0.1s;
@@ -662,8 +608,6 @@ img:hover {
 .expandright {
     left: auto;
     right: 73px;
-
-    /* Button width-1px */
 }
 
 .expandright:focus {
@@ -680,7 +624,7 @@ input:focus {
     appearance: none;
     float: left;
     width: 0;
-    background: #fff;
+    background: $white;
     color: #6A5D4F;
     font-weight: 600;
     padding: 0px;
@@ -699,7 +643,8 @@ input:focus {
     }
 
     .search {
-        @include calc(height, "100%");
+        @include calc(height,
+        "100%");
     }
 
     .expandright {
@@ -707,153 +652,168 @@ input:focus {
         left: 61px;
     }
 
-    .search:hover, .search:focus {
+    .search:hover,
+    .search:focus {
         width: 85%;
         outline: none;
     }
 }
 
-/* End Search */
 
-/* Sidebar Nav */
+/* Sidebar nav */
 
 .dot {
-    display: inline-block;
-    width: 40px;
-    height: 25px;
-    z-index: 999;
-    content: '';
-    color: transparent;
-    font-size: 14px;
-    line-height: 10px;
-    vertical-align: middle;
-    margin: 10px 0 10px 0;
-    font-weight: 300;
-}
-
-.dot span {
-    position: relative;
-    top: -30px;
-    left: -120px;
-    float: left;
-    width: 100px;
-    line-height: 1rem;
-    color: black;
-    display: none;
-}
-
-.dot:hover span {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.dot img {
-    width: 50px;
-    height: 50px;
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.6);
-    -ms-transform: scale(0.6);
-    -o-transform: scale(0.6);
-    transform: scale(0.6);
-    opacity: 1;
-    transition: 0.8s ease;
-}
-
-.dot:hover img {
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    -o-transform: scale(0.8);
-    transform: scale(0.8);
-    opacity: 1;
+    display: inline-block; //width: 50px;
+    //height: 25px;
+    //z-index: 999;
+    content: ''; //color: transparent;
+    //font-size: 14px;
+    //line-height: 10px;
+    //vertical-align: middle;
+    //margin: 10px 0 10px 0;
+    //font-weight: 300;
+    img {
+        width: 50px;
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.6);
+        -ms-transform: scale(0.6);
+        -o-transform: scale(0.6);
+        transform: scale(0.6);
+        &:hover {
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            transform: scale(0.8);
+            transition: 0.5s ease;
+            opacity: 1;
+            border: 0.1rem solid $gold;
+        }
+    }
+    span {
+        display: none;
+        position: relative;
+        top: -30px;
+        left: -120px;
+        float: left;
+        width: 100px;
+        line-height: 1rem;
+    }
 }
 
 .sidebar-nav {
-    padding: 0 0px;
+    background-color: $black;
     position: fixed;
-    top: 30%;
-    text-align: right;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    /* IE 9 */
+    -webkit-transform: translateY(-50%);
+    /* Safari */
+    right: 0;
+    z-index: 1; //transform: translate(0, -50%);
+    //-align: right;
+    //-webkit-box-shadow: 2px 4px 14px 0px rgba(0, 0, 0, 0.3);
+    //-moz-box-shadow: 2px 4px 14px 0px rgba(0, 0, 0, 0.3);
+    //box-shadow: 2px 4px 14px 0px rgba(0, 0, 0, 0.3);
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
 }
 
-.sidebar-nav ul li a {
-    text-decoration: none;
+.name-active {
+    span {
+        color: $black;
+        text-align: right;
+        border-bottom: 0.3rem solid $gold;
+    }
+    img {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        border: 1px solid $gold;
+    }
 }
 
-.sidebar-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
 
-.name-active span {
-    text-align: right;
-    border-bottom: 1px solid #cdb586;
-}
-
-.name-active img {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-    border: 2px solid #000;
-}
-
-/* PAGE CONTENT */
-
-.content {
+//pagecontent
+.sidebar-content {
     width: 100%;
     text-align: justify;
-}
+    display: block;
+    section {
+        padding: 20px 0;
+        border-bottom: 1px solid $gold;
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        a img {
+            width: 50%;
+            float: left;
+            margin: 0 2rem 1rem 0;
+            display: block;
+        }
+    }
 
-section {
-    padding: 0 0 20px 0;
-}
+    section:last-child {
+        margin: 0 0 100vh 0;
+        border-bottom: 1px solid $gold;
+    }
 
-section:last-child {
-    padding: 0 0 100vh 0;
-}
+    .title {
+        font-size: 1.2rem;
+        color: $black;
+        line-height: 2rem;
+        font-weight: bold;
+        // display: block; 
+    }
 
-.title {
-    font-size: 24px;
-    color: rgba(255, 255, 255, 0.3);
-    text-transform: uppercase;
-    padding: 0 0 0px 0;
-}
-
-p {
-    margin: 0;
-    padding: 0px 0 0px 0;
-}
-
-/* PAGE CONTENT */
-
-.verticalnav-content {
-    width: 100%;
-    text-align: justify;
-}
-
-section {
-    padding: 0 0 20px 0;
-}
-
-section:last-child {
-    padding: 0 0 100vh 0;
-}
-
-/* End Vertical Nav */
-
-/* Chapter */
-#chapter {
-    margin-bottom: 5rem;
+    p {
+        margin: 0;
+        padding: 0px 0 0px 0;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    #chapter {
-        margin-top: 5rem;
-        margin-bottom: 0;
+    .sidebar-nav {
+        display: none;
+        top: initial;
+        bottom: 0;
+        width: 100%;
+        transform: inherit;
+        -ms-transform: inherit;
+        /* IE 9 */
+        -webkit-transform: inherit;
+        /* Safari */
+        ul {
+            text-align: center;
+            li {
+                display: inline-block;
+            }
+        }
     }
 }
+
+@media screen and (max-width: 400px) {
+    .sidebar-content {
+        section {
+            a img {
+                width: 100%;
+                margin: 0 1rem 1rem 0;
+                display: block;
+            }
+        }
+    }
+}
+
+
+
+
+
 
 /* Image overlays */
 
@@ -922,10 +882,11 @@ section:last-child {
     }
 }
 
+
 @media screen and (max-width: 400px) {
     .item {
         position: relative;
-        margin: 2% 0;
+        margin: 4% 0;
 
         .image {
             overflow: hidden;
@@ -941,7 +902,7 @@ section:last-child {
 
         .overlay {
             position: absolute;
-            margin: 0 50px;
+            margin: 0 20px;
             transition: 0.8s ease;
             overflow: hidden;
             opacity: 0;
@@ -958,7 +919,6 @@ section:last-child {
         }
 
         h3 {
-            color: black;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -971,18 +931,37 @@ section:last-child {
     }
 }
 
-/* About */
-#about {
-    margin-bottom: 5rem;
+// Image Crop
+.imgcrop {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-@media screen and (max-width: 768px) {
-    #about {
-        margin-top: 5rem;
-        margin-bottom: 0;
-    }
+.imgcrop::before {
+    content: "";
+    display: block;
+    padding: 33%;
 }
 
+.imgcrop img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+/* Content */
+        h2 {
+            color: $gold;
+            margin: 0 0 40px 0;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
 .content-wrapper {
     margin: 1rem 0;
 
@@ -993,7 +972,8 @@ section:last-child {
     .content {
         position: relative;
 
-        @include calc(width, "100% - 70px");
+        @include calc(width,
+        "100% - 70px");
 
         margin: 0 auto 0 auto;
         background: rgba(255, 255, 255, 0.4);
@@ -1007,14 +987,19 @@ section:last-child {
         }
 
         h2 {
-            color: #cdb586;
+            color: $gold;
             margin: 0 0 40px 0;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
         }
 
         h4 {
-            margin: 0 0 1rem 0;
+            margin: 0 0 0.5rem 0;
             font-size: 1.5rem;
+        }
+        .meta.info{
+            background: black;
+            color: $gold;
+            padding: 0.5rem;
         }
 
         &::after {
@@ -1024,47 +1009,52 @@ section:last-child {
             left: 0;
             content: attr(data-title);
 
-            @include calc(width, "100% + 70px");
+            @include calc(width,
+            "100% + 70px");
 
             margin: 65px -35px;
 
-            @include calc(height, "100% - 130px");
+            @include calc(height,
+            "100% - 130px");
 
             background: rgba(255, 255, 255, 0.8);
             z-index: -1;
         }
+        ul{
+            list-style-type: none;
+            margin-left:-40px;
+        }
+    }       
+}
+
+@media screen and (max-width: 400px) {
+    .content-wrapper {
+        margin: 6rem auto 0;
+        .content-padding {
+            padding: 5px 10px 70px 10px;
+        }
+        .content {
+            position: relative;
+            @include calc(width,
+            "100% - 20px");
+            h2 {
+                margin: 0 0 20px 0;
+            }
+            &::after {
+                @include calc(width,
+                "100% + 20px");
+                margin: 35px -10px;
+                @include calc(height,
+                "100% - 70px");
+            }
+        }
     }
 }
 
-/*Chapter Index*/
-.faux-modal {
-    padding-bottom: 5rem;
 
-    a.overlay-close {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        font-size: 2rem;
-        color: grey;
-    }
+/* Modal */
 
-    a.item-prev,
-    a.item-next {
-        color: gray;
-        position: absolute;
-        bottom: 2.5rem;
-    }
-
-    .item-prev {
-        left: 40px;
-    }
-
-    .item-next {
-        right: 40px;
-    }
-}
-
-.expand {
+.about-expand {
     text-align: center;
     width: 0px;
     height: 0px;
@@ -1077,7 +1067,7 @@ section:last-child {
     text-align: center;
     background: rgba(255, 255, 255, 0.95);
 
-    > div {
+    >div {
         position: relative;
 
         /* color: rgba(27,54,81,0.8); */
@@ -1099,7 +1089,6 @@ section:last-child {
                 display: block;
                 line-height: 6px;
                 font-size: 16px;
-                font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
                 font-style: italic;
             }
         }
@@ -1113,7 +1102,6 @@ section:last-child {
             float: left;
             width: 260px;
             font-size: 16px;
-            font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
             font-style: italic;
         }
     }
@@ -1122,7 +1110,7 @@ section:last-child {
         /* height: 100%; For Opera max-height does not seem to work */
         position: relative;
         opacity: 0;
-        filter: alpha(opacity = 0);
+        filter: alpha(opacity=0);
 
         /* internet explorer */
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
@@ -1151,7 +1139,7 @@ section:last-child {
         height: 23px;
         overflow: hidden;
         opacity: 0;
-        filter: alpha(opacity = 0);
+        filter: alpha(opacity=0);
 
         /* internet explorer */
     }
@@ -1168,7 +1156,7 @@ section:last-child {
         height: 23px;
         overflow: hidden;
         opacity: 0;
-        filter: alpha(opacity = 0);
+        filter: alpha(opacity=0);
 
         /* internet explorer */
     }
@@ -1184,7 +1172,7 @@ section:last-child {
         a.item-prev,
         a.item-next {
             opacity: 1;
-            filter: alpha(opacity = 99);
+            filter: alpha(opacity=99);
 
             /* internet explorer */
             -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
@@ -1202,7 +1190,7 @@ section:last-child {
         a.expand-close {
             font-size: 2rem;
             opacity: 1;
-            filter: alpha(opacity = 99);
+            filter: alpha(opacity=99);
 
             /* internet explorer */
             -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
@@ -1220,6 +1208,7 @@ section:last-child {
     }
 }
 
+
 /* 
   100% Height for Opera as the max-height seems to be ignored, not optimal for large screens 
   http://bricss.net/post/11230266445/css-hack-to-target-opera 
@@ -1230,7 +1219,7 @@ x:-o-prefocus,
     height: 100%;
 }
 
-.about-expand {
+.modal-expand {
     text-align: center;
     width: 0px;
     height: 0px;
@@ -1247,7 +1236,7 @@ x:-o-prefocus,
         /* height: 100%; For Opera max-height does not seem to work */
         position: relative;
         opacity: 0;
-        filter: alpha(opacity = 0);
+        filter: alpha(opacity=0);
 
         /* internet explorer */
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
@@ -1270,7 +1259,7 @@ x:-o-prefocus,
         right: 10%;
         font-size: 15px;
         overflow: hidden;
-        filter: alpha(opacity = 0);
+        filter: alpha(opacity=0);
 
         /* internet explorer */
     }
@@ -1309,7 +1298,7 @@ x:-o-prefocus,
         a.item-prev,
         a.item-next {
             opacity: 1;
-            filter: alpha(opacity = 99);
+            filter: alpha(opacity=99);
 
             /* internet explorer */
             -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
@@ -1327,7 +1316,7 @@ x:-o-prefocus,
         a.expand-close {
             font-size: 2rem;
             opacity: 1;
-            filter: alpha(opacity = 99);
+            filter: alpha(opacity=99);
 
             /* internet explorer */
             -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
@@ -1339,6 +1328,8 @@ x:-o-prefocus,
         }
     }
 }
+
+
 
 /* Footer */
 
@@ -1358,7 +1349,7 @@ footer {
     }
 
     a {
-        color: #cdb586;
+        color: $gold;
         padding: 1rem 0;
 
         &:hover {
@@ -1371,23 +1362,8 @@ footer {
     }
 }
 
-.imgcrop {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.imgcrop::before {
-    content: "";
-    display: block;
-    padding: 33%;
-}
-
-.imgcrop img {
-    display: block;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
+@media screen and (max-width: 400px) {
+    footer {
+        margin-top: 3rem;
+    }
 }
