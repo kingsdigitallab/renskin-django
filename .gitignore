@@ -101,3 +101,5 @@ renskin/settings/local.py
 
 *.log
 static/CACHE/
+static/media/
+logs/
