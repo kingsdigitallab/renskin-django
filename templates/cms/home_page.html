@@ -24,6 +24,7 @@
                     <div class="content-padding">
                         <h2>Events and Updates</h2>
 
+
                         {% for event in self.get_events %}
                         <div class="row">
                             <div class="col-1-3">
@@ -44,11 +45,19 @@
                                     {% if event.time_end %} - {{ event.time_end|date:'H:i' }}{% endif %}
                                     </time>
                                 </div>
-                            
+    
                                 {% include "cms/includes/streamfield_firstonly.html" with blocks=event.body %}
+
+
                             </div>
                         </div>
                         {% endfor %}
+
+                        {% if self.get_events and self.get_news %}
+                        <hr>
+                        {% endif %}
+
+                        {% include "cms/includes/news_preview.html" with pages=self.get_news %}
                     </div>
                 </div>
             </div>
@@ -58,9 +67,7 @@
                 <div class="content">
                     <div class="content-padding">
                         <h2>Twitter</h2>
-                        <p>
-                            I'm leaving this blank - I cannot find a twitter api version that looks in-line with the design, so it may need some tweaking. - bm
-                        </p>
+                        <a class="twitter-timeline" data-height="300" data-dnt="true" data-theme="dark" data-link-color="#FAB81E" href="https://twitter.com/RenSkinKCL">Tweets by RenSkinKCL</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
             </div>

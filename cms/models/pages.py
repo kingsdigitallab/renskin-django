@@ -135,6 +135,10 @@ class HomePage(Page, WithStreamField):
             'date_from')
         return events
 
+    def get_news(self):
+        news = NewsPost.objects.live().order_by('-date')[:2]
+        return news
+
 
 HomePage.content_panels = [
     FieldPanel('title', classname='full title'),
