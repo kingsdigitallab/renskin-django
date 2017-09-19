@@ -307,6 +307,8 @@ img:hover {
 }
 
 
+
+
 /* Background*/
 
 #renskin-background:before {
@@ -695,7 +697,7 @@ input:focus {
             transform: scale(0.8);
             transition: 0.5s ease;
             opacity: 1;
-            border: 0.1rem solid $gold;
+            border: 2px solid $gold;
         }
     }
     span {
@@ -728,6 +730,11 @@ input:focus {
         list-style-type: none;
         margin: 0;
         padding: 0;
+    }
+    a {
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 
@@ -965,11 +972,13 @@ input:focus {
 
 
 /* Content */
-        h2 {
-            color: $gold;
-            margin: 0 0 40px 0;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-        }
+
+h2 {
+    color: $gold;
+    margin: 0 0 40px 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
 .content-wrapper {
     margin: 1rem 0;
 
@@ -999,7 +1008,9 @@ input:focus {
             margin: 0 0 40px 0;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
         }
-
+        h3{
+            margin-top:0;
+        }
         h4 {
             margin: 0 0 0.5rem 0;
             font-size: 1.5rem;
@@ -1035,6 +1046,35 @@ input:focus {
     }       
 }
 
+
+//Images
+img.richtext-image{
+&.left{
+    width: 50%;
+    float: left;
+    margin: 0 1rem 1rem 0;
+}
+&.right{
+    width: 50%;
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+}
+
+.img-wrapper{
+    &.float-left{
+        width: 50%;
+    float: left;
+    }
+        &.float-right{
+    width: 50%;
+    float: right;
+    }
+    &.float-mid{
+    width: 50%;
+     margin: 0 auto;
+    }
+}
 @media screen and (max-width: 400px) {
     .content-wrapper {
         margin: 6rem auto 0;

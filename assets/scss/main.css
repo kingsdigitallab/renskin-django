@@ -204,7 +204,8 @@ h1 {
   color: #cdb586; }
 
 img {
-  width: 100%; }
+  width: 100%;
+  height: auto; }
 
 img:hover {
   opacity: 0.7; }
@@ -501,7 +502,7 @@ input:focus {
       transform: scale(0.8);
       transition: 0.5s ease;
       opacity: 1;
-      border: 0.1rem solid #cdb586; }
+      border: 2px solid #cdb586; }
   .dot span {
     display: none;
     position: relative;
@@ -526,6 +527,8 @@ input:focus {
     list-style-type: none;
     margin: 0;
     padding: 0; }
+  .sidebar-nav a:hover {
+    opacity: 1; }
 
 .name-active span {
   color: #000;
@@ -719,6 +722,8 @@ h2 {
       color: #cdb586;
       margin: 0 0 40px 0;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+    .content-wrapper .content h3 {
+      margin-top: 0; }
     .content-wrapper .content h4 {
       margin: 0 0 0.5rem 0;
       font-size: 1.5rem; }
@@ -746,6 +751,25 @@ h2 {
     .content-wrapper .content ul {
       list-style-type: none;
       margin-left: -40px; }
+
+img.richtext-image.left {
+  width: 50%;
+  float: left;
+  margin: 0 1rem 1rem 0; }
+img.richtext-image.right {
+  width: 50%;
+  float: right;
+  margin: 0 0 1rem 1rem; }
+
+.img-wrapper.float-left {
+  width: 50%;
+  float: left; }
+.img-wrapper.float-right {
+  width: 50%;
+  float: right; }
+.img-wrapper.float-mid {
+  width: 50%;
+  margin: 0 auto; }
 
 @media screen and (max-width: 400px) {
   .content-wrapper {
