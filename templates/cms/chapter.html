@@ -3,7 +3,7 @@
 <div class="sidebar-nav">
     <ul>
         {% for p in self.get_children %}
-        <li><a href="#image{{p.id}}" class="dot">{% image p.specific.image width-400 %} <span>{{ p.title }}</span></a></li>
+        <li><a href="#image{{p.id}}" class="dot">{% image p.specific.image original %} <span>{{ p.title }}</span></a></li>
         {% endfor %}
     </ul>
 </div>
@@ -15,7 +15,7 @@
                 <div class="sidebar-content">
                     <h2>{{ self.title }}</h2> 
                     {% for p in self.get_children %}
-                    <section>
+                    <section id="image{{p.id}}">
                     <span class="title"></span>
                     <a href="#image{{p.id}}">{% image p.specific.image width-400 %}</a>
                     <a href="#image{{p.id}}"></a>

@@ -316,7 +316,7 @@ class EventIndexPage(RoutablePageMixin, Page, WithStreamField):
         index.SearchField('body'),
     ]
 
-    subpage_types = ['Event', 'PastEventIndexPage']
+    subpage_types = ['Event', 'PastEventIndexPage', 'AllEventIndexPage']
 
     @property
     def events(self):
@@ -371,6 +371,41 @@ class PastEventIndexPage(RoutablePageMixin, Page, WithStreamField):
         today = date.today()
         events = Event.objects.live().filter(date_from__lt=today).order_by(
             '-date_from')
+        return events
+
+    @route(r'^$')
+    def all_events(self, request):
+        events = self.events
+        return render(request, self.get_template(request),
+                      {'self': self, 'events': _paginate(request, events)})
+
+    @route(r'^tag/(?P<tag>[\w\- ]+)/$')
+    def tag(self, request, tag=None):
+        if not tag:
+            # Invalid tag filter
+            logger.error('Invalid tag filter')
+            return self.all_posts(request)
+
+        posts = self.posts.filter(tags__name=tag)
+
+        return render(
+            request, self.get_template(request), {
+                'self': self, 'events': _paginate(request, posts),
+                'filter_type': 'tag', 'filter': tag
+            }
+        )
+
+
+class AllEventIndexPage(RoutablePageMixin, Page, WithStreamField):
+    search_fields = Page.search_fields + [
+        index.SearchField('body'),
+    ]
+
+    subpage_types = []
+
+    @property
+    def events(self):
+        events = Event.objects.live().order_by('-date_from')
         return events
 
     @route(r'^$')

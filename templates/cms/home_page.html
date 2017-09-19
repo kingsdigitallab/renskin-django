@@ -7,13 +7,13 @@
         {% for chapter in self.get_chapters %}
         <div class="item col-1-3 tab-1-2 mob-full">
             <a href="{% pageurl chapter %}">
-            <div class="imgcrop">
+                <div class="imgcrop">
                     {% image chapter.get_children.all.0.specific.image original %}
-                    </div>
-                    <div class="overlay">
-                        <h3>{{ chapter.title }}</h3>
-                    </div>
-                    </a>
+                </div>
+                <div class="overlay">
+                    <h3>{{ chapter.title }}</h3>
+                </div>
+            </a>
         </div>
         {% endfor %}
     </div>
@@ -27,7 +27,9 @@
                         {% for event in self.get_events %}
                         <div class="row">
                             <div class="col-1-3">
-                                {% image event.specific.image width-400 %}
+                            <div class="imgcrop">
+                                {% image event.specific.image original %}
+                            </div>
                             </div>
                             <div class="col-2-3">
                                 <h4>{{ event.title }}</h4>
@@ -43,7 +45,7 @@
                                     </time>
                                 </div>
                             
-                                {% include "cms/includes/streamfield.html" with blocks=event.body %}
+                                {% include "cms/includes/streamfield_firstonly.html" with blocks=event.body %}
                             </div>
                         </div>
                         {% endfor %}

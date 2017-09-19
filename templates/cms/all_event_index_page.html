@@ -1,15 +1,14 @@
-{% extends "base.html" %}
-
-{% block meta_title %}{{ self.title }}{% endblock %}
+{% extends "cms/base.html" %}
 
 {% block main %}
+
 <div class="row">
     <div class="content-wrapper">
         <div class="content">
             <div class="content-padding">
                 <h2>{{ self.title }}</h2>
                 
-                {% include "cms/includes/streamfield.html" with blocks=self.body %}
+                {% include "cms/includes/event_index_page_children.html" with events=self.events %}
                
             </div>
         </div>
