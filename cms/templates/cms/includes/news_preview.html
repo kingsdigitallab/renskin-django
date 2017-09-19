@@ -1,28 +1,5 @@
 {% load cms_tags wagtailimages_tags wagtailcore_tags wagtailroutablepage_tags %}
 
-{% for event in events %}
-
-<div class="row">
-
-    <div class="col-2-3 mob-full">
-        
-            <h3><a href="{% pageurl page %}">{{ page.title }}</a><</h3>
-            <div class="meta info">
-                        <i class="fa fa-clock-o"></i>
-                        <time datetime="{{ page.specific.date }}">
-                    {{ page.specific.date|date:'j b Y' }}
-                        </time>
-
-                </div>
-        
-                <p>{{ page.search_description }}</p>
-
-    </div>
-</div>
-
-{% endfor %}
-
-<!--
 <div class="row news-block small-up-1 medium-up-3" data-equalizer data-equalize-by-row="true" data-equalize-on="medium">
     {% for page in pages %}
     <div class="column column-block">
@@ -47,10 +24,9 @@
                      | <span class="disqus-comment-count" data-disqus-identifier="{{ page.id }}">Comments</span>
                     {% endif %}
                 </p>
-                <p>{{ page.search_description }}</p>
+                {% include "cms/includes/streamfield_firstonly.html" with blocks=page.specific.body %}
             </div>
         </div>
     </div>
     {% endfor %}
 </div>
--->

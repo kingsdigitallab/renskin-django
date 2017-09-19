@@ -36,6 +36,38 @@ def _paginate(request, items):
     return items
 
 
+class PersonIndexPage(Page, WithStreamField):
+    subpage_types = ['Person', ]
+
+
+PersonIndexPage.content_panels = [
+    FieldPanel('title', classname='full title'),
+    StreamFieldPanel('body'),
+
+]
+
+PersonIndexPage.promote_panels = Page.promote_panels
+
+
+class Person(Page, WithStreamField):
+    search_fields = Page.search_fields + [
+    ]
+    image = models.ForeignKey(
+        'wagtailimages.Image',
+        on_delete=models.PROTECT,
+    )
+    subpage_types = ['ImagePage', ]
+
+
+Person.content_panels = [
+    FieldPanel('title', classname='full title'),
+    ImageChooserPanel('image'),
+    StreamFieldPanel('body'),
+]
+
+Person.promote_panels = Page.promote_panels
+
+
 class ChapterIndexPage(Page):
     subpage_types = ['Chapter', ]
 
@@ -90,7 +122,7 @@ class HomePage(Page, WithStreamField):
     subpage_types = [
         'BlogIndexPage', 'EventIndexPage', 'IndexPage',
         'NewsIndexPage', 'PastEventIndexPage', 'RichTextPage',
-        'ChapterIndexPage'
+        'ChapterIndexPage', 'PersonIndexPage'
     ]
 
     def get_chapters(self):
@@ -102,6 +134,10 @@ class HomePage(Page, WithStreamField):
         events = Event.objects.live().filter(date_from__gte=today).order_by(
             'date_from')
         return events
+
+    def get_news(self):
+        news = NewsPost.objects.live().order_by('-date')[:2]
+        return news
 
 
 HomePage.content_panels = [
