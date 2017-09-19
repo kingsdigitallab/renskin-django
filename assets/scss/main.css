@@ -701,11 +701,14 @@ h2 {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
 
 .content-wrapper {
-  margin: 1rem 0; }
+  margin: 1rem 0;
+  float: left; }
   .content-wrapper .content-padding {
-    padding: 15px 25px 70px 25px; }
+    padding: 15px 25px 70px 25px;
+    float: left; }
   .content-wrapper .content {
     position: relative;
+    float: left;
     width: -webkit-calc(100%);
     width: -moz-calc(100%);
     width: -o-calc(100%);

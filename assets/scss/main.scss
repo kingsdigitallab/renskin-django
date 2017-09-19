@@ -981,14 +981,16 @@ h2 {
 
 .content-wrapper {
     margin: 1rem 0;
+    float:left;
 
     .content-padding {
         padding: 15px 25px 70px 25px;
+        float:left;
     }
 
     .content {
         position: relative;
-
+        float:left;
         @include calc(width,
         "100%");
 
