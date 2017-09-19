@@ -347,6 +347,8 @@ img:hover {
       #nav > ul > li.active {
         border: none;
         background: rgba(205, 181, 134, 0.8); }
+        #nav > ul > li.active ul li a {
+          color: #000; }
       #nav > ul > li > a {
         height: auto;
         text-align: left;
@@ -701,10 +703,10 @@ h2 {
     padding: 15px 25px 70px 25px; }
   .content-wrapper .content {
     position: relative;
-    width: -webkit-calc(100% - 70px);
-    width: -moz-calc(100% - 70px);
-    width: -o-calc(100% - 70px);
-    width: calc(100% - 70px);
+    width: -webkit-calc(100%);
+    width: -moz-calc(100%);
+    width: -o-calc(100%);
+    width: calc(100%);
     margin: 0 auto 0 auto;
     background: rgba(255, 255, 255, 0.4);
     -webkit-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
@@ -721,7 +723,7 @@ h2 {
       margin: 0 0 0.5rem 0;
       font-size: 1.5rem; }
     .content-wrapper .content .meta.info {
-      background: black;
+      background: rgba(0, 0, 0, 0.7);
       color: #cdb586;
       padding: 0.5rem; }
     .content-wrapper .content::after {
@@ -730,11 +732,11 @@ h2 {
       top: 0;
       left: 0;
       content: attr(data-title);
-      width: -webkit-calc(100% + 70px);
-      width: -moz-calc(100% + 70px);
-      width: -o-calc(100% + 70px);
-      width: calc(100% + 70px);
-      margin: 65px -35px;
+      width: -webkit-calc(100% + 30px);
+      width: -moz-calc(100% + 30px);
+      width: -o-calc(100% + 30px);
+      width: calc(100% + 30px);
+      margin: 65px -15px;
       height: -webkit-calc(100% - 130px);
       height: -moz-calc(100% - 130px);
       height: -o-calc(100% - 130px);

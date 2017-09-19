@@ -7,44 +7,45 @@
         {% endfor %}
     </ul>
 </div>
-<!-- /sidebar -->
-<div class="row col-eleven tab-full">
-    <div class="content-wrapper">
-        <div class="content">
-            <div class="content-padding">
-                <div class="sidebar-content">
-                    <h2>{{ self.title }}</h2> 
-                    {% for p in self.get_children %}
-                    <section id="image{{p.id}}">
-                    <span class="title"></span>
-                    <a href="#image{{p.id}}">{% image p.specific.image width-400 %}</a>
-                    <a href="#image{{p.id}}"></a>
-                    <h3>{{ p.title }}</h3> <p>{% include "cms/includes/streamfield.html" with blocks=p.specific.body %}</p>
+<
+<div class="row">
+  <div class="col-eleven tab-full">
+      <div class="content-wrapper">
+          <div class="content">
+              <div class="content-padding">
+                  <div class="sidebar-content">
+                      <h2>{{ self.title }}</h2> 
+                      {% for p in self.get_children %}
+                      <section>
+                      <span class="title"></span>
+                      <a href="#image{{p.id}}">{% image p.specific.image original %}</a>
+                      <a href="#image{{p.id}}"></a>
+                      <h3>{{ p.title }}</h3> <p>{% include "cms/includes/streamfield.html" with blocks=p.specific.body %}</p>
 
 
-                
-                <div class="modal-expand" id="image{{p.id}}">
-                    <div class="row">
-                        <div class="col-full"><a href="#image{{p.id}}">{% image p.specific.image original %}</a>
-                        </div>
-                        <div class="col-full">
-                            <h3>{{ p.title }}</h3> {% include "cms/includes/streamfield.html" with blocks=p.specific.body %}
-                        </div>
-                    </div>
-                    <hr />
-                    <a href="#image-2" class="item-prev"><span>&#12296;</span>Previous</a> <a href="#image-" class="item-next">Next<span>&#12297;</span></a> <a href="#page" class="expand-close">&#9587;</a>
-                </div>
-                
-                    
-                
-                {% endfor %}
-                <!-- /content -->
-                  </section>
-              </div>  
-                <!-- /container -->
-            </div>
-        </div>
-    </div>
-</div>
+                  
+                  <div class="modal-expand" id="image{{p.id}}">
+                      <div class="row">
+                          <div class="col-full"><a href="#image{{p.id}}">{% image p.specific.image original %}</a>
+                          </div>
+                          <div class="col-full">
+                              <h3>{{ p.title }}</h3> {% include "cms/includes/streamfield.html" with blocks=p.specific.body %}
+                          </div>
+                      </div>
+                      <hr />
+                      <a href="#image-2" class="item-prev"><span>&#12296;</span>Previous</a> <a href="#image-" class="item-next">Next<span>&#12297;</span></a> <a href="#page" class="expand-close">&#9587;</a>
+                  </div>
+                  
+                      
+                  
+                  {% endfor %}
+                  <!-- /content -->
+                    </section>
+                </div>  
+                  <!-- /container -->
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
 {% endblock %}

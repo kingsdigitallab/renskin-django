@@ -483,6 +483,13 @@ img:hover {
             &.active {
                 border: none;
                 background: rgba(205, 181, 134, 0.8);
+                ul{ //second level
+                    li{
+                        a{
+                            color:$black;
+                        }    
+                    }
+                }
             }
 
             >a {
@@ -973,7 +980,7 @@ input:focus {
         position: relative;
 
         @include calc(width,
-        "100% - 70px");
+        "100%");
 
         margin: 0 auto 0 auto;
         background: rgba(255, 255, 255, 0.4);
@@ -997,7 +1004,7 @@ input:focus {
             font-size: 1.5rem;
         }
         .meta.info{
-            background: black;
+            background: rgba(0,0,0,0.7);
             color: $gold;
             padding: 0.5rem;
         }
@@ -1010,9 +1017,9 @@ input:focus {
             content: attr(data-title);
 
             @include calc(width,
-            "100% + 70px");
+            "100% + 30px");
 
-            margin: 65px -35px;
+            margin: 65px -15px;
 
             @include calc(height,
             "100% - 130px");
