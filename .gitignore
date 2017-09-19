@@ -103,3 +103,5 @@ renskin/settings/local.py
 static/CACHE/
 static/media/
 logs/
+logs/django.log.2017-07-27_17
+logs/django.log.2017-07-27_17
