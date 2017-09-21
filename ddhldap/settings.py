@@ -43,7 +43,7 @@ AUTH_LDAP_USER_FLAGS_BY_GROUP = {
 AUTH_LDAP_PROFILE_FLAGS_BY_GROUP = {}
 
 # This is the default, but I like to be explicit
-AUTH_LDAP_ALWAYS_UPDATE_USER = True
+AUTH_LDAP_ALWAYS_UPDATE_USER = False
 
 # Cache group memberships for an hour to minimize LDAP traffic
 AUTH_LDAP_CACHE_GROUPS = True
