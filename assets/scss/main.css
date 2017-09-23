@@ -7,17 +7,18 @@
  * 4. ----- Base style overrides
  * 5. ----- Typography/Links
  * 6. ----- Background
- * 7. ----- Menu
- * 8. ----- Search
- * 9. ----- Sidebar Nav
- * 10. ---- Image Overlay
- * 11. ---- Image Crop
- * 12. ---- Content
- * 13. ---- Modal
- * 14. ---- Footer
+ * 7. ----- Logo
+ * 8. ----- Menu
+ * 9. ----- Search
+ * 10. ----- Sidebar Nav
+ * 11. ---- Image Overlay
+ * 12. ---- Image Crop
+ * 13. ---- Content
+ * 15. ---- Modal
+ * 16. ---- Footer
 */
 /* 1. Webfonts  */
-@import url("https://fonts.googleapis.com/css?family=Abel");
+@import url("https://fonts.googleapis.com/css?family=Alegreya");
 /* 2. Mixins  */
 /* Grid */
 .row {
@@ -183,7 +184,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  font-family: 'Abel', sans-serif;
+  font-family: 'Alegreya', serif;
   margin: 0 auto;
   background: #000; }
 
@@ -200,9 +201,6 @@ a {
   a:hover {
     opacity: 0.7; }
 
-h1 {
-  color: #cdb586; }
-
 img {
   width: 100%;
   height: auto; }
@@ -210,7 +208,7 @@ img {
 img:hover {
   opacity: 0.7; }
 
-/* Background*/
+/* Background */
 #renskin-background:before {
   background: #000 url("https://lostandtaken.com/wp-content/uploads/edd/2016/02/brown-abstract-bubble-texture-5-780x520.jpg") center/cover;
   content: '';
@@ -222,6 +220,63 @@ img:hover {
   z-index: -1;
   opacity: 0.3; }
 
+/* Logo */
+.logo {
+  position: relative;
+  width: 22rem;
+  margin: 2rem auto 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem; }
+  .logo:after {
+    position: absolute;
+    top: 0;
+    content: attr(data-title);
+    width: -webkit-calc(100% + 1rem);
+    width: -moz-calc(100% + 1rem);
+    width: -o-calc(100% + 1rem);
+    width: calc(100% + 1rem);
+    margin: 0.5rem -11.5rem;
+    height: -webkit-calc(100% - 1rem);
+    height: -moz-calc(100% - 1rem);
+    height: -o-calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    background: rgba(255, 255, 255, 0.2);
+    z-index: -1; }
+  .logo h1 a {
+    color: #cdb586;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    text-align: center; }
+
+@media screen and (max-width: 768px) {
+  .logo {
+    position: relative;
+    width: 25rem;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
+    padding: 0; }
+    .logo:after {
+      position: absolute;
+      top: 0;
+      content: attr(data-title);
+      width: -webkit-calc(100% + 1rem);
+      width: -moz-calc(100% + 1rem);
+      width: -o-calc(100% + 1rem);
+      width: calc(100% + 1rem);
+      margin: 0.5rem -11.5rem;
+      height: -webkit-calc(100% - 1rem);
+      height: -moz-calc(100% - 1rem);
+      height: -o-calc(100% - 1rem);
+      height: calc(100% - 1rem);
+      background: rgba(255, 255, 255, 0.2);
+      z-index: -1; }
+    .logo h1 a {
+      text-align: left; } }
 /* Menu*/
 #nav {
   width: 100%;
@@ -231,7 +286,7 @@ img:hover {
   #nav h1 {
     color: #cdb586;
     font-size: 2rem;
-    padding: 2rem 0 0 0;
+    padding: 0;
     margin: 0;
     text-transform: uppercase;
     font-weight: bold; }
@@ -656,7 +711,6 @@ input:focus {
       margin: 0 20px;
       transition: 0.8s ease;
       overflow: hidden;
-      opacity: 0;
       z-index: 1;
       text-align: center;
       bottom: 0;
