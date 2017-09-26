@@ -188,9 +188,16 @@ body {
   background: #000; }
 
 .viewport {
-  width: 90%;
-  height: 100vh;
+  width: 100%;
+  height: 80vh;
   margin: 0 auto; }
+
+.viewport .imgcrop {
+  max-height: 200px; }
+  .viewport .imgcrop:before {
+    content: "";
+    display: block;
+    padding: 15vh; }
 
 @media screen and (max-width: 800px) {
   body {
@@ -214,8 +221,9 @@ img:hover {
 
 h2 {
   color: #cdb586;
-  margin: 0 0 40px 0;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+  margin: 0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  padding: 2vh 2vw; }
 
 /* Background */
 #renskin-background:before {
@@ -232,7 +240,7 @@ h2 {
 /* Menu*/
 #nav {
   width: 100%;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 3vh auto;
   text-align: center;
   font-size: 0.8rem; }
   #nav .logo {
@@ -648,7 +656,7 @@ input:focus {
 
 .item {
   position: relative;
-  padding: 2%; }
+  padding: 2vh 2vw; }
   .item .image {
     overflow: hidden; }
   .item img {
