@@ -269,6 +269,26 @@ body {
     background: $black;
 }
 
+.viewport {
+    width:100%;
+    height: 100vh;
+    margin:0 auto;
+}
+
+.viewport .imgcrop{
+    max-height:200px;
+
+    &:before{
+    content: "";
+    display: block;
+    padding: 15vh;
+    }
+    //width:auto;
+    //height:auto;
+    //max-height:10vh;
+}
+
+
 @media screen and (max-width: 800px) {
     body {
         margin: 0;
