@@ -799,6 +799,29 @@ input:focus {
 
 
 //pagecontent
+.page-content{
+    a.button{
+    display: inline-block;
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0 50px;
+    background: $gold; 
+    border:2px solid $gold;
+    &:hover{
+    background: transparent;
+    border:2px solid $gold;
+       
+    }
+    }
+}
 .sidebar-content {
     width: 100%;
     text-align: justify;

@@ -8,7 +8,8 @@
     <title>{% block meta_title %}{% endblock %} | Renaissance Skin</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-
+    <link rel="shortcut icon" href="{% static 'images/favicon-96x96.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon-96x96.png' %}" type="image/x-icon">
     {% compress css %}
     {# SCSS compilation relies on django compressor #}
     <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/main.scss' %}">
