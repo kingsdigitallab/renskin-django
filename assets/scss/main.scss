@@ -803,6 +803,7 @@ input:focus {
     a.button{
     display: inline-block;
     font-size: 1rem;
+    line-height: 2.5rem;
     text-align: center;
     color: black;
     text-decoration: none;
@@ -814,10 +815,10 @@ input:focus {
     user-select: none;
     padding: 0 50px;
     background: $gold; 
-    border:2px solid $gold;
+    border:3px solid $gold;
     &:hover{
     background: transparent;
-    border:2px solid $gold;
+    border:3px solid $gold;
        
     }
     }
