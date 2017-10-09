@@ -350,6 +350,6 @@ ITEMS_PER_PAGE = 10
 # -----------------------------------------------------------------------------
 
 # Google Analytics ID
-GA_ID = ''
+GA_ID = 'UA-107591427-1'
 
 WAGTAILSEARCH_RESULTS_TEMPLATE = 'cms/search_results.html'  # Really wagtail?
