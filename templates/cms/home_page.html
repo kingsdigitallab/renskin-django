@@ -30,12 +30,7 @@
 
                         {% for event in self.get_events %}
                         <div class="row">
-                            <div class="col-1-3">
-                            <div class="imgcrop">
-                                {% image event.specific.image original %}
-                            </div>
-                            </div>
-                            <div class="col-2-3">
+                            <div class="col-3-3">
                                 <h4>{{ event.title }}</h4>
                                 
 
@@ -60,7 +55,17 @@
                         <hr>
                         {% endif %}
 
-                        {% include "cms/includes/news_preview.html" with pages=self.get_news %}
+                        {% for n in self.get_news %}
+                        <div class="row">
+                            <div class="col-3-3">
+                                <h4>{{ n.title }}</h4>
+    
+                                {% include "cms/includes/streamfield_firstonly.html" with blocks=n.body %}
+
+
+                            </div>
+                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
