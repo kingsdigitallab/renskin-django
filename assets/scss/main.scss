@@ -3,7 +3,9 @@
 
 /* Table of contents
  *
- * 1. ----- Webfonts
+ * 1. ----- Imports
+ *    --------- FontAwesome
+ *    --------- Webfonts
  * 2. ----- Mixins and Variables
  * 3. ----- Grid
  * 4. ----- Base style overrides
@@ -17,13 +19,16 @@
  * 12. ---- Content
  * 13. ---- Modal
  * 14. ---- Footer
+ * 15. ---- Cookie disclaimer
 */
 
+/* 1. Imports  */
 
-/* 1. Webfonts  */
+/* FontAwesome */
+@import 'font-awesome';
 
-@import url('https://fonts.googleapis.com/css?family=Alegreya');
-
+/* Webfonts */
+@import url("https://fonts.googleapis.com/css?family=Alegreya");
 
 /* 2. Mixins  */
 
@@ -52,8 +57,6 @@ $black:#000;
 $white:#fff;
 
 
-
-
 /* Grid */
 
 .row {
@@ -74,7 +77,8 @@ $white:#fff;
 
 .row .row {
     width: auto;
-    max-width: none; //margin-left: -20px;
+    max-width: none;
+    //margin-left: -20px;
     //margin-right: -20px;
 }
 
@@ -168,7 +172,8 @@ $white:#fff;
     }
     .row .row {
         padding-left: 0;
-        padding-right: 0; //margin-left: -15px;
+        padding-right: 0;
+        //margin-left: -15px;
         //margin-right: -15px;
     }
     [class*="col-"] {
@@ -282,6 +287,10 @@ body {
     display: block;
     padding: 15vh;
     }
+}
+
+.hide {
+    display: none;
 }
 
 
@@ -1476,5 +1485,53 @@ footer {
 @media screen and (max-width: 400px) {
     footer {
         margin-top: 3rem;
+    }
+}
+
+/* 15. Cookie disclaimer */
+
+
+.cookies-box {
+    background: rgba(0, 0, 0, .8);
+    bottom: 0;
+    color: white;
+    margin: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+
+    a {
+        margin-bottom: 0;
+        &.button {
+            text-decoration: underline;
+        }
+    }
+
+    a,
+    button,
+    .button {
+        border: 0;
+        color: white;
+    }
+    
+    button {
+        background: #fff;
+        height: 3rem;
+        line-height: 1rem;
+        margin-top: .5rem;
+        &:hover {
+            background: #444 !important;
+        }
+    }
+
+    p {
+        margin: 1rem auto .5rem;
+    }
+
+    .small {
+        text-decoration: underline;
+        &:hover {
+            color: red;
+        }
     }
 }

@@ -1,7 +1,9 @@
 /* Renskin main scss */
 /* Table of contents
  *
- * 1. ----- Webfonts
+ * 1. ----- Imports
+ *    --------- FontAwesome
+ *    --------- Webfonts
  * 2. ----- Mixins and Variables
  * 3. ----- Grid
  * 4. ----- Base style overrides
@@ -16,9 +18,16 @@
  * 13. ---- Modal
  * 14. ---- Footer
 */
-/* 1. Webfonts  */
+/* 1. Imports  */
+
+/* FontAwesome */
+@import 'font-awesome';
+
+/* Webfonts */
 @import url("https://fonts.googleapis.com/css?family=Alegreya");
+
 /* 2. Mixins  */
+
 /* Grid */
 .row {
   width: 94%;
