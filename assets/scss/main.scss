@@ -19,6 +19,7 @@
  * 12. ---- Content
  * 13. ---- Modal
  * 14. ---- Footer
+ * 15. ---- Cookie disclaimer
 */
 
 /* 1. Imports  */
@@ -286,6 +287,10 @@ body {
     display: block;
     padding: 15vh;
     }
+}
+
+.hide {
+    display: none;
 }
 
 
@@ -1480,5 +1485,53 @@ footer {
 @media screen and (max-width: 400px) {
     footer {
         margin-top: 3rem;
+    }
+}
+
+/* 15. Cookie disclaimer */
+
+
+.cookies-box {
+    background: rgba(0, 0, 0, .8);
+    bottom: 0;
+    color: white;
+    margin: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+
+    a {
+        margin-bottom: 0;
+        &.button {
+            text-decoration: underline;
+        }
+    }
+
+    a,
+    button,
+    .button {
+        border: 0;
+        color: white;
+    }
+    
+    button {
+        background: #fff;
+        height: 3rem;
+        line-height: 1rem;
+        margin-top: .5rem;
+        &:hover {
+            background: #444 !important;
+        }
+    }
+
+    p {
+        margin: 1rem auto .5rem;
+    }
+
+    .small {
+        text-decoration: underline;
+        &:hover {
+            color: red;
+        }
     }
 }
