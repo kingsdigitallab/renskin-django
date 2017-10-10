@@ -1,32 +1,26 @@
 {% load cms_tags wagtailimages_tags wagtailcore_tags wagtailroutablepage_tags %}
 
-<div class="row news-block small-up-1 medium-up-3" data-equalizer data-equalize-by-row="true" data-equalize-on="medium">
-    {% for page in pages %}
-    <div class="column column-block">
-        <div class="card news" data-equalizer-watch>
-            {% if page.specific.feed_image %}
-            {% image page.specific.feed_image max-600x300 as tmp_image %}
-            <div class="image-container">
-                <a href="{% pageurl page %}">
-                    <img src="{{ tmp_image.url }}" alt="{{ tmp_image.alt }}">
-                </a>
-            </div>
-            {% endif %}
 
-            <div class="card-section">
-                <h3><a href="{% pageurl page %}">{{ page.title }}</a></h3>
-                <p class="byline newspost">
-                    <time datetime="{{ page.specific.date }}">
-                    {{ page.specific.date|date:'j b Y' }}</time>
+{% for page in pages %}
 
-                    {% are_comments_allowed as allow_comments %}
-                    {% if allow_comments %}
-                     | <span class="disqus-comment-count" data-disqus-identifier="{{ page.id }}">Comments</span>
-                    {% endif %}
-                </p>
-                {% include "cms/includes/streamfield_firstonly_notrunc.html" with blocks=page.specific.body %}
-            </div>
-        </div>
+<div class="row">
+
+    {% if page.specific.feed_image %}
+    <div class="col-1-3 mob-full">
+        <a href="{% pageurl page %}">
+            {% image page.specific.feed_image original %}
+        </a>
     </div>
-    {% endfor %}
+
+    {% endif %}
+    <div class="col-2-3 mob-full">
+        
+            <h3><a href="{% pageurl page %}">{{ page.title }}</a></h3>
+        
+            {% include "cms/includes/streamfield_firstonly_notrunc.html" with blocks=page.specific.body %}
+
+    </div>
 </div>
+
+{% endfor %}
+
