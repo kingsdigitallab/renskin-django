@@ -6,11 +6,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block meta_title %}{% endblock %} | Renaissance Skin</title>
+
+    {% comment %}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    {% endcomment %}
+
     <!-- favicons -->
     {% include 'includes/favicon.html' %}
     <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+
     {% compress css %}
     {# SCSS compilation relies on django compressor #}
     <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/main.scss' %}">
@@ -30,26 +35,32 @@
     {% endblock %}
 
     {% block title %}{% endblock %}
+
     {% block main %}
 
     {% endblock %}
  
-    
     <footer>
     {% block footer %}
     {% include 'includes/footer.html' %}
     {% endblock %}
     </footer>
 
+    <!-- define requirejs config settings. -->
 
-  <!-- define requirejs config settings. -->
-  <script type="text/javascript">
-    {% include 'includes/config.js' %}
-  </script>
-  {% require_module 'config' %}
-   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        {% include 'includes/config.js' %}
+    </script>
+
+    {% require_module 'config' %}
+
+    {% comment %}
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    {% endcomment %}
+
     <script src="{% static 'js/main.js' %}"></script>
-  {% block footer_scripts %}{% endblock %}
+    
+    {% block footer_scripts %}{% endblock %}
 </body>
 
 </html>

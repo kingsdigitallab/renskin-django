@@ -3,7 +3,9 @@
 
 /* Table of contents
  *
- * 1. ----- Webfonts
+ * 1. ----- Imports
+ *    --------- FontAwesome
+ *    --------- Webfonts
  * 2. ----- Mixins and Variables
  * 3. ----- Grid
  * 4. ----- Base style overrides
@@ -19,11 +21,13 @@
  * 14. ---- Footer
 */
 
+/* 1. Imports  */
 
-/* 1. Webfonts  */
+/* FontAwesome */
+@import 'font-awesome';
 
-@import url('https://fonts.googleapis.com/css?family=Alegreya');
-
+/* Webfonts */
+@import url("https://fonts.googleapis.com/css?family=Alegreya");
 
 /* 2. Mixins  */
 
@@ -52,8 +56,6 @@ $black:#000;
 $white:#fff;
 
 
-
-
 /* Grid */
 
 .row {
@@ -74,7 +76,8 @@ $white:#fff;
 
 .row .row {
     width: auto;
-    max-width: none; //margin-left: -20px;
+    max-width: none;
+    //margin-left: -20px;
     //margin-right: -20px;
 }
 
@@ -168,7 +171,8 @@ $white:#fff;
     }
     .row .row {
         padding-left: 0;
-        padding-right: 0; //margin-left: -15px;
+        padding-right: 0;
+        //margin-left: -15px;
         //margin-right: -15px;
     }
     [class*="col-"] {
