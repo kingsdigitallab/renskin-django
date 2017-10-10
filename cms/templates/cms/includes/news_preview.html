@@ -24,7 +24,7 @@
                      | <span class="disqus-comment-count" data-disqus-identifier="{{ page.id }}">Comments</span>
                     {% endif %}
                 </p>
-                {% include "cms/includes/streamfield_firstonly.html" with blocks=page.specific.body %}
+                {% include "cms/includes/streamfield_firstonly_notrunc.html" with blocks=page.specific.body %}
             </div>
         </div>
     </div>
