@@ -2556,7 +2556,7 @@ h2 {
 
 /* Background */
 #renskin-background:before {
-  background: #000 url("/static/images/renskin-background.jpg") center/cover;
+  background: #000 url("/static/images/renskin-background1.jpg") center/cover;
   content: '';
   position: fixed;
   left: 0;
@@ -2564,7 +2564,7 @@ h2 {
   top: 0;
   bottom: 0;
   z-index: -1;
-  opacity: 0.8; }
+  opacity: 0.7; }
 
 /* Menu*/
 #nav {

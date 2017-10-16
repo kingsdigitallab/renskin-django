@@ -22,13 +22,19 @@
  * 15. ---- Cookie disclaimer
 */
 
+
 /* 1. Imports  */
 
+
 /* FontAwesome */
+
 @import 'font-awesome';
 
+
 /* Webfonts */
+
 @import url("https://fonts.googleapis.com/css?family=Alegreya");
+
 
 /* 2. Mixins  */
 
@@ -57,6 +63,7 @@ $black:#000;
 $white:#fff;
 
 
+
 /* Grid */
 
 .row {
@@ -77,8 +84,7 @@ $white:#fff;
 
 .row .row {
     width: auto;
-    max-width: none;
-    //margin-left: -20px;
+    max-width: none; //margin-left: -20px;
     //margin-right: -20px;
 }
 
@@ -172,8 +178,7 @@ $white:#fff;
     }
     .row .row {
         padding-left: 0;
-        padding-right: 0;
-        //margin-left: -15px;
+        padding-right: 0; //margin-left: -15px;
         //margin-right: -15px;
     }
     [class*="col-"] {
@@ -252,6 +257,7 @@ $white:#fff;
 }
 
 
+
 /* Base style overrides */
 
 html {
@@ -275,17 +281,17 @@ body {
 }
 
 .viewport {
-    width:100%;
+    width: 100%;
     height: 80vh;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
-.viewport .imgcrop{
-    max-height:200px;
-    &:before{
-    content: "";
-    display: block;
-    padding: 15vh;
+.viewport .imgcrop {
+    max-height: 200px;
+    &:before {
+        content: "";
+        display: block;
+        padding: 15vh;
     }
 }
 
@@ -305,6 +311,7 @@ body {
 }
 
 
+
 /* Typography/Links */
 
 a {
@@ -318,7 +325,7 @@ a {
 
 img {
     width: 100%;
-    height:auto;
+    height: auto;
 }
 
 img:hover {
@@ -332,6 +339,7 @@ h2 {
     padding: 2vh 2vw;
 }
 
+
 /* Background */
 
 #renskin-background:before {
@@ -343,8 +351,9 @@ h2 {
     top: 0;
     bottom: 0;
     z-index: -1;
-    opacity: 0.8;
+    opacity: 0.7;
 }
+
 
 /* Menu*/
 
@@ -353,35 +362,37 @@ h2 {
     margin: 0 auto 3vh auto;
     text-align: center;
     font-size: 0.8rem;
-      .logo{
+    .logo {
         position: relative;
-        width:22rem;
+        width: 22rem;
         margin: 2rem auto 0 auto;
         background: rgba(255, 255, 255, 0.1);
         -webkit-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
         -moz-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
         box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
-        padding: 0.5rem 1rem ;
+        padding: 0.5rem 1rem;
         &:after {
-          position: absolute;
-          top:0;
-          content: attr(data-title);
-          @include calc(width, "100% + 1rem");
-          margin: 0.5rem -11.5rem;
-          @include calc(height, "100% - 1rem");
-          background: rgba(255, 255, 255, 0.2);
-          z-index: -1;
+            position: absolute;
+            top: 0;
+            content: attr(data-title);
+            @include calc(width,
+            "100% + 1rem");
+            margin: 0.5rem -11.5rem;
+            @include calc(height,
+            "100% - 1rem");
+            background: rgba(255, 255, 255, 0.2);
+            z-index: -1;
         }
-          h1{
-        color: $gold;
-        text-shadow: 1px 1px rgba(0,0,0,0.5);
-        text-align:center;
-         font-size: 2rem;
-        padding: 0;
-        margin: 0;
-        text-transform: uppercase;
-        font-weight: bold;
-      }
+        h1 {
+            color: $gold;
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            font-size: 2rem;
+            padding: 0;
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
     }
     >a {
         display: none;
@@ -412,11 +423,11 @@ h2 {
 }
 
 //first level
-#nav > ul {
+#nav>ul {
     height: 3.75em;
     margin: 0 0 0 -40px;
 
-    > li {
+    >li {
         height: 100%;
         display: inline-block;
 
@@ -424,7 +435,7 @@ h2 {
             border-bottom: 0.2rem solid $gold;
         }
 
-        > a {
+        >a {
             height: 100%;
             font-size: 1.2em;
             line-height: 3em;
@@ -453,7 +464,7 @@ h2 {
 
     a {
         font-size: 0.85rem;
-        padding:0.5rem 0.2rem;
+        padding: 0.5rem 0.2rem;
         color: #cdb586;
     }
 }
@@ -486,32 +497,34 @@ h2 {
         width: 100%;
         height: 50px;
         position: fixed;
-        .logo{
-        position: relative;
-        width:17rem;
-        margin: 0.5rem 1rem;
-        background: rgba(255, 255, 255, 0.1);
-        -webkit-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
-        -moz-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
-        box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
-        padding: 0;
-        &:after {
-          position: absolute;
-          top:0;
-          content: attr(data-title);
-          @include calc(width, "100% + 1rem");
-          margin: 0.5rem -9rem;
-          @include calc(height, "100% - 1rem");
-          background: rgba(255, 255, 255, 0.2);
-          z-index: -1;
+        .logo {
+            position: relative;
+            width: 17rem;
+            margin: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            -webkit-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
+            padding: 0;
+            &:after {
+                position: absolute;
+                top: 0;
+                content: attr(data-title);
+                @include calc(width,
+                "100% + 1rem");
+                margin: 0.5rem -9rem;
+                @include calc(height,
+                "100% - 1rem");
+                background: rgba(255, 255, 255, 0.2);
+                z-index: -1;
+            }
+            h1 {
+                text-align: left;
+                padding: 0.5rem 0 0.5rem 0.75rem;
+                font-size: 1.75rem;
+            }
         }
-        h1{
-            text-align:left;
-            padding:0.5rem 0 0.5rem 0.75rem;
-            font-size: 1.75rem;
-          }
-        }
-        
+
         >a {
             width: 100%;
             height: 4.125rem;
@@ -546,11 +559,12 @@ h2 {
             &.active {
                 border: none;
                 background: rgba(205, 181, 134, 0.8);
-                ul{ //second level
-                    li{
-                        a{
-                            color:$black;
-                        }    
+                ul {
+                    //second level
+                    li {
+                        a {
+                            color: $black;
+                        }
                     }
                 }
             }
@@ -606,6 +620,7 @@ h2 {
         }
     }
 }
+
 
 
 
@@ -722,6 +737,7 @@ input:focus {
 }
 
 
+
 /* Sidebar nav */
 
 .dot {
@@ -808,30 +824,30 @@ input:focus {
 
 
 //pagecontent
-.page-content{
-    a.button{
-    display: inline-block;
-    font-size: 1rem;
-    line-height: 2.5rem;
-    text-align: center;
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding: 0 50px;
-    background: $gold; 
-    border:3px solid $gold;
-    &:hover{
-    background: transparent;
-    border:3px solid $gold;
-       
-    }
+.page-content {
+    a.button {
+        display: inline-block;
+        font-size: 1rem;
+        line-height: 2.5rem;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0 50px;
+        background: $gold;
+        border: 3px solid $gold;
+        &:hover {
+            background: transparent;
+            border: 3px solid $gold;
+        }
     }
 }
+
 .sidebar-content {
     width: 100%;
     text-align: justify;
@@ -859,8 +875,7 @@ input:focus {
         font-size: 1.2rem;
         color: $black;
         line-height: 2rem;
-        font-weight: bold;
-        // display: block; 
+        font-weight: bold; // display: block; 
     }
 
     p {
@@ -900,6 +915,7 @@ input:focus {
         }
     }
 }
+
 
 
 
@@ -1046,28 +1062,28 @@ input:focus {
 
 
 
+
 /* Content */
 
 .content-wrapper {
+    float: left;
     margin: 1rem 0;
-    float:left;
-
+    min-width: 100%;
     .content-padding {
+        float: left;
         padding: 15px 25px 70px 25px;
-        float:left;
     }
 
     .content {
-        position: relative;
-        float:left;
         @include calc(width,
         "100%");
-
-        margin: 0 auto 0 auto;
         background: rgba(255, 255, 255, 0.4);
         -webkit-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
         -moz-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
         box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
+        float: left;
+        position: relative;
+        margin: 0 auto 0 auto;
 
         p {
             color: black;
@@ -1078,17 +1094,18 @@ input:focus {
             color: $gold;
             margin: 0 0 40px 0;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-            padding:0;
+            padding: 0;
         }
-        h3{
-            margin-top:0;
+        h3 {
+            margin-top: 0;
         }
         h4 {
             margin: 0 0 0.5rem 0;
             font-size: 1.5rem;
         }
-        .meta.info{
-            background: rgba(0,0,0,0.7);
+
+        .meta.info {
+            background: rgba(0, 0, 0, 0.7);
             color: $gold;
             padding: 0.5rem;
         }
@@ -1111,45 +1128,48 @@ input:focus {
             background: rgba(255, 255, 255, 0.8);
             z-index: -1;
         }
-        ul{
+
+        ul {
             list-style-type: none;
-            margin-left:-40px;
+            margin-left: -40px;
         }
-    }       
+    }
 }
 
 
 //Images
-img.richtext-image{
-&.left{
-    width: 50%;
-    float: left;
-    margin: 0 1rem 1rem 0;
-}
-&.right{
-    width: 50%;
-    float: right;
-    margin: 0 0 1rem 1rem;
-}
+img.richtext-image {
+    &.left {
+        width: 50%;
+        float: left;
+        margin: 0 1rem 1rem 0;
+    }
+
+    &.right {
+        width: 50%;
+        float: right;
+        margin: 0 0 1rem 1rem;
+    }
 }
 
-.img-wrapper{
-    &.float-left{
+.img-wrapper {
+    &.float-left {
         width: 50%;
-    float: left;
+        float: left;
     }
-        &.float-right{
-    width: 50%;
-    float: right;
+    &.float-right {
+        width: 50%;
+        float: right;
     }
-    &.float-mid{
-    width: 50%;
-     margin: 0 auto;
+    &.float-mid {
+        width: 50%;
+        margin: 0 auto;
     }
 }
+
 @media screen and (max-width: 400px) {
     .content-wrapper {
-        margin:0 1rem;
+        margin: 0 1rem;
         .content-padding {
             padding: 5px 10px 70px 10px;
         }
@@ -1170,6 +1190,7 @@ img.richtext-image{
         }
     }
 }
+
 
 
 /* Modal */
@@ -1329,6 +1350,7 @@ img.richtext-image{
 }
 
 
+
 /* 
   100% Height for Opera as the max-height seems to be ignored, not optimal for large screens 
   http://bricss.net/post/11230266445/css-hack-to-target-opera 
@@ -1451,6 +1473,7 @@ x:-o-prefocus,
 
 
 
+
 /* Footer */
 
 footer {
@@ -1488,8 +1511,8 @@ footer {
     }
 }
 
-/* 15. Cookie disclaimer */
 
+/* 15. Cookie disclaimer */
 
 .cookies-box {
     background: rgba(0, 0, 0, .8);
@@ -1513,14 +1536,14 @@ footer {
         border: 0;
         color: $black;
     }
-    
+
     button {
         background: $gold;
         height: 3rem;
         line-height: 1rem;
         margin-top: .5rem;
         &:hover {
-            opacity:0.7;
+            opacity: 0.7;
         }
     }
 
@@ -1529,9 +1552,9 @@ footer {
     }
 
     .small {
-          color: $white;
+        color: $white;
         &:hover {
-          text-decoration: underline;
+            text-decoration: underline;
         }
     }
 }
