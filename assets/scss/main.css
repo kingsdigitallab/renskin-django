@@ -2361,7 +2361,13 @@
 
 .row .row {
   width: auto;
-  max-width: none; }
+  max-width: none;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #cdb586;
+  padding-bottom: 2rem; }
+  .row .row:last-child {
+    border-bottom: none;
+    padding-bottom: 0; }
 
 [class*="col-"],
 .bgrid {
@@ -2556,7 +2562,7 @@ h2 {
 
 /* Background */
 #renskin-background:before {
-  background: #000 url("/static/images/renskin-background1.jpg") center/cover;
+  background: #000 url("/static/images/renskin-background.jpg") center/cover;
   content: '';
   position: fixed;
   left: 0;
@@ -2580,7 +2586,8 @@ h2 {
     -webkit-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
-    padding: 0.5rem 1rem; }
+    padding: 0.5rem 1rem;
+    z-index: 0; }
     #nav .logo:after {
       position: absolute;
       top: 0;
@@ -2704,8 +2711,7 @@ h2 {
         height: -moz-calc(100% - 1rem);
         height: -o-calc(100% - 1rem);
         height: calc(100% - 1rem);
-        background: rgba(255, 255, 255, 0.2);
-        z-index: -1; }
+        background: rgba(255, 255, 255, 0.2); }
       #nav .logo h1 {
         text-align: left;
         padding: 0.5rem 0 0.5rem 0.75rem;
@@ -3104,23 +3110,24 @@ input:focus {
 
 /* Content */
 .content-wrapper {
+  float: left;
   margin: 1rem 0;
-  float: left; }
+  min-width: 100%; }
   .content-wrapper .content-padding {
-    padding: 15px 25px 70px 25px;
-    float: left; }
-  .content-wrapper .content {
-    position: relative;
     float: left;
+    padding: 15px 25px 70px 25px; }
+  .content-wrapper .content {
     width: -webkit-calc(100%);
     width: -moz-calc(100%);
     width: -o-calc(100%);
     width: calc(100%);
-    margin: 0 auto 0 auto;
     background: rgba(255, 255, 255, 0.4);
     -webkit-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5); }
+    box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
+    float: left;
+    position: relative;
+    margin: 0 auto 0 auto; }
     .content-wrapper .content p {
       color: black;
       text-align: justify; }
@@ -3439,7 +3446,7 @@ footer {
   background: rgba(0, 0, 0, 0.8);
   bottom: 0;
   color: white;
-  margin: 0;
+  margin-left: -32px;
   position: fixed;
   text-align: center;
   width: 100%; }

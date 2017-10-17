@@ -84,8 +84,14 @@ $white:#fff;
 
 .row .row {
     width: auto;
-    max-width: none; //margin-left: -20px;
-    //margin-right: -20px;
+    max-width: none; 
+    margin-bottom: 3rem;
+    border-bottom: 1px solid $gold;
+    padding-bottom: 2rem;
+    &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    }
 }
 
 [class*="col-"],
@@ -371,6 +377,7 @@ h2 {
         -moz-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
         box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
         padding: 0.5rem 1rem;
+        z-index: 0;
         &:after {
             position: absolute;
             top: 0;
@@ -516,7 +523,6 @@ h2 {
                 @include calc(height,
                 "100% - 1rem");
                 background: rgba(255, 255, 255, 0.2);
-                z-index: -1;
             }
             h1 {
                 text-align: left;
@@ -1518,7 +1524,7 @@ footer {
     background: rgba(0, 0, 0, .8);
     bottom: 0;
     color: white;
-    margin: 0;
+    margin-left: -32px;
     position: fixed;
     text-align: center;
     width: 100%;
