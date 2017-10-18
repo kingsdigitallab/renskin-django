@@ -2962,8 +2962,6 @@ input:focus {
   text-align: justify;
   display: block; }
   .sidebar-content section {
-    padding: 20px 0;
-    border-bottom: 1px solid #cdb586;
     width: 100%;
     display: block;
     overflow: hidden; }
@@ -2972,9 +2970,12 @@ input:focus {
       float: left;
       margin: 0 2rem 1rem 0;
       display: block; }
-  .sidebar-content section:last-child {
-    margin: 0 0 100vh 0;
-    border-bottom: 1px solid #cdb586; }
+    .sidebar-content section .page-content {
+      border-bottom: 1px solid #cdb586;
+      padding: 0 0 3rem 0;
+      margin: 0 0 4rem 0; }
+      .sidebar-content section .page-content:last-of-type {
+        border-bottom: none; }
   .sidebar-content .title {
     font-size: 1.2rem;
     color: #000;

@@ -31,9 +31,11 @@
 @import 'font-awesome';
 
 
+
 /* Webfonts */
 
 @import url("https://fonts.googleapis.com/css?family=Alegreya");
+
 
 
 /* 2. Mixins  */
@@ -64,6 +66,7 @@ $white:#fff;
 
 
 
+
 /* Grid */
 
 .row {
@@ -84,13 +87,13 @@ $white:#fff;
 
 .row .row {
     width: auto;
-    max-width: none; 
+    max-width: none;
     margin-bottom: 3rem;
     border-bottom: 1px solid $gold;
     padding-bottom: 2rem;
     &:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
     }
 }
 
@@ -264,6 +267,7 @@ $white:#fff;
 
 
 
+
 /* Base style overrides */
 
 html {
@@ -318,6 +322,7 @@ body {
 
 
 
+
 /* Typography/Links */
 
 a {
@@ -346,6 +351,7 @@ h2 {
 }
 
 
+
 /* Background */
 
 #renskin-background:before {
@@ -359,6 +365,7 @@ h2 {
     z-index: -1;
     opacity: 0.7;
 }
+
 
 
 /* Menu*/
@@ -630,6 +637,7 @@ h2 {
 
 
 
+
 /* Search */
 
 .button {
@@ -741,6 +749,7 @@ input:focus {
         outline: none;
     }
 }
+
 
 
 
@@ -859,8 +868,6 @@ input:focus {
     text-align: justify;
     display: block;
     section {
-        padding: 20px 0;
-        border-bottom: 1px solid $gold;
         width: 100%;
         display: block;
         overflow: hidden;
@@ -870,12 +877,19 @@ input:focus {
             margin: 0 2rem 1rem 0;
             display: block;
         }
+        .page-content {
+            border-bottom: 1px solid $gold;
+            padding: 0 0 3rem 0;
+            margin: 0 0 4rem 0;
+            &:last-of-type{
+                border-bottom: none;
+            }
+        }
     }
 
-    section:last-child {
-        margin: 0 0 100vh 0;
-        border-bottom: 1px solid $gold;
-    }
+    //section:last-child {
+        //margin: 0 0 100vh 0;
+    //}
 
     .title {
         font-size: 1.2rem;
@@ -921,6 +935,7 @@ input:focus {
         }
     }
 }
+
 
 
 
@@ -1069,6 +1084,7 @@ input:focus {
 
 
 
+
 /* Content */
 
 .content-wrapper {
@@ -1196,6 +1212,7 @@ img.richtext-image {
         }
     }
 }
+
 
 
 
@@ -1357,6 +1374,7 @@ img.richtext-image {
 
 
 
+
 /* 
   100% Height for Opera as the max-height seems to be ignored, not optimal for large screens 
   http://bricss.net/post/11230266445/css-hack-to-target-opera 
@@ -1480,6 +1498,7 @@ x:-o-prefocus,
 
 
 
+
 /* Footer */
 
 footer {
@@ -1516,6 +1535,7 @@ footer {
         margin-top: 3rem;
     }
 }
+
 
 
 /* 15. Cookie disclaimer */
