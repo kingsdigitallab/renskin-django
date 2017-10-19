@@ -865,6 +865,7 @@ input:focus {
         padding: 0 50px;
         background: $gold;
         border: 3px solid $gold;
+        margin: 1rem 0;
         &:hover {
             background: transparent;
             border: 3px solid $gold;
@@ -911,6 +912,15 @@ input:focus {
 }
 
 @media screen and (max-width: 768px) {
+    .page-content {
+        a.button {
+            font-size: 1.2rem;
+            line-height: 3.5rem;
+        }
+    }
+
+
+
     .sidebar-nav {
         display: none;
         top: initial;
@@ -1240,11 +1250,11 @@ img.richtext-image {
 
     h4 {
         float: left;
-        width: 75%;
+        width: 70%;
     }
     h5 {
         float: left;
-        width: 75%;
+        width: 70%;
         font-size: 1.2rem;
         font-weight: normal;
         font-style: italic;
@@ -1334,7 +1344,7 @@ img.richtext-image {
         }
 
         img {
-            width: 25%;
+            width: 30%;
             float: left;
             padding: 0 2rem 2rem 0;
             filter: grayscale(100%);
@@ -1585,4 +1595,14 @@ footer {
             text-decoration: underline;
         }
     }
+}
+
+
+/* Twitter */
+
+span.PrettyLink-value{
+    color: $gold!important;
+}
+.customisable, .customisable:link, .customisable:visited {
+    color: $gold!important;
 }

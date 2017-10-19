@@ -30,7 +30,7 @@
 
                         {% for event in self.get_events %}
                         <div class="row">
-                            <div class="col-3-3">
+                            <div class="col-3-3 tab-full">
                                 <h4>{{ event.title }}</h4>
                                 
 
@@ -52,12 +52,12 @@
                         {% endfor %}
 
                         {% if self.get_events and self.get_news %}
-                        <hr>
+
                         {% endif %}
 
                         {% for n in self.get_news %}
                         <div class="row">
-                            <div class="col-3-3">
+                            <div class="col-3-3 tab-full">
                                 <h4>{{ n.title }}</h4>
     
                                 {% include "cms/includes/streamfield_firstonly.html" with blocks=n.body %}
