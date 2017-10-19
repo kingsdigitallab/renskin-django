@@ -57,7 +57,7 @@ class LinkStyleChoiceBlock(FieldBlock):
 
 
 class LinkBlock(StructBlock):
-    url = URLBlock(required=False)
+    url = CharBlock(required=False)
     page = PageChooserBlock(required=False)
     label = CharBlock()
     style = LinkStyleChoiceBlock()
