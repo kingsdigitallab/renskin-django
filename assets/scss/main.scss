@@ -32,9 +32,11 @@
 
 
 
+
 /* Webfonts */
 
 @import url("https://fonts.googleapis.com/css?family=Alegreya");
+
 
 
 
@@ -63,6 +65,7 @@ $z) {
 $gold:#cdb586;
 $black:#000;
 $white:#fff;
+
 
 
 
@@ -268,6 +271,7 @@ $white:#fff;
 
 
 
+
 /* Base style overrides */
 
 html {
@@ -323,6 +327,7 @@ body {
 
 
 
+
 /* Typography/Links */
 
 a {
@@ -352,6 +357,7 @@ h2 {
 
 
 
+
 /* Background */
 
 #renskin-background:before {
@@ -365,6 +371,7 @@ h2 {
     z-index: -1;
     opacity: 0.7;
 }
+
 
 
 
@@ -638,6 +645,7 @@ h2 {
 
 
 
+
 /* Search */
 
 .button {
@@ -749,6 +757,7 @@ input:focus {
         outline: none;
     }
 }
+
 
 
 
@@ -881,16 +890,13 @@ input:focus {
             border-bottom: 1px solid $gold;
             padding: 0 0 3rem 0;
             margin: 0 0 4rem 0;
-            &:last-of-type{
+            &:last-of-type {
                 border-bottom: none;
             }
         }
-    }
-
-    //section:last-child {
-        //margin: 0 0 100vh 0;
+    } //section:last-child {
+    //margin: 0 0 100vh 0;
     //}
-
     .title {
         font-size: 1.2rem;
         color: $black;
@@ -935,6 +941,7 @@ input:focus {
         }
     }
 }
+
 
 
 
@@ -1063,6 +1070,11 @@ input:focus {
     width: 100%;
     overflow: hidden;
     position: relative;
+    &.filter {
+        -webkit-filter: grayscale(100%);
+        /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+    }
 }
 
 .imgcrop::before {
@@ -1079,6 +1091,7 @@ input:focus {
     top: 0;
     left: 0;
 }
+
 
 
 
@@ -1150,11 +1163,6 @@ input:focus {
             background: rgba(255, 255, 255, 0.8);
             z-index: -1;
         }
-
-        ul {
-            list-style-type: none;
-            margin-left: -40px;
-        }
     }
 }
 
@@ -1216,10 +1224,10 @@ img.richtext-image {
 
 
 
+
 /* Modal */
 
 .about-expand {
-    text-align: center;
     width: 0px;
     height: 0px;
     position: fixed;
@@ -1228,79 +1236,60 @@ img.richtext-image {
     top: 0px;
     margin: 50px;
     z-index: 99;
-    text-align: center;
     background: rgba(255, 255, 255, 0.95);
 
-    >div {
-        position: relative;
+    h4 {
+        float: left;
+        width: 75%;
+    }
+    h5 {
+        float: left;
+        width: 75%;
+        font-size: 1.2rem;
+        font-weight: normal;
+        font-style: italic;
+        margin: 0;
+    }
+    ul {
+        list-style-type: square;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        li {
+            margin-left: -23px;
+        }
+    }
 
-        /* color: rgba(27,54,81,0.8); */
-        width: 550px;
-        height: 80px;
-        margin: 40px auto 0px auto;
-        text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
-
+    p {
+        float: left;
+        width: 100%;
+    }
+    .row.row {
+        border-bottom: none;
+    }
+    .rich-text {
         h4 {
-            font-size: 26px;
-            float: left;
-            text-align: right;
-            border-right: 1px solid rgba(27, 54, 81, 0.4);
-            padding: 0px 20px;
-            width: 200px;
-            height: 60px;
-
-            span {
-                display: block;
-                line-height: 6px;
-                font-size: 16px;
-                font-style: italic;
-            }
-        }
-
-        p {
-            padding: 0px 20px;
-            width: 200px;
-            height: 60px;
-            font-size: 14px;
-            text-align: left;
-            float: left;
-            width: 260px;
-            font-size: 16px;
-            font-style: italic;
+            width: 100%;
+            border-top: 1px solid $gold;
+            padding-top: 1rem;
+            margin-bottom: 0;
         }
     }
 
-    img {
-        /* height: 100%; For Opera max-height does not seem to work */
-        position: relative;
-        opacity: 0;
-        filter: alpha(opacity=0);
-
-        /* internet explorer */
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
-
-        /*IE8*/
-        -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-        -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
-        -webkit-transition: opacity 0.5s linear;
-        -moz-transition: opacity 0.5s linear;
-        -o-transition: opacity 0.5s linear;
-        -ms-transition: opacity 0.5s linear;
-        transition: opacity 0.5s linear;
-    }
 
     a.expand-close {
         font-size: 6rem;
         position: absolute;
         color: gray;
         top: 2rem;
-        right: 20%;
+        right: 2rem;
         font-size: 15px;
         line-height: 26px;
         text-align: center;
         width: 50px;
-        height: 23px;
+        height: 50px;
         overflow: hidden;
         opacity: 0;
         filter: alpha(opacity=0);
@@ -1345,9 +1334,10 @@ img.richtext-image {
         }
 
         img {
-            width: 50%;
-            text-align: center;
-            margin: 0 auto;
+            width: 25%;
+            float: left;
+            padding: 0 2rem 2rem 0;
+            filter: grayscale(100%);
         }
 
         img,
@@ -1371,6 +1361,7 @@ img.richtext-image {
         right: 20%;
     }
 }
+
 
 
 
@@ -1496,7 +1487,17 @@ x:-o-prefocus,
 }
 
 
-
+@media screen and (max-width: 850px) {
+    .about-expand {
+        margin: 0;
+        &:target {
+            padding: 10px;
+            img {
+                padding: 0 1rem 1rem 0;
+            }
+        }
+    }
+}
 
 
 /* Footer */
@@ -1535,6 +1536,7 @@ footer {
         margin-top: 3rem;
     }
 }
+
 
 
 
