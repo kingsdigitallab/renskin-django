@@ -30,7 +30,8 @@ class HomePageBlock(StructBlock):
     class Meta:
         template = 'cms/blocks/home_page_block.html'
         help_text = '''
-        Use either URL or page, if both are filled in URL takes precedence.'''
+        Use either URL or page, if both are filled in URL takes precedence.
+        For an email button, use the format mailto:email@address.com'''
 
 
 class ImageFormatChoiceBlock(FieldBlock):
