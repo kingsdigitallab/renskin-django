@@ -132,7 +132,7 @@ class HomePage(Page, WithStreamField):
         # Events that have not ended.
         today = date.today()
         events = Event.objects.live().filter(date_from__gte=today).order_by(
-            'date_from')
+            'date_from')[:2]
         return events
 
     def get_news(self):
