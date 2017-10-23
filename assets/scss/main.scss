@@ -500,7 +500,7 @@ h2 {
     display: block;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
     transition: 0.6s ease;
     opacity: 1;
 
@@ -789,7 +789,6 @@ input:focus {
             transform: scale(0.8);
             transition: 0.5s ease;
             opacity: 1;
-            border: 2px solid $gold;
         }
     }
     span {
@@ -834,7 +833,6 @@ input:focus {
     span {
         color: $black;
         text-align: right;
-        border-bottom: 0.3rem solid $gold;
     }
     img {
         -webkit-transform: scale(1);
@@ -842,7 +840,6 @@ input:focus {
         -ms-transform: scale(1);
         -o-transform: scale(1);
         transform: scale(1);
-        border: 1px solid $gold;
     }
 }
 
@@ -1153,7 +1150,7 @@ input:focus {
             background: rgba(0, 0, 0, 0.7);
             color: $gold;
             padding: 0.5rem;
-        }
+            text-transform: capitalize;        }
 
         &::after {
             display: block;

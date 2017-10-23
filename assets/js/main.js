@@ -57,7 +57,8 @@ require([
                 var theID = aArray[i];
                 var divPos = $(theID).offset().top;
                 var divHeight = $(theID).height();
-                if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+
+                if (windowPos >= divPos -10 && windowPos <= (divPos + divHeight)) {
                     $("a[href='" + theID + "']").addClass("name-active");
                 } else {
                     $("a[href='" + theID + "']").removeClass("name-active");
@@ -66,7 +67,6 @@ require([
             if (windowPos + windowHeight == docHeight) {
                 if (!$(".sidebar-nav li:last-child a").hasClass("name-active")) {
                     var navActiveCurrent = $(".name-active").attr("href");
-                    $("a[href='" + navActiveCurrent + "']").removeClass("name-active");
                     $(".sidebar-nav li:last-child a").addClass("name-active");
                 }
             }

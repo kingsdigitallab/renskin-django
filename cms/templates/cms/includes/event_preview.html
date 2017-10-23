@@ -16,10 +16,9 @@
         
             <h3><a href="{% pageurl event %}">{{ event.title }}</a></h3>
             <div class="meta info">
-                        <i class="fa fa-clock-o"></i>
                         <time datetime="{{ page.specific.date }}">
                         {{ event.date_from|date:'j b Y' }} 
-                        {% if event.date_to %} - {{ event.date_to|date:'j b Y' }}{% endif %}
+                        {% if event.date_to %} - {{ event.date_to|date:'j b Y' }}{% endif %}, 
                         {{ event.time|date:'H:i' }} 
                         {% if event.time_end %} - {{ event.time_end|date:'H:i' }}{% endif %}
                         </time>
