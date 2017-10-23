@@ -11,10 +11,13 @@ require([
         // Fix search button
         $('body').on('click', '.searchbutton', function(event) {   
 
-            if ($('#searchright').css('opacity') !== '0') {
+            if ($('#searchright').css('opacity') !== '0' || $('#searchright').hasClass('visible')) {
                 event.preventDefault();
                 event.stopPropagation();
                 $(this).parent().submit();
+            } else
+            {
+                $('#searchright').addClass('visible').show();
             }
         });
 
