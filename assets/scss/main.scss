@@ -628,12 +628,10 @@ h2 {
             padding-top: 0;
             opacity: 1;
             display: none;
-
             li {
                 margin-left: 0;
                 text-align: left;
             }
-
             a {
                 padding: 0.7rem;
             }
@@ -641,13 +639,7 @@ h2 {
     }
 }
 
-
-
-
-
-
 /* Search */
-
 .button {
     display: inline-block;
     font-size: 1rem;
@@ -688,25 +680,21 @@ h2 {
     outline: none;
     border: none;
     padding: 0;
-    width: 0;
-
     @include calc(height,
     "100% + 2px");
-
     z-index: 10;
-    transition-duration: 0.1s;
-    -moz-transition-duration: 0.1s;
-    -webkit-transition-duration: 0.1s;
-    -o-transition-duration: 0.1s;
+    opacity: 0;
+    width: 400px;
 }
-
 .search:focus {
     width: 400px;
+    right:73px;
+    top:0;
 }
 
 .expandright {
     left: auto;
-    right: 73px;
+    width:73px;
 }
 
 .expandright:focus {
@@ -714,27 +702,38 @@ h2 {
 }
 
 input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top:0;
+    border: 0;
+    outline: none;
     opacity: 0;
+    right:0;
+    -webkit-transition-delay: 0.7s; /* Safari */
+    transition-delay: 0.7s;
 }
 
 input:focus {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    float: left;
     width: 0;
+    margin-top:0;
     background: $white;
     color: #6A5D4F;
     font-weight: 600;
-    padding: 0px;
+    padding: 0;
     border: 0;
     outline: none;
     opacity: 1;
-    transition-duration: 0.2s;
-    -moz-transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
-    -o-transition-duration: 0.2s;
+    transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+
 }
+
 
 @media screen and (max-width: 789px) {
     form {
