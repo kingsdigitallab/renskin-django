@@ -1,6 +1,7 @@
 from cms.models.pages import (
     BlogIndexPage, EventIndexPage, HomePage, IndexPage, NewsIndexPage,
-    PastEventIndexPage, RichTextPage, _paginate
+    PastEventIndexPage, RichTextPage, _paginate, ChapterIndexPage,
+    PersonIndexPage
 )
 from django.test import RequestFactory, TestCase
 from wagtail.tests.utils import WagtailPageTests
@@ -34,11 +35,13 @@ class TestHomePage(WagtailPageTests):
         self.assertAllowedSubpageTypes(
             HomePage, {
                 BlogIndexPage,
+                ChapterIndexPage,
                 EventIndexPage,
                 IndexPage,
                 NewsIndexPage,
                 PastEventIndexPage,
-                RichTextPage
+                RichTextPage,
+                PersonIndexPage
             })
 
 
