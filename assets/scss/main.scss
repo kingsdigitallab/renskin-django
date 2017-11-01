@@ -847,9 +847,8 @@ input:focus {
     overflow: hidden;
     position: relative;
     &.filter {
-        -webkit-filter: grayscale(100%);
-        /* Safari 6.0 - 9.0 */
-        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%) sepia(25%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%) sepia(25%);
     }
 }
 
@@ -948,30 +947,33 @@ input:focus {
 //Images
 img.richtext-image {
     &.left {
-        width: 50%;
+        width: 20%;
         float: left;
-        margin: 0 1rem 1rem 0;
+        margin: 1rem 1rem 1rem 0;
     }
 
     &.right {
-        width: 50%;
+        width: 20%;
         float: right;
-        margin: 0 0 1rem 1rem;
+        margin: 1rem 0 1rem 1rem;
     }
 }
 
 .img-wrapper {
     &.float-left {
-        width: 50%;
+        width: 20%;
         float: left;
+        margin: 1rem 1rem 1rem 0;
     }
     &.float-right {
-        width: 50%;
+        width: 20%;
         float: right;
+        margin: 1rem 0 1rem 1rem;
     }
     &.float-mid {
-        width: 50%;
+        width: 20%;
         margin: 0 auto;
+        margin: 1rem;
     }
 }
 
@@ -1604,9 +1606,31 @@ footer {
 }
 
 
-    img.richtext-image.left {
-    width: 100%;
+//Images
+img.richtext-image {
+    &.left {
+        width: 50%;
+    }
+
+    &.right {
+        width: 50%;
+    }
 }
+
+.img-wrapper {
+    &.float-left {
+        width: 50%;
+    }
+    &.float-right {
+        width: 50%;
+    }
+    &.float-mid {
+        width: 50%;
+    }
+}
+
+
+
     .sidebar-content {
         section {
             a img {
