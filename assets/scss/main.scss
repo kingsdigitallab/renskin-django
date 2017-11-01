@@ -847,8 +847,8 @@ input:focus {
     overflow: hidden;
     position: relative;
     &.filter {
-        -webkit-filter: grayscale(100%) sepia(25%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(100%) sepia(25%);
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
     }
 }
 
