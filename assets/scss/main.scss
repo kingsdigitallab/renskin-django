@@ -67,6 +67,7 @@ $z) {
 $gold:#cdb586;
 $black:#000;
 $white:#fff;
+$brown:#744428;
 
 
 
@@ -899,6 +900,9 @@ input:focus {
         p {
             color: black;
             text-align: justify;
+            a{
+                color: $brown;
+            }
         }
 
         h2 {
@@ -913,6 +917,15 @@ input:focus {
         h4 {
             margin: 0 0 0.5rem 0;
             font-size: 1.5rem;
+        }
+        .caption{
+            p{
+                font-size: 0.7rem;
+                border-bottom:1px solid $brown;
+                padding-bottom: 0.5rem;
+                font-variant: small-caps;
+                text-align: left;
+            }
         }
 
         .meta.info {
@@ -947,33 +960,37 @@ input:focus {
 //Images
 img.richtext-image {
     &.left {
-        width: 20%;
+        width: 25%;
         float: left;
         margin: 1rem 1rem 1rem 0;
     }
 
     &.right {
-        width: 20%;
+        width: 25%;
         float: right;
         margin: 1rem 0 1rem 1rem;
+    }
+    &.full-width{
+        width:50%;
     }
 }
 
 .img-wrapper {
     &.float-left {
-        width: 20%;
+        width: 25%;
         float: left;
         margin: 1rem 1rem 1rem 0;
     }
     &.float-right {
-        width: 20%;
+        width: 25%;
         float: right;
         margin: 1rem 0 1rem 1rem;
     }
     &.float-mid {
-        width: 20%;
+        width: 50%;
+        float: left;
         margin: 0 auto;
-        margin: 1rem;
+        margin: 1rem 1rem 1rem 0;
     }
 }
 
@@ -1076,7 +1093,7 @@ img.richtext-image {
         height: auto;
         bottom: 0px;
         right: 0px;
-        padding: 80px 5% 120px 5%;
+        padding: 80px 5% 0 5%;
         overflow: scroll;
 
         a.item-prev,
@@ -1482,7 +1499,9 @@ footer {
     }
 
 
-
+    .content-wrapper {
+        margin: 60px 0 1rem 0;
+    }
     .sidebar-nav {
         display: none;
         top: initial;
@@ -1534,7 +1553,6 @@ footer {
 @media screen and (max-width: 400px) {
     .content-wrapper {
         min-width: 93%;
-        margin: 1rem;
         padding: 0.3rem;
         .content-padding {
             padding: 5px 10px 70px 10px;
@@ -1614,6 +1632,9 @@ img.richtext-image {
 
     &.right {
         width: 50%;
+    }
+    &.full-width{
+        width:100%;
     }
 }
 
