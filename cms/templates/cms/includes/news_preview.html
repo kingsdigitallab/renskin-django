@@ -17,7 +17,7 @@
         
             <h3><a href="{% pageurl page %}">{{ page.title }}</a></h3>
         
-            {% include "cms/includes/streamfield_firstonly_notrunc.html" with blocks=page.specific.body %}
+            {% include "cms/includes/streamfield_firstonly.html" with blocks=page.specific.body %}
 
     </div>
 </div>
