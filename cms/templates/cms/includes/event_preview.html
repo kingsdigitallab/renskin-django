@@ -24,7 +24,11 @@
                         </time>
                 </div>
         
-                {% include "cms/includes/streamfield.html" with blocks=event.body %}
+                {% include "cms/includes/streamfield_firstonly.html" with blocks=event.body %} 
+                <a href="{% pageurl event %}">
+                    <div class="button dark">Read More >></div>
+                </a>
+
 
     </div>
 </div>
