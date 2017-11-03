@@ -7,9 +7,11 @@
 
     {% if page.specific.feed_image %}
     <div class="col-1-3 mob-full">
-        <a href="{% pageurl page %}">
-            {% image page.specific.feed_image original %}
-        </a>
+        <div class="imgcrop">
+            <a href="{% pageurl page %}">
+                {% image page.specific.feed_image original %}
+            </a>
+        </div>
     </div>
 
     {% endif %}
@@ -17,7 +19,7 @@
         
             <h3><a href="{% pageurl page %}">{{ page.title }}</a></h3>
         
-            {% include "cms/includes/streamfield_firstonly.html" with blocks=page.specific.body %}
+            {% include "cms/includes/streamfield_firstonly_longtrunc.html" with blocks=page.specific.body %}
 
     </div>
 </div>
