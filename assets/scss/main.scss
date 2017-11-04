@@ -730,11 +730,11 @@ input:focus {
 }
 
 .button.dark{
-    background: rgba(0,0,0,0.7);
-            color:$gold;
-                    &:hover {
-            background: $gold;
+    background: $gold;
             color:$black;
+                    &:hover {
+            background: $black;
+            color:$gold;
         }
         }  
 
@@ -889,7 +889,6 @@ input:focus {
     margin: 1rem 0;
     min-width: 100%;
     .content-padding {
-        float: left;
         padding: 15px 25px 70px 25px;   
     }
 

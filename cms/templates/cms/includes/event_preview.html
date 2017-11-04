@@ -6,9 +6,11 @@
 
     {% if event.image %}
     <div class="col-1-3 mob-full">
-        <a href="{% pageurl event %}">
-            {% image event.image original %}
-        </a>
+        <div class="imgcrop">
+            <a href="{% pageurl event %}">
+                {% image event.image original %}
+            </a>
+        </div>
     </div>
 
     {% endif %}

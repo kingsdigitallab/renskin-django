@@ -7,9 +7,11 @@
 
     {% if page.specific.feed_image %}
     <div class="col-1-3 mob-full">
-        <a href="{% pageurl page %}">
-            {% image page.specific.feed_image original %}
-        </a>
+        <div class="imgcrop">
+            <a href="{% pageurl page %}">
+                {% image page.specific.feed_image original %}
+            </a>
+        </div>
     </div>
 
     {% endif %}
