@@ -1352,9 +1352,16 @@ footer {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .viewport .imgcrop {
+    &:before {
+        padding: 10vh;
+    }
+}
+}
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     body {
         margin: 0;
     }
@@ -1495,7 +1502,11 @@ footer {
         padding-top: 60px;
         height: 100%;
     }
-
+    .viewport .imgcrop {
+    &:before {
+        padding: 15vh;
+    }
+}
     .page-content {
         a.button {
             font-size: 1.2rem;
