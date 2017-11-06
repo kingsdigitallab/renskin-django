@@ -13,7 +13,7 @@
     {% elif block.block_type == 'intro' %}
     <div class="intro">{{ block }}</div>
     {% elif block.block_type == 'paragraph' %}
-    {{ block.value|richtext|truncatechars_html:100 }}
+    {{ block.value|richtext|truncatechars_html:400 }}
     {% elif block.block_type == 'html' %}
     <div class="iframe-container block.value.alignment">
         {{ block.value.bound_blocks.html.render }}
