@@ -19,7 +19,8 @@
         
             <h3><a href="{% pageurl page %}">{{ page.title }}</a></h3>
         
-            {% include "cms/includes/streamfield_firstonly.html" with blocks=page.specific.body %}
+            {% include "cms/includes/streamfield_trunc.html" with blocks=page.specific.body %}
+            
             <a href="{% pageurl page %}">
                 <div class="button dark">Read More >></div>
             </a>
