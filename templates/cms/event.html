@@ -10,15 +10,8 @@
             <div class="content-padding">
                 <h2>{{ self.title }}</h2>
                 
-                <div class="row">
-                    {% if self.image %}
-                        <div class="col-full mob-full">
-                            {% image self.image original %}
-                        </div>
-                    {% endif %}
-                    
+                <div class="row">           
                      <div class="col-full mob-full">
-
                      <div class="meta info">
                         <i class="fa fa-clock-o"></i>
                         <time datetime="{{ page.specific.date }}">
