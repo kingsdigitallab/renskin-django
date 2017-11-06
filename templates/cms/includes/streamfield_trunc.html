@@ -1,6 +1,6 @@
 {% load wagtailcore_tags %}
 
-{% with limit=limit|default:80 %}
+{% with limit=limit|default:60 %}
     {% filter truncatewords_html:limit %}
         <div class="page-content">
             {% for block in blocks %}

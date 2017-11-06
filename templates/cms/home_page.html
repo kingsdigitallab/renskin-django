@@ -43,7 +43,7 @@
                                     </time>
                                 </div>
     
-                                {% include "cms/includes/streamfield_trunc.html" with blocks=event.body limit=60 %}
+                                {# % include "cms/includes/streamfield_trunc.html" with blocks=event.body limit=40 % #}
 
 
                             </div>
@@ -59,7 +59,7 @@
                             <div class="col-3-3 tab-full">
                                 <h4><a href="{% pageurl n %}">{{ n.title }}</a></h4>
     
-                                {% include "cms/includes/streamfield_trunc.html" with blocks=n.body limit=60 %}
+                                {% include "cms/includes/streamfield_trunc.html" with blocks=n.body limit=30 %}
 
 
                             </div>
