@@ -10,7 +10,7 @@
                 <h2>{{ self.title }}</h2>
                 
                  {% include "cms/includes/streamfield_firstonly_notrunc.html" with blocks=self.body %}
-                <div class="row viewport">
+                <div class="row">
 
                 {% for p in self.get_children.live %}
                  <div class="item col-1-3 tab-1-2 mob-full">

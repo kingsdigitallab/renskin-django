@@ -81,7 +81,7 @@ $brown:#744428;
 
 .row {
     width: 94%;
-
+    max-width:1140px;
     margin: 0 auto;
 }
 
@@ -280,6 +280,12 @@ $brown:#744428;
 
 
 
+@media screen and (min-width: 1824px) {
+
+.row {
+    max-width:none;
+}
+}
 
 
 
@@ -1736,34 +1742,17 @@ footer {
 
 
 
-@media screen and (min-width: 1224px) {
-
-    .viewport {
-        width: 100%;
-        height: 100vh;
-        margin: 0 auto;
-        .imgcrop {
-            max-height: none;
-            &:before {
-                padding: 14vh;
-            }
-        }
-    }
-    .item .overlay {
-    margin: 0 70px;
-    }
-}
 
 @media screen and (min-width: 1824px) {
 
     .viewport {
-        width: 100%;
+        width: inherit;
         height: 100vh;
         margin: 0 auto;
         .imgcrop {
             max-height: none;
             &:before {
-                padding: 16vh;
+                padding: 15vh;
             }
         }
     }    
