@@ -14,7 +14,7 @@ from wagtail.wagtailadmin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.wagtailcore.models import Page
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from wagtail.wagtailsearch import index
-
+from django.shortcuts import redirect
 from .behaviours import WithFeedImage, WithStreamField
 from datetime import date
 
@@ -79,11 +79,18 @@ ChapterIndexPage.content_panels = [
 ChapterIndexPage.promote_panels = Page.promote_panels
 
 
-class Chapter(Page):
+class Chapter(RoutablePageMixin, Page):
     search_fields = Page.search_fields + [
     ]
 
     subpage_types = ['ImagePage', ]
+
+    @route(r'^(?P<slug>[\w\- ]+)/$')
+    def view_func(self, request, slug=None):
+        image_page = ImagePage.objects.get(slug=slug)
+        return redirect('{}#image_thumb{}'.format(
+            self.get_url(), image_page.id)
+        )
 
 
 Chapter.content_panels = [
