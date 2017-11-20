@@ -1258,7 +1258,7 @@ x:-o-prefocus,
         height: auto;
         bottom: 0px;
         right: 0px;
-        padding: 80px 100px 120px 100px;
+        padding: 80px 5% 0 5%;
         overflow: scroll;
 
         a.item-prev,
@@ -1275,7 +1275,7 @@ x:-o-prefocus,
         img {
             width: 100%;
             text-align: center;
-            margin: 0 auto;
+            margin-bottom:1rem;
         }
 
         img,
@@ -1447,7 +1447,7 @@ footer {
             font-size: 1.5rem;
             top: 0;
             right: 0;
-            width: 50%;
+            width: 10%;
             padding: 0.8rem 1rem 0 0;
             transition: 1.6s ease;
         }
@@ -1644,6 +1644,17 @@ footer {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .viewport .imgcrop {
+        min-height: 275px;
+    }
+  }  
+  .modal-expand {
+   /* &:target {
+        padding: 80px 1% 0 1%;
+    }*/
+  }
+
 @media screen and (max-width: 400px) {
     .content-wrapper {
         min-width: 93%;
@@ -1674,6 +1685,7 @@ footer {
     }
 
     .viewport .imgcrop {
+        min-height: initial;
         &:before {
             padding: 33%;
         }
