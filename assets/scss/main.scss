@@ -1756,7 +1756,6 @@ footer {
 
 
 @media screen and (min-width: 1824px) {
-
     .viewport {
         width: inherit;
         height: 100vh;
@@ -1771,6 +1770,14 @@ footer {
     .item .overlay {
     margin: 0 100px;
     }
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
 
 
 }

@@ -323,6 +323,13 @@ class NewsPostTag(TaggedItemBase):
 
 
 class NewsPost(Page, WithStreamField, WithFeedImage):
+
+    image = models.ForeignKey(
+        'wagtailimages.Image',
+        on_delete=models.PROTECT,
+        null=True
+    )
+
     date = models.DateField()
     tags = ClusterTaggableManager(through=NewsPostTag, blank=True)
 
@@ -344,6 +351,7 @@ class NewsPost(Page, WithStreamField, WithFeedImage):
 
 NewsPost.content_panels = [
     FieldPanel('title', classname='full title'),
+    ImageChooserPanel('image'),
     FieldPanel('date'),
     StreamFieldPanel('body'),
 ]
