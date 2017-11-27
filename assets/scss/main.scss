@@ -1378,7 +1378,7 @@ footer {
         position: fixed;
         .logo {
             position: relative;
-            width: 12rem;
+            width: 13rem;
             margin: 0.5rem 1rem;
             background: rgba(255, 255, 255, 0.2);
             -webkit-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
@@ -1391,7 +1391,7 @@ footer {
                 content: attr(data-title);
                 @include calc(width,
                 "100% + 1rem");
-                margin: 0.5rem -6.5rem;
+                margin: 0.5rem -7rem;
                 @include calc(height,
                 "100% - 1rem");
                 background: rgba(255, 255, 255, 0.2);
