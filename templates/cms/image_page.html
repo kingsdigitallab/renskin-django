@@ -1,13 +1,5 @@
 {% extends "cms/base.html" %} {% load wagtailimages_tags cms_tags %} {% block main %}
 <!-- sidebar -->
-<div class="sidebar-nav">
-    <ul>
-        {% for p in self.get_children %}
-        <li><a href="#image_thumb{{p.id}}" class="dot">{% image p.specific.image original %} <span>{{ p.title }}</span></a></li>
-        {% endfor %}
-    </ul>
-</div>
-<
 <div class="row">
   <div class="col-full">
       <div class="content-wrapper">
@@ -15,8 +7,7 @@
               <div class="content-padding">
                   <div class="sidebar-content">
                       <h2>{{ self.title }}</h2>
-                      {% with chapters=self.get_children %} 
-                      {% for p in chapters %}
+                      {% with p=self %} 
                       <section id="image_thumb{{p.id}}">
                       <span class="title"></span>
                       <a href="#image{{p.id}}">{% image p.specific.image original %}</a>
@@ -33,23 +24,12 @@
                               <h3>{{ p.title }}</h3> {% include "cms/includes/streamfield.html" with blocks=p.specific.body %}
                           </div>
                       </div>
-                      {% if not forloop.first %}
-                        {% with prev_element=chapters|previous:forloop.counter0 %} 
-                      <a href="#image{{prev_element.id}}" class="item-prev"><span>&#12296;</span>Previous</a>
-                        {% endwith %}
-                      {% endif %} 
-                      {% if not forloop.last %}
-                        {% with next_element=chapters|next:forloop.counter0 %} 
-                          <a href="#image{{next_element.id}}" class="item-next">Next<span>&#12297;</span></a>
-                        {% endwith %}
-                      {% endif %}
-                       <a href="#page" class="expand-close">&#9587;</a>
+
                   </div>
                   
                       
                 </section>
 
-                  {% endfor %}
 
                   {% endwith %}
                   <!-- /content -->

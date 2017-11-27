@@ -73,26 +73,17 @@
 - hosts: all
   vars_files:
     - vars.yml
-  gather_facts: false
+   gather_facts: false
   tasks:
-  - name: pip | setup virtualenv
-    file: path={{ python.virtualenv_location }} state=directory
-  - command: virtualenv {{ python.virtualenv_location }}
+  - name: python | easy install pip
+    become: yes
+    command: "easy_install -f https://pypi.python.org/simple/pip pip"
     tags:
       - python
 
-  - name: pip | Installing fix for setuptools (requirements-setuptools-fix.txt)
-    pip:
-      requirements: "{{ project_root }}/requirements-setuptools-fix.txt"
-      virtualenv: "{{ python.virtualenv_location }}"
-    tags:
-      - python
-
-  - name: pip | update setuptools
-    pip:
-      name: setuptools
-      virtualenv: "{{ python.virtualenv_location }}"
-      state: latest
+  - name: python | install setuptools
+    become: yes
+    pip: name=setuptools state=latest
     tags:
       - python
 

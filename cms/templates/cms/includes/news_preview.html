@@ -5,11 +5,15 @@
 
 <div class="row">
 
-    {% if page.specific.feed_image %}
+    {% if page.specific.image or page.specific.feed_image %}
     <div class="col-1-3 mob-full">
         <div class="imgcrop">
             <a href="{% pageurl page %}">
-                {% image page.specific.feed_image original %}
+                {% if page.specific.image %}
+                    {% image page.specific.image original %}
+                {% else %}
+                    {% image page.specific.feed_image original %}
+                {% endif %}
             </a>
         </div>
     </div>
@@ -19,7 +23,8 @@
         
             <h3><a href="{% pageurl page %}">{{ page.title }}</a></h3>
         
-            {% include "cms/includes/streamfield_firstonly.html" with blocks=page.specific.body %}
+            {% include "cms/includes/streamfield_trunc.html" with blocks=page.specific.body %}
+            
             <a href="{% pageurl page %}">
                 <div class="button dark">Read More >></div>
             </a>

@@ -34,9 +34,11 @@
 
 
 
+
 /* Webfonts */
 
 @import url("https://fonts.googleapis.com/css?family=Alegreya");
+
 
 
 
@@ -74,11 +76,12 @@ $brown:#744428;
 
 
 
+
 /* Grid */
 
 .row {
     width: 94%;
-    max-width: 1140px;
+    max-width:1140px;
     margin: 0 auto;
 }
 
@@ -277,6 +280,13 @@ $brown:#744428;
 
 
 
+@media screen and (min-width: 1824px) {
+
+.row {
+    max-width:none;
+}
+}
+
 
 
 
@@ -315,10 +325,10 @@ body {
         display: block;
         padding: 15vh;
     }
-    &.filter{
-            &:before {
-        padding: 33%;
-    }
+    &.filter {
+        &:before {
+            padding: 33%;
+        }
     }
 }
 
@@ -333,12 +343,12 @@ body {
 
 
 
+
 /* Typography/Links */
 
 a {
     text-decoration: none;
-    color: inherit;
-
+    color: $brown;
     &:hover {
         opacity: 0.7;
     }
@@ -360,6 +370,17 @@ h2 {
     padding: 2vh 2vw;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+    a {
+        color: $black;
+    }
+}
+
+
 
 
 
@@ -377,6 +398,7 @@ h2 {
     z-index: -1;
     opacity: 0.7;
 }
+
 
 
 
@@ -420,6 +442,9 @@ h2 {
             margin: 0;
             text-transform: uppercase;
             font-weight: bold;
+            >a {
+                color: $gold;
+            }
         }
     }
     >a {
@@ -519,6 +544,7 @@ h2 {
 
 
 
+
 /* Search */
 
 .button {
@@ -615,6 +641,7 @@ input:focus {
     -webkit-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
 }
+
 
 
 
@@ -724,19 +751,19 @@ input:focus {
         margin: 1rem 0;
         &:hover {
             background: $black;
-            color:$gold;
+            color: $gold;
         }
     }
 }
 
-.button.dark{
+.button.dark {
     background: $gold;
-            color:$black;
-                    &:hover {
-            background: $black;
-            color:$gold;
-        }
-        }  
+    color: $black;
+    &:hover {
+        background: $black;
+        color: $gold;
+    }
+}
 
 .sidebar-content {
     width: 100%;
@@ -775,6 +802,7 @@ input:focus {
         padding: 0px 0 0px 0;
     }
 }
+
 
 
 
@@ -855,7 +883,8 @@ input:focus {
     overflow: hidden;
     position: relative;
     &.filter {
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        -webkit-filter: grayscale(100%);
+        /* Safari 6.0 - 9.0 */
         filter: grayscale(100%);
     }
 }
@@ -882,6 +911,7 @@ input:focus {
 
 
 
+
 /* Content */
 
 .content-wrapper {
@@ -889,7 +919,7 @@ input:focus {
     margin: 1rem 0;
     min-width: 100%;
     .content-padding {
-        padding: 15px 25px 70px 25px;   
+        padding: 15px 25px 70px 25px;
     }
 
     .content {
@@ -906,9 +936,6 @@ input:focus {
         p {
             color: black;
             text-align: justify;
-            a{
-                color: $brown;
-            }
         }
 
         h2 {
@@ -923,10 +950,10 @@ input:focus {
         h4 {
             margin: 0.5rem 0;
         }
-        .caption{
-            p{
+        .caption {
+            p {
                 font-size: 0.7rem;
-                border-bottom:1px solid $brown;
+                border-bottom: 1px solid $brown;
                 padding-bottom: 0.5rem;
                 font-variant: small-caps;
                 text-align: left;
@@ -975,8 +1002,8 @@ img.richtext-image {
         float: right;
         margin: 1rem 0 1rem 1rem;
     }
-    &.full-width{
-        width:50%;
+    &.full-width {
+        width: 50%;
     }
 }
 
@@ -998,6 +1025,7 @@ img.richtext-image {
         margin: 1rem 1rem 1rem 0;
     }
 }
+
 
 
 
@@ -1146,6 +1174,7 @@ img.richtext-image {
 
 
 
+
 /* 
   100% Height for Opera as the max-height seems to be ignored, not optimal for large screens 
   http://bricss.net/post/11230266445/css-hack-to-target-opera 
@@ -1229,7 +1258,7 @@ x:-o-prefocus,
         height: auto;
         bottom: 0px;
         right: 0px;
-        padding: 80px 100px 120px 100px;
+        padding: 80px 5% 0 5%;
         overflow: scroll;
 
         a.item-prev,
@@ -1246,7 +1275,7 @@ x:-o-prefocus,
         img {
             width: 100%;
             text-align: center;
-            margin: 0 auto;
+            margin-bottom:1rem;
         }
 
         img,
@@ -1265,6 +1294,7 @@ x:-o-prefocus,
         }
     }
 }
+
 
 
 
@@ -1299,6 +1329,7 @@ footer {
         margin: 0 0.5rem 0 2rem;
     }
 }
+
 
 
 
@@ -1351,12 +1382,16 @@ footer {
     }
 }
 
+
+
+
+
 @media screen and (max-width: 1024px) {
     .viewport .imgcrop {
-    &:before {
-        padding: 10vh;
+        &:before {
+            padding: 12vh;
+        }
     }
-}
 }
 
 
@@ -1412,7 +1447,7 @@ footer {
             font-size: 1.5rem;
             top: 0;
             right: 0;
-            width: 50%;
+            width: 10%;
             padding: 0.8rem 1rem 0 0;
             transition: 1.6s ease;
         }
@@ -1502,10 +1537,11 @@ footer {
         height: 100%;
     }
     .viewport .imgcrop {
-    &:before {
-        padding: 15vh;
+
+        &:before {
+            padding: 11vh;
+        }
     }
-}
     .page-content {
         a.button {
             font-size: 1.2rem;
@@ -1514,7 +1550,49 @@ footer {
         }
     }
 
+    .item {
+        position: relative;
+        margin: 4% 0;
+        padding: 1vh 2vw;
 
+        .image {
+            overflow: hidden;
+        }
+        img {
+            // position: relative;
+            // width: 100%;
+            // height: auto;
+            -webkit-transition: opacity 1s, -webkit-transform 1s;
+        }
+
+        .overlay {
+            position: absolute;
+            margin: 0 30px;
+            transition: 0.8s ease;
+            overflow: hidden;
+            z-index: 1;
+            text-align: center;
+            bottom: 0;
+            top: 0;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.4);
+            opacity: 1;
+            -webkit-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        h3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 30%;
+            bottom: 40%;
+            width: 50%;
+            margin: -15% 0 0 -25%;
+            opacity: 1;
+        }
+    }
     .content-wrapper {
         margin: 60px 0 1rem 0;
     }
@@ -1566,6 +1644,17 @@ footer {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .viewport .imgcrop {
+        min-height: 275px;
+    }
+  }  
+  .modal-expand {
+   /* &:target {
+        padding: 80px 1% 0 1%;
+    }*/
+  }
+
 @media screen and (max-width: 400px) {
     .content-wrapper {
         min-width: 93%;
@@ -1590,81 +1679,44 @@ footer {
         }
     }
     .item {
-        position: relative;
-        margin: 4% 0;
-        padding: 1vh 2vw;
-
- .image {
-            overflow: hidden;
-        }
-        img {
-           // position: relative;
-           // width: 100%;
-           // height: auto;
-            -webkit-transition: opacity 1s, -webkit-transform 1s;
-        }
-
-              .overlay {
-            position: absolute;
-            margin: 0 20px;
-            transition: 0.8s ease;
-            overflow: hidden;
-            z-index: 1;
-            text-align: center;
-            bottom: 0;
-            top: 0;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.4);
-            opacity: 1;
-            -webkit-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.75);
-            box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.75);
-        }
-
-        h3 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            height: 30%;
-            bottom: 40%;
-            width: 50%;
-            margin: -15% 0 0 -25%;
-            opacity: 1;
+        .overlay {
+            margin: 0 25px;
         }
     }
 
     .viewport .imgcrop {
-    &:before {
-        padding: 33%;
-    }
-}
-
-
-//Images
-img.richtext-image {
-    &.left {
-        width: 50%;
+        min-height: initial;
+        &:before {
+            padding: 33%;
+        }
     }
 
-    &.right {
-        width: 50%;
-    }
-    &.full-width{
-        width:100%;
-    }
-}
 
-.img-wrapper {
-    &.float-left {
-        width: 50%;
+    //Images
+    img.richtext-image {
+        &.left {
+            width: 50%;
+        }
+
+        &.right {
+            width: 50%;
+        }
+        &.full-width {
+            width: 100%;
+        }
     }
-    &.float-right {
-        width: 50%;
+
+    .img-wrapper {
+        &.float-left {
+            width: 50%;
+        }
+        &.float-right {
+            width: 50%;
+        }
+        &.float-mid {
+            width: 50%;
+        }
     }
-    &.float-mid {
-        width: 50%;
-    }
-}
 
 
 
@@ -1678,12 +1730,12 @@ img.richtext-image {
         }
     }
     .page-content a.button {
-        width:100%;
-     }   
-     .about-expand {
-        a.expand-close{
-            top:1rem;
-            right:0;
+        width: 100%;
+    }
+    .about-expand {
+        a.expand-close {
+            top: 1rem;
+            right: 0;
         }
     }
 
@@ -1698,4 +1750,34 @@ img.richtext-image {
             padding-top: 0;
         }
     }
+}
+
+
+
+
+@media screen and (min-width: 1824px) {
+    .viewport {
+        width: inherit;
+        height: 100vh;
+        margin: 0 auto;
+        .imgcrop {
+            max-height: none;
+            &:before {
+                padding: 15vh;
+            }
+        }
+    }    
+    .item .overlay {
+    margin: 0 100px;
+    }
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+
 }
