@@ -7,7 +7,7 @@
                 
 <div class="row viewport">
 <h2>{{ self.title }}</h2>
-    {% for chapter in self.get_children.all %}
+    {% for chapter in self.get_children.live.all %}
     <div class="item col-1-3 tab-1-2 mob-full">
         <a href="{% pageurl chapter %}">
         <div class="imgcrop">

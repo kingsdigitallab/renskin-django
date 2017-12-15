@@ -133,7 +133,7 @@ class HomePage(Page, WithStreamField):
     ]
 
     def get_chapters(self):
-        return Chapter.objects.all()
+        return Chapter.objects.live()
 
     def get_events(self):
         # Events that have not ended.
