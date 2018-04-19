@@ -73,13 +73,19 @@ $brown:#744428;
 
 
 
-
 .responsive-object{
   padding-bottom: 0 !important;
   text-align: center;
   iframe{
+  width: 70%;
+  height: calc(100vw/2.3);
+  }
+}
+ 
+@media screen and (max-width:768px) {
+iframe{
   width: 100%;
-  height: calc(100vw/1.77);
+  height: calc(100vw/1.7);
   }
 }
 
