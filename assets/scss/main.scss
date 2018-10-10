@@ -1759,10 +1759,43 @@ footer {
     }
 }
 
-
+@media screen and (min-width: 1200px) {
+    body{
+        font-size: 150%;
+        }
+    .row{
+        max-width: 2400px;
+    }
+    #nav>ul>li>a {
+        font-size: 150%;
+    }
+    label.button.searchbutton{
+        font-size: 150%;
+    }
+    .content-wrapper{
+        .content-padding{
+            padding: 15px 4% 70px 4%;
+        }
+         .content {
+            h2{
+                font-size: 100%;
+            }
+        }
+    }
+}
 
 
 @media screen and (min-width: 1824px) {
+    body{
+        font-size: 180%;
+    }
+    #nav>ul>li>a {
+        font-size: 180%;
+        line-height: 2em;
+    }
+    label.button.searchbutton{
+        font-size: 180%;
+    }
     .viewport {
         width: inherit;
         height: 100vh;
@@ -1777,6 +1810,7 @@ footer {
     .item .overlay {
     margin: 0 100px;
     }
+
 }
 
 /* ----------- iPad Pro 12.9" ----------- */
