@@ -54,7 +54,7 @@ class Person(Page, WithStreamField):
     ]
     image = models.ForeignKey(
         'wagtailimages.Image',
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
     )
     subpage_types = ['ImagePage', ]
 
@@ -107,7 +107,7 @@ class ImagePage(Page, WithStreamField):
 
     image = models.ForeignKey(
         'wagtailimages.Image',
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
     )
     subpage_types = []
 
@@ -326,7 +326,7 @@ class NewsPost(Page, WithStreamField, WithFeedImage):
 
     image = models.ForeignKey(
         'wagtailimages.Image',
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         null=True
     )
 
@@ -498,7 +498,7 @@ class Event(Page, WithStreamField, WithFeedImage):
 
     image = models.ForeignKey(
         'wagtailimages.Image',
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
     )
     date_from = models.DateField(verbose_name="Start Date")
     date_to = models.DateField(verbose_name="End Date (Leave blank if\
