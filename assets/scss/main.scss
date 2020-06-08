@@ -30,7 +30,9 @@
 
 @import 'font-awesome';
 
-
+.icons{
+    font-family:"FontAwesome";
+}
 
 
 
@@ -39,9 +41,12 @@
 
 @import url("https://fonts.googleapis.com/css?family=Alegreya");
 
-
-
-
+/*skip to main content option */
+.skip-main { 
+    font-size: 1px; 
+    position: absolute; 
+    top:-25px; 
+}
 
 
 /* 2. Mixins  */
@@ -355,7 +360,8 @@ body {
 
 a {
     text-decoration: none;
-    color: $brown;
+    font-weight: bold;
+    color: scale-color($brown, $lightness:-30%);
     &:hover {
         opacity: 0.7;
     }
@@ -932,7 +938,7 @@ input:focus {
     .content {
         @include calc(width,
         "100%");
-        background: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.8);
         -webkit-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
         -moz-box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
         box-shadow: 2px 7px 34px 0px rgba(0, 0, 0, 0.5);
@@ -946,7 +952,7 @@ input:focus {
         }
 
         h2 {
-            color: $gold;
+            color: #584829;
             margin: 0 0 40px 0;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
             padding: 0;
@@ -1325,10 +1331,12 @@ footer {
 
     a {
         color: $gold;
+        font-weight: bold;
         padding: 1rem 0;
 
         &:hover {
             opacity: 0.7;
+            text-decoration: underline;
         }
     }
 
