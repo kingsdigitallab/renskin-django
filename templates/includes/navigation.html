@@ -9,9 +9,10 @@
 
         {% main_menu root=site_root current_page=self %}
         <li>
-            <form method="get" action="search">
-                <input class="button" type="submit" value="search" id="searchright" name="q" {% if query_string %} value="{{query_string}}" {% endif %} placeholder="Search the site">
+            <form method="get" action="/search">
+                <input class="search expandright" type="search" value="search" id="searchright" name="q" {% if query_string %} value="{{query_string}}" {% endif %} placeholder="Search the site">
                 <label class="button searchbutton" for="searchright">Search</label>
+                <input class="button" type="submit">
             </form>
             </div>
         </li>

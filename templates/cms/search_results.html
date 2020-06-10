@@ -5,7 +5,7 @@
 
 {% block main %}
 
-<div class="row">
+<div class="row" role="complementary" aria-label="search list">
     <div class="content-wrapper">
         <div class="content">
             <div class="content-padding">
@@ -15,7 +15,7 @@
                 <ul>
                    {% for result in search_results %}
                    <li>
-                       <h4><a href="{% pageurl result.specific %}">{{ result.specific }}</a></h4>
+                       <h3><a href="{% pageurl result.specific %}">{{ result.specific }}</a></h3>
                        {% if result.specific.search_description %}
                            {{ result.specific.search_description|safe }}
                        {% endif %}
