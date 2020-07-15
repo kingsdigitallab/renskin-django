@@ -379,7 +379,6 @@ img:hover {
 h2 {
     color: $gold;
     margin: 0;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     padding: 2vh 2vw;
 }
 
@@ -952,13 +951,15 @@ input:focus {
         }
 
         h2 {
-            color: #584829;
+            color: $black;
             margin: 0 0 40px 0;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
             padding: 0;
+            border-bottom: 1px solid $gold;
+            display: inline-block;
         }
         h3 {
             margin-top: 0;
+            font-size: 1.25rem;
         }
         h4 {
             margin: 0.5rem 0;
