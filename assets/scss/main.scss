@@ -954,7 +954,7 @@ input:focus {
         h2 {
             color: #584829;
             margin: 0 0 40px 0;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
             padding: 0;
         }
         h3 {
@@ -1353,7 +1353,7 @@ footer {
 /* 15. Cookie disclaimer */
 
 .cookies-box {
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, .9);
     bottom: 0;
     color: white;
     margin-left: -32px;
@@ -1373,6 +1373,7 @@ footer {
     .button {
         border: 0;
         color: $black;
+        font-family: 'Alegreya', serif;
     }
 
     button {
@@ -1380,8 +1381,9 @@ footer {
         height: 3rem;
         line-height: 1rem;
         margin-top: .5rem;
+        padding: 0.5rem 2rem;
         &:hover {
-            opacity: 0.7;
+            opacity: 0.8;
         }
     }
 
