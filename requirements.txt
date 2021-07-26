@@ -1,7 +1,7 @@
 -r ddhldap/requirements.txt
 django<2
 django-compressor
-django-grappelli
+django-grappelli<=2.14.2
 django-libsass
 django-model-utils
 django-redis

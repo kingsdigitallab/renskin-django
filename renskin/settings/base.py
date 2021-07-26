@@ -241,11 +241,14 @@ STATICFILES_FINDERS = (
 
 STATICFILES_STORAGE = 'require.storage.OptimizedStaticFilesStorage'
 
-MEDIA_URL = STATIC_URL + 'media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_URL.strip('/'))
 
 if not os.path.exists(MEDIA_ROOT):
     os.makedirs(MEDIA_ROOT)
+
+if not os.path.exists(os.path.join(MEDIA_ROOT, 'original_images')):
+    print('WARNING: the media folder is now under /media instead of /static/media, did forget to move the content?')
 
 # -----------------------------------------------------------------------------
 # EMAIL SETTINGS

@@ -7,7 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.insert_key = false
 
-  config.vm.box = "bento/debian-8.11"
+  # config.vm.box = "bento/debian-7.8"
 
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = ".vagrant_provisioning/playbook.yml"
@@ -31,7 +31,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # vagrant-hostupdater configuration
   config.vm.define "renskin" do |machine|
-    machine.vm.box = "bento/debian-8.11"
+    machine.vm.box = "bento/ubuntu-18.04"
     machine.vm.hostname = "renskin.vagrant"
     machine.vm.network "private_network", ip: "192.168.33.99"
   end
