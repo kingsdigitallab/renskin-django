@@ -20,8 +20,5 @@ requirejs.config({
         'jscookie': {
             exports: 'JScookie'
         },
-        'ga': {
-            exports: '__ga__'
-        },
     }
 });
