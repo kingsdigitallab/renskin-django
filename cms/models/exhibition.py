@@ -75,7 +75,7 @@ class ExhibitionGalleryPage(ExhibitionBasePage):
 
 class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):
 
-    side_bar_text = RichTextField()
+    side_bar_text = RichTextField(blank=True, default='')
 
     content_panels = ExhibitionBasePage.content_panels + [
         FieldPanel('side_bar_text'),
