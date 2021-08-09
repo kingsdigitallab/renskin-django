@@ -131,7 +131,7 @@ class HomePage(Page, WithStreamField):
     subpage_types = [
         'BlogIndexPage', 'EventIndexPage', 'IndexPage',
         'NewsIndexPage', 'PastEventIndexPage', 'RichTextPage',
-        'ChapterIndexPage', 'PersonIndexPage'
+        'ChapterIndexPage', 'PersonIndexPage', 'ExhibitionHomePage'
     ]
 
     def get_chapters(self):

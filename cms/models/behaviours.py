@@ -21,3 +21,10 @@ class WithStreamField(models.Model):
 
     class Meta:
         abstract = True
+
+
+class WithOptionalStreamField(models.Model):
+    body = StreamField(CMSStreamBlock(), blank=True, default='')
+
+    class Meta:
+        abstract = True
