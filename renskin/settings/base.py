@@ -91,8 +91,8 @@ INSTALLED_APPS += (
 INSTALLED_APPS += (
     # your project apps here
     'cms',
-    'wagtail.contrib.modeladmin',  # for wagtailmenus
-    'wagtailmenus',
+    # 'wagtail.contrib.modeladmin',  # for wagtailmenus
+    # 'wagtailmenus',
 )
 
 INTERNAL_IPS = ('127.0.0.1', )
@@ -189,7 +189,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.template.context_processors.static',
                 'django.contrib.messages.context_processors.messages',
-                'wagtailmenus.context_processors.wagtailmenus',
+                # 'wagtailmenus.context_processors.wagtailmenus',
             ],
             'debug': False,
         },
