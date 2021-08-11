@@ -1,0 +1,19 @@
+{% load staticfiles cms_tags %}
+    <div class="logo">
+        <h1><a href="/">Renaissance Skin</a></h1>
+    </div>
+    <a href="#nav" title="Show navigation">☰</a>
+    <a class="hide-nav" href="#" title="Hide navigation">×</a>
+    <ul>
+        {% get_site_root as site_root %}
+
+        {% main_menu root=site_root current_page=self %}
+        <li>
+            <form method="get" action="/search">
+                <input class="search expandright" type="search" value="search" id="searchright" name="q" {% if query_string %} value="{{query_string}}" {% endif %} placeholder="Search the site">
+                <label class="button searchbutton" for="searchright">Search</label>
+                <input class="button" type="submit">
+            </form>
+            </div>
+        </li>
+    </ul>

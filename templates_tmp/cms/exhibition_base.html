@@ -1,0 +1,22 @@
+{% extends "cms/base.html" %}
+
+{% block main %}
+
+<div class="row">
+    <div class="content-wrapper">
+        <div class="content">
+            <div class="content-padding">
+                <h2>{{ self.title }}</h2>
+
+                <div class="row">
+                     <div class="col-full mob-full">
+                        {% include "cms/includes/streamfield.html" with blocks=self.body %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

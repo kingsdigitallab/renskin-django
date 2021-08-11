@@ -32,6 +32,7 @@ try:
 except ImportError:
     pass
 
+
 # -----------------------------------------------------------------------------
 # Django Debug Toolbar
 # http://django-debug-toolbar.readthedocs.org/en/latest/
@@ -51,6 +52,8 @@ except ImportError:
 # Local settings
 # -----------------------------------------------------------------------------
 
+TEMPLATES_DIR_LOCAL = None
+
 try:
     from local import *  # noqa
 except ImportError:
@@ -59,3 +62,8 @@ except ImportError:
     from test import *  # noqa
     print('the project is running with test settings')
     print('please create a local settings file')
+
+if TEMPLATES_DIR_LOCAL:
+    TEMPLATES[0]['DIRS'].insert(0, os.path.join(BASE_DIR, TEMPLATES_DIR_LOCAL))
+
+    TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, TEMPLATES_DIR_LOCAL)]
