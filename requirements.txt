@@ -12,3 +12,4 @@ elasticsearch>=2.0.0,<3.0.0
 django-appconf<=1.0.2
 django-taggit
 wagtail<2
+wagtailmenus<3

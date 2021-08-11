@@ -88,7 +88,9 @@ class ExhibitionPage(ExhibitionBasePage):
 
 
 class ExhibitionGalleryPage(ExhibitionBasePage):
-    pass
+
+    def get_feature_pages(self):
+        return self.get_children().type(ExhibitionFeaturePage).specific()
 
 
 class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):

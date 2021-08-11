@@ -65,5 +65,3 @@ except ImportError:
 
 if TEMPLATES_DIR_LOCAL:
     TEMPLATES[0]['DIRS'].insert(0, os.path.join(BASE_DIR, TEMPLATES_DIR_LOCAL))
-
-    TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, TEMPLATES_DIR_LOCAL)]
