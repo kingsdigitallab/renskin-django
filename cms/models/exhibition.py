@@ -11,7 +11,7 @@ from modelcluster.tags import ClusterTaggableManager
 from taggit.models import TaggedItemBase
 from wagtail.contrib.wagtailroutablepage.models import RoutablePageMixin, route
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, StreamFieldPanel, \
-    InlinePanel
+    InlinePanel, MultiFieldPanel
 from wagtail.wagtailcore.models import Page, Orderable
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from wagtail.wagtailsearch import index
@@ -23,7 +23,22 @@ from wagtail.wagtailcore.fields import RichTextField
 logger = logging.getLogger(__name__)
 
 
-class ExhibitionBasePage(Page, WithOptionalStreamField):
+class WithThumbnailField(models.Model):
+
+    class Meta:
+        abstract = True
+
+    thumbnail = models.ForeignKey(
+        'wagtailimages.Image',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
+
+
+class ExhibitionBasePage(Page, WithOptionalStreamField, WithThumbnailField):
+
     class Meta:
         abstract = True
 
@@ -36,6 +51,10 @@ class ExhibitionBasePage(Page, WithOptionalStreamField):
     content_panels = Page.content_panels + [
         # FieldPanel('title', classname='full title'),
         StreamFieldPanel('body'),
+    ]
+
+    promote_panels = Page.promote_panels + [
+        ImageChooserPanel('thumbnail'),
     ]
 
 
@@ -53,7 +72,6 @@ class WithStaticMap(models.Model):
 
 
 class ExhibitionHomePage(ExhibitionBasePage, WithStaticMap):
-
     # intro = RichTextField()
     dates_times = RichTextField(blank=True, default='')
     locations = RichTextField(blank=True, default='')
@@ -74,7 +92,6 @@ class ExhibitionGalleryPage(ExhibitionBasePage):
 
 
 class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):
-
     side_bar_text = RichTextField(blank=True, default='')
 
     content_panels = ExhibitionBasePage.content_panels + [
