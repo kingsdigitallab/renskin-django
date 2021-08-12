@@ -1,3 +1,5 @@
+import re
+
 from django import template
 from django.conf import settings
 
@@ -145,3 +147,73 @@ def footer_menu(context, root, current_page=None):
 
     return {'request': context['request'], 'root': root,
             'current_page': current_page, 'menu_pages': menu_pages}
+
+'''GN: 
+
+{% toc %}
+    <h1>first title</h1>
+    <h1>second title</h1>
+{% endtoc %}
+
+toc tag adds a name="first-title" to the headings
+and adds a new toc list to the context.
+Each item in the list as the form: 
+{
+    'title': 'first title'
+    'slug': 'first-title'
+}
+
+The toc variable can be used to build a
+dynamic table of content.
+'''
+
+
+@register.tag(name="toc")
+def do_table_of_contents(parser, token):
+    nodelist = parser.parse(('endtoc',))
+    parser.delete_first_token()
+    return TableOfContentsNode(nodelist)
+
+
+class TableOfContentsNode(template.Node):
+
+    def __init__(self, nodelist):
+        self.nodelist = nodelist
+
+    def render(self, context):
+        from django.utils.text import slugify
+        from django.utils.html import strip_tags
+
+        output = self.nodelist.render(context)
+
+        toc = []
+
+        def replace_title(m):
+            ret = m.group(0)
+
+            title = m.group(3)
+            title = strip_tags(title).strip()
+            slug = slugify(title)
+
+            if title:
+                toc.append({
+                    'title': title,
+                    'slug': slug
+                })
+
+            if slug:
+                ret = '%s id="%s"%s%s%s' % (
+                    m.group(1),
+                    slug,
+                    m.group(2),
+                    m.group(3),
+                    m.group(4),
+                )
+
+            return ret
+
+        output = re.sub(r'(<h\d)(>)(.*?)(</h\d>)', replace_title, output)
+
+        context['toc'] = toc
+
+        return output
