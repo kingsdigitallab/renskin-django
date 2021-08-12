@@ -32,7 +32,7 @@
                     <img src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1045,c_fill,g_auto,h_588,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190906133333-isleworth-mona-lisa-crop.jpg" alt="After" />
                 </div>
             </figure>
-            <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+            <input type="range" min="0" max="100" value="50" class="slider">
         </div><!-- end .comparison -->
     </div><!-- end .artwork -->
     <h2>An African Drummer: Reworked using a cou cou stick (used for stirring stew), Granny’s quilt and a ‘clothes horse’</h2>
@@ -48,25 +48,26 @@
                     <img src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1045,c_fill,g_auto,h_588,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190906133333-isleworth-mona-lisa-crop.jpg" alt="After" />
                 </div>
             </figure>
-            <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+            <input type="range" min="0" max="100" value="50" class="slider">
         </div><!-- end .comparison -->
     </div><!-- end .artwork -->
     <h2>An African Drummer: Reworked using a cou cou stick (used for stirring stew), Granny’s quilt and a ‘clothes horse’</h2>
 </div><!-- end .item -->
 
 <script>
-	var divisor = document.getElementById("divisor"),
-    handle = document.getElementById("handle"),
-    slider = document.getElementById("slider");
+$(function() {
+    $('.comparison').each(function(index) {
+        $comp = $(this);
+        let divisor = $comp.find('.divisor')[0];
+        let handle = $comp.find('.handle')[0];
+        let slider = $comp.find('.slider')[0];
 
-function moveDivisor() {
-  handle.style.left = slider.value+"%";
-	divisor.style.width = slider.value+"%";
-}
-
-window.onload = function() {
-	moveDivisor();
-};
+        $comp.on('input', function() {
+            handle.style.left = slider.value + "%";
+            divisor.style.width = slider.value + "%";
+        });
+    });
+});
 </script>
 
 {% endblock excontent %}
