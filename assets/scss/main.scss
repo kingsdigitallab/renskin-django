@@ -1940,15 +1940,140 @@ footer {
 
 /*** Exhibition Styles ***/
 
-/* Artwork */
+/* Artwork index page*/
+.artwork {
+    width:100%;
+  display:block;
+  margin:0 auto
+}
+
+.comparison {
+    //width: 100%;
+    padding-bottom: 80%;
+    overflow: hidden; 
+  position: relative;
+  figure { 
+  position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0; 
+    img{
+   width:auto;
+    left:0;
+    position: absolute;
+    //overflow:hidden;
+    bottom: 0; 
+    height: 100%;
+  }// img
+  .divisor{ 
+width:100%;
+overflow:hidden;
+    position: absolute;
+    bottom: 0; 
+  height: 100%;
+  img{
+    width:auto;
+    left:0;
+    position: absolute;
+    //overflow:hidden;
+    bottom: 0; 
+    height: 100%;
+  }
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: calc(50% - 25px);
+    background: white;
+    z-index: 3;
+  }
+  &::before {
+    top: 0;
+    box-shadow: 0 -3px 8px 1px rgba(0,0,0,.3);
+  }
+  &::after {
+    bottom: 0;
+    box-shadow: 0 3px 8px 1px rgba(0,0,0,.3);
+  }
+}// #divisor
+.handle {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 1;
+  
+  &::before,
+  &::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 6px inset transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+  }
+  &::before {
+    border-right: 6px solid white;
+    left: 50%;
+    margin-left: -17px;
+  }
+  &::after {
+    border-left: 6px solid white;
+    right: 50%;
+    margin-right: -17px;
+  }
+}// #handle
+}// figure
+}// #comparison
+
+input[type=range]{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    position: absolute;
+    top: 50%; left: -22px;
+  transform: translateY(-50%);
+    background-color: transparent;
+    width: calc(100% + 40px); 
+  z-index: 2;
+  
+  &:focus,
+  &:active {
+    border: none;
+    outline: none;
+  }// &:focus,&:active
+&::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid white;
+  box-shadow: 0 0 8px 1px rgba(0,0,0,.3);
+}//&::-webkit-slider-thumb 
+&::-moz-range-track {
+    -moz-appearance:none;
+    height:15px;
+    width: 100%;
+    background-color: transparent; 
+    position: relative;
+    outline: none;    
+}//&::-moz-range-track
+}// input[type=range]
+
+
+
+
+
 
 /* Artwork child page */
 
-
-
-
-
-/* MAIN PAGE */
+/* Main content */
 .page-wrap {
     padding: 50px;
     -webkit-box-sizing: border-box;
