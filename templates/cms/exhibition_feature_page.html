@@ -1,5 +1,6 @@
 {% extends "cms/exhibition_base.html" %}
 {% load cms_tags %}
+{% load wagtailimages_tags %}
 
 {% block main %}
 
@@ -36,7 +37,18 @@
                         {# TODO: img #}
                         <!-- img src="https://pbs.twimg.com/media/EbQfeKJXQAEtsYk.jpg:large" alt="reworked" / -->
                         {# TODO: bullet vs no-bullet #}
-                        <h5 class="no-bullet">{{ entry.title }}</h5>
+                        {% if forloop.first %}
+                            {% image self.get_any_thumbnail width-50 class="toc-thumb" %}
+                            <h5 class="no-bullet">{{ entry.title }}</h5>
+                        {% elif 'audio' in entry.slug %}
+                            <img src="https://cdn2.vectorstock.com/i/1000x1000/84/41/sound-wave-concept-outline-icon-vector-20978441.jpg" alt="After" />
+                            <h5 class="no-bullet">{{ entry.title }}</h5>
+                        {% elif 'location' in entry.slug %}
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQutAu0ob712xjnofIZsRBOfPFMAa6lGD_fiw&usqp=CAU" alt="After" />
+                            <h5 class="no-bullet">{{ entry.title }}</h5>
+                        {% else  %}
+                            <h5 class="bullet">{{ entry.title }}</h5>
+                        {% endif %}
                     </a>
                 </li>
             {% endfor %}
