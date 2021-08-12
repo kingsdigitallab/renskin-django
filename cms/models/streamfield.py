@@ -100,6 +100,6 @@ class CMSStreamBlock(StreamBlock):
     image = ImageBlock(label='Aligned image', icon='image')
     document = DocumentChooserBlock(icon='doc-full-inverse')
     link = LinkBlock(icon='link')
-    embed = EmbedBlock(icon='media')
+    embed = EmbedBlock(icon='media', max_length=2048)
 
     html = AlignedHTMLBlock(icon='code', label='Raw HTML')
