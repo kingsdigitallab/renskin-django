@@ -10,7 +10,7 @@
                 <li>
                     <a href="{{ feature.url }}">
                         <span class="feature-title">{{ feature.title }}</span>
-                        {% image feature.thumbnail width-200 class="feature-thumb" %}
+                        {% image feature.get_any_thumbnail width-200 class="feature-thumb" %}
                     </a>
                 </li>
              {% endfor %}

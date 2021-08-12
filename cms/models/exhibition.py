@@ -36,6 +36,11 @@ class WithThumbnailField(models.Model):
         related_name='+'
     )
 
+    def get_any_thumbnail(self):
+        '''return most relevant thumbnail for a page'''
+        ret = self.thumbnail
+        return ret
+
 
 class ExhibitionBasePage(Page, WithOptionalStreamField, WithThumbnailField):
 
@@ -101,6 +106,17 @@ class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):
         InlinePanel('artworks', label='Artworks'),
         ImageChooserPanel('static_map'),
     ]
+
+    def get_any_thumbnail(self):
+        '''return the page thumb, or the first artwork image
+        TODO: or the first image in the body.
+        '''
+        ret = super(ExhibitionFeaturePage, self).get_any_thumbnail()
+        if ret is None:
+            artwork = self.artworks.first()
+            if artwork:
+                ret = artwork.image
+        return ret
 
 
 class Artwork(Orderable):
