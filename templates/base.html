@@ -40,16 +40,16 @@
 
 </head>
 
-<body>
+<body class="{% block body-class %}{% endblock %}">
 
     <div id="renskin-background">
     </div>
     <div role="complementary" class="skip-main" aria-label="option to skip to main content"><a href="#maincontent">Skip to main content</a></div>
-    {% block navigation %}
-    <nav id="nav">
-    {% include 'includes/navigation.html' %}
-    </nav>
-    {% endblock %}
+        {% block navigation %}
+            <nav id="nav">
+                {% include 'includes/navigation.html' %}
+            </nav>
+        {% endblock %}
     <div id="maincontent" tabindex="0"></div>
 
     {% block title %}{% endblock %}
