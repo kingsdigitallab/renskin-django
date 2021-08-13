@@ -62,7 +62,6 @@ class ExhibitionBasePage(Page, WithOptionalStreamField, WithThumbnailField):
         ImageChooserPanel('thumbnail'),
     ]
 
-
 class WithStaticMap(models.Model):
     class Meta:
         abstract = True
@@ -109,7 +108,6 @@ class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):
 
     def get_any_thumbnail(self):
         '''return the page thumb, or the first artwork image
-        TODO: or the first image in the body.
         '''
         ret = super(ExhibitionFeaturePage, self).get_any_thumbnail()
         if ret is None:
@@ -121,7 +119,10 @@ class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):
 
 class Artwork(Orderable):
     feature = ParentalKey(ExhibitionFeaturePage, related_name='artworks')
-    title = models.CharField(max_length=255)
+    title = models.CharField(
+        max_length=255, blank=True, default='',
+        help_text='To use the image title, leave this field empty.'
+    )
     dimensions = models.CharField(max_length=255, blank=True, default='')
     credit = models.TextField(blank=True, default='')
     copyright = models.TextField(blank=True, default='')
@@ -134,9 +135,9 @@ class Artwork(Orderable):
     )
 
     panels = [
+        ImageChooserPanel('image'),
         FieldPanel('title'),
         FieldPanel('dimensions'),
         FieldPanel('credit'),
         FieldPanel('copyright'),
-        ImageChooserPanel('image'),
     ]

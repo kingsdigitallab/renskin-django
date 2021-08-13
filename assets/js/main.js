@@ -69,4 +69,18 @@ $(function() {
         evn.preventDefault();
         $('html,body').scrollTo(this.hash, this.hash);
     });
+
+    // image comparison slider
+    $('.comparison').each(function(index) {
+        $comp = $(this);
+        let divisor = $comp.find('.divisor')[0];
+        let handle = $comp.find('.handle')[0];
+        let slider = $comp.find('.slider')[0];
+
+        $comp.on('input', function() {
+            handle.style.left = slider.value + "%";
+            divisor.style.width = slider.value + "%";
+        });
+    });
+
 });

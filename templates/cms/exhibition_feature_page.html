@@ -9,12 +9,20 @@
 <input id="switch" type="checkbox" />
 <div class="page-wrap">
     <label for="switch" id="menu-toggle"> Page Content</label>
+
     <div class="row">
         <div class="col-full">
             <div class="content-wrapper">
                 <div class="content">
                     <div class="content-padding">
                         <h2>{{ self.title }}</h2>
+
+                        {% if self.artworks.count == 2 %}
+                            <div class="item col-1-3 tab-1-2 mob-full">
+                                {% include "cms/includes/feature_artworks_slider.html" with feature=self %}
+                                {# % include "cms/includes/feature_artworks_side_by_side.html" with feature=self % #}
+                            </div>
+                        {% endif %}
 
                         {% include "cms/includes/streamfield.html" with blocks=self.body %}
                     </div>

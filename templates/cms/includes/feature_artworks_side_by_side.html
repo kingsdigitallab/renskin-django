@@ -1,0 +1,8 @@
+{% load wagtailimages_tags %}
+
+<div class="item col-1-3 tab-1-2 mob-full">
+    <div class="artwork">
+        {% image self.artworks.all.0.image width-400 class="artwork-img img-left" %}
+        {% image self.artworks.all.1.image width-400 class="artwork-img img-right" %}
+    </div>
+</div>
