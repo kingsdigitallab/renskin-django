@@ -101,9 +101,9 @@ class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):
     side_bar_text = RichTextField(blank=True, default='')
 
     content_panels = ExhibitionBasePage.content_panels + [
-        FieldPanel('side_bar_text'),
+        # FieldPanel('side_bar_text'),
         InlinePanel('artworks', label='Artworks'),
-        ImageChooserPanel('static_map'),
+        # ImageChooserPanel('static_map'),
     ]
 
     def get_any_thumbnail(self):
