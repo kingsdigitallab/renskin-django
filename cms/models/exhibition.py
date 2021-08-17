@@ -62,6 +62,23 @@ class ExhibitionBasePage(Page, WithOptionalStreamField, WithThumbnailField):
         ImageChooserPanel('thumbnail'),
     ]
 
+    def get_context(self, request):
+        context = super(ExhibitionBasePage, self).get_context(request)
+
+        # Add extra variables and return the updated context
+        import re
+        from django.utils.text import slugify
+
+        context['body_classes'] = re.sub(
+            r'[A-Z]',
+            lambda m: '-' + m.group(0).lower(),
+            self.__class__.__name__
+        ).strip('-').replace('exhibition-', 'ex-')
+
+        print(context['body_classes'])
+
+        return context
+
 class WithStaticMap(models.Model):
     class Meta:
         abstract = True

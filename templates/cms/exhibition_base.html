@@ -1,26 +1,24 @@
 {% extends "cms/base.html" %}
 {# % load menu_tags % #}
 
-{% block body-class %}bodyex{% endblock %}
+{% block body-class %}ex-base {{body_classes}}{% endblock %}
 
 {% block main %}
 
+    {% comment %}
+        <ul id="exhibition-menu">
+            {% flat_menu 'visibleskin' use_specific=True %}
+        </ul>
+    {% endcomment %}
 
-                {% comment %}
-                    <ul id="exhibition-menu">
-                        {% flat_menu 'visibleskin' use_specific=True %}
-                    </ul>
-                {% endcomment %}
+    <h2>{{ self.title }}</h2>
 
-                <h2>{{ self.title }}</h2>
-
-                <div class="row">
-                    {% block excontent %}
-                         <div class="col-full mob-full">
-                            {% include "cms/includes/streamfield.html" with blocks=self.body %}
-                        </div>
-                    {% endblock excontent %}
-                </div>
-
+    <div class="row">
+        {% block excontent %}
+             <div class="col-full mob-full">
+                {% include "cms/includes/streamfield.html" with blocks=self.body %}
+            </div>
+        {% endblock excontent %}
+    </div>
 
 {% endblock %}
