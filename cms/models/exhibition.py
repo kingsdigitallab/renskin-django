@@ -79,6 +79,7 @@ class ExhibitionBasePage(Page, WithOptionalStreamField, WithThumbnailField):
 
         return context
 
+
 class WithStaticMap(models.Model):
     class Meta:
         abstract = True
@@ -116,8 +117,14 @@ class ExhibitionGalleryPage(ExhibitionBasePage):
 
 class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):
     side_bar_text = RichTextField(blank=True, default='')
+    feature_number = models.IntegerField(blank=True, null=True, default=None)
 
-    content_panels = ExhibitionBasePage.content_panels + [
+    class Meta:
+        ordering = ['feature_number']
+
+    content_panels = [
+        FieldPanel('feature_number'),
+    ] + ExhibitionBasePage.content_panels + [
         # FieldPanel('side_bar_text'),
         InlinePanel('artworks', label='Artworks'),
         # ImageChooserPanel('static_map'),
@@ -138,7 +145,7 @@ class Artwork(Orderable):
     feature = ParentalKey(ExhibitionFeaturePage, related_name='artworks')
     title = models.CharField(
         max_length=255, blank=True, default='',
-        help_text='To use the image title, leave this field empty.'
+        help_text='The full title of the artwork.'
     )
     dimensions = models.CharField(max_length=255, blank=True, default='')
     credit = models.TextField(blank=True, default='')
@@ -148,7 +155,8 @@ class Artwork(Orderable):
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
-        related_name='+'
+        related_name='+',
+        help_text = '(To specify the HTML alt attribute, click Edit and change the title field.)',
     )
 
     panels = [

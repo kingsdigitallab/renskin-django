@@ -15,7 +15,10 @@
             <div class="content-wrapper">
                 <div class="content">
                     <div class="content-padding">
-                        <h2>{{ self.title }}</h2>
+                        <h2>
+                            {{ self.feature_number|stringformat:"02d" }}
+                            {{ self.title }}
+                        </h2>
 
                         {% if self.artworks.count == 2 %}
                             <div>
