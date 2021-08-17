@@ -1473,7 +1473,15 @@ footer {
 .artwork {
     width:100%;
   display:block;
-  margin:0 auto
+  margin:0 auto;
+  h3{
+    background:$black;
+    text-align:center;
+    color:$white;
+    font-family: 'BenchNine', sans-serif;
+    padding:0.3em;
+  }
+
 }
 
 .artwork input[type=range]{
@@ -1744,7 +1752,7 @@ footer {
     //ul
 
     .name-active {
-        h5 {
+        h3 {
             color: $white;
 
             &:before {
