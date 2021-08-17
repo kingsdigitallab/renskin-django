@@ -1470,47 +1470,61 @@ footer {
 /*** Exhibition Styles ***/
 
 /* Artwork index page*/
-    .artwork {
-        position: relative;
-        display: inline-block;
-        background:$black;
-        width:100%;
-          padding-bottom:100%;
-  position:relative;
+.artwork {
+    position: relative;
+    display: inline-block;
+    background: $black;
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
 
-      img{
+    img {
 
-        position:absolute;
-          top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  object-fit:contain;
-              }// img
-      .restaged {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    // img
+    .restaged {
         position: absolute;
         top: 0;
         left: 0;
         z-index: 99;
-        opacity:0;
+        opacity: 0;
         transition: opacity 1.5s ease-in-out;
-  -moz-transition: opacity 1.5s ease-in-out;
-  -webkit-transition: opacity 1.5s ease-in-out;
+        -moz-transition: opacity 1.5s ease-in-out;
+        -webkit-transition: opacity 1.5s ease-in-out;
 
-    }//restaged
-   &:hover .restaged {
-        display: block;
-     opacity:1;
-    }//hover
-
-    }//artwork
-        .ex-gallery h3{
-        background:$white;
-        color:$black;
-        margin-top:0;
-        text-align: center;
-  
     }
+
+    //restaged
+    &:hover .restaged {
+        display: block;
+        opacity: 1;
+    }
+
+    //hover
+
+}
+
+//artwork
+.ex-gallery h3 {
+    background: $white;
+    color: $black;
+    margin-top: 0;
+    text-align: center;
+    opacity: 1;
+    padding: 0.2em;
+
+    &:hover {
+        opacity: 0.8;
+
+    }
+}
 
 
 
@@ -1550,7 +1564,8 @@ footer {
         &:focus {
             outline: none;
         }
-        &:hover{
+
+        &:hover {
             opacity: 0.8;
         }
 
@@ -1558,19 +1573,21 @@ footer {
     }
 
     // #menu-toggle
-    h2{
+    h2 {
         font-family: 'BenchNine', sans-serif;
         text-transform: uppercase;
     }
-    h3{
-        margin:2em 0 0.2em 0 !important;
-        border:none;
+
+    h3 {
+        margin: 2em 0 0.2em 0 !important;
+        border: none;
         text-transform: uppercase;
-        font-size:1.2em !important;
+        font-size: 1.2em !important;
         font-family: 'BenchNine', sans-serif;
     }
-    p{
-        margin:0;
+
+    p {
+        margin: 0;
     }
 }
 
@@ -1596,7 +1613,7 @@ footer {
         ~.page-wrap #menu-toggle {
             right: 7.1em;
             background: $black;
-            color:$white;
+            color: $white;
         }
 
         // ~ .page-wrap #menu-toggle
