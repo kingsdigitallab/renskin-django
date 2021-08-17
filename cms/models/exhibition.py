@@ -75,7 +75,7 @@ class ExhibitionBasePage(Page, WithOptionalStreamField, WithThumbnailField):
             self.__class__.__name__
         ).strip('-').replace('exhibition-', 'ex-')
 
-        print(context['body_classes'])
+        context['body_classes'] += ' ex-' + slugify(self.title)
 
         return context
 
