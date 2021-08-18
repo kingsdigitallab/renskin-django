@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
 import logging
-
+import re
 from django.conf import settings
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.db import models
@@ -155,6 +155,13 @@ class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):
 
     original = property(get_artwork_original)
 
+    '''
+    Conventions:
+    long_title = 'short_title: sub_title'
+    long_title comes from first artwork's title
+    short_title is the Feature page title
+    '''
+
     short_title = property(lambda self: self.title)
 
     def get_long_title(self):
@@ -167,15 +174,29 @@ class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):
 
     long_title = property(get_long_title)
 
+    def get_subtitle(self):
+        ret = re.sub(
+            r'^.*'+re.escape(self.short_title.strip())+'(.+)$',
+            r'\1',
+            self.long_title or ''
+        ).lstrip(' ,:;.').strip()
+
+        return ret
+
+    subtitle = property(get_subtitle)
+
 
 class Artwork(Orderable):
     feature = ParentalKey(ExhibitionFeaturePage, related_name='artworks')
     title = models.CharField(
         max_length=255, blank=True, default='',
-        help_text='The full title of the artwork.'
+        help_text='The complete title of the artwork.'
     )
     dimensions = models.CharField(max_length=255, blank=True, default='')
-    credit = models.TextField(blank=True, default='')
+    credit = models.TextField(
+        blank=True, default='',
+        help_text = "The credit line: author, 'full title', year, owner."
+    )
     copyright = models.TextField(blank=True, default='')
     image = models.ForeignKey(
         'wagtailimages.Image',
