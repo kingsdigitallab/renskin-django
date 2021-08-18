@@ -191,8 +191,6 @@ class TableOfContentsNode(template.Node):
 
         output = self.nodelist.render(context)
 
-        print(output)
-
         toc = []
 
         def replace_title(m):
