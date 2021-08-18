@@ -7,8 +7,8 @@
             <a href="{{ feature.url }}">
                 <div class="artwork">
                     {% if feature.artworks.count %}
-                        {% image feature.artworks.all.0.image width-400 class="artwork-img img-before" %}
-                        {% image feature.artworks.all.1.image width-400 class="artwork-img img-after restaged" %}
+                        {% image feature.reworked.image width-400 class="artwork-img img-before" %}
+                        {% image feature.original.image width-400 class="artwork-img img-after restaged" %}
                     {% else %}
                         {# Fallback in case no artwork image has been uploaded to the Feature page #}
                         <img src="https://cdn.theatlantic.com/thumbor/m5wttEp1DkkbBIArlxU2oPY-dPI=/0x1:2400x1351/1536x864/media/img/2017/09/28/WEL_Isaacson_MonaLisa_Web_Art/original.jpg" alt="before" />
@@ -17,7 +17,7 @@
                 </div>
                 <h3 class="ex-gallery">
                     {{ feature.feature_number|stringformat:"02d" }}
-                    {{ feature.title }}
+                    {{ feature.short_title }}
                 </h3>
             </a>
         </div>

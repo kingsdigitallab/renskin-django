@@ -143,6 +143,30 @@ class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):
                 ret = artwork.image
         return ret
 
+    def get_artwork_reworked(self):
+        ret = self.artworks.first()
+        return ret
+
+    reworked = property(get_artwork_reworked)
+
+    def get_artwork_original(self):
+        ret = self.artworks.last()
+        return ret
+
+    original = property(get_artwork_original)
+
+    short_title = property(lambda self: self.title)
+
+    def get_long_title(self):
+        ret = None
+        reworked = self.reworked
+        if reworked:
+            ret = reworked.title
+
+        return ret or self.short_title
+
+    long_title = property(get_long_title)
+
 
 class Artwork(Orderable):
     feature = ParentalKey(ExhibitionFeaturePage, related_name='artworks')
