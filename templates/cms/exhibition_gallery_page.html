@@ -16,7 +16,10 @@
                     {% endif %}
                     -->
                 </div>
-                <h3 class="ex-gallery">{{ feature.title }}</h3>
+                <h3 class="ex-gallery">
+                    {{ feature.feature_number|stringformat:"02d" }}
+                    {{ feature.title }}
+                </h3>
             </a>
         </div>
     {% endfor %}
