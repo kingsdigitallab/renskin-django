@@ -8,6 +8,9 @@ from datetime import date
 
 register = template.Library()
 
+# <h1 class="NOT_IN_TOC"> => ignored by the toc tag
+NOT_IN_TOC = 'not-in-toc'
+
 
 @register.filter
 def next(some_list, current_index):
@@ -165,6 +168,8 @@ Each item in the list as the form:
 
 The toc variable can be used to build a
 dynamic table of content.
+
+Use class="not-in-toc" to exclude a heading from the toc.
 '''
 
 
@@ -186,33 +191,36 @@ class TableOfContentsNode(template.Node):
 
         output = self.nodelist.render(context)
 
+        print(output)
+
         toc = []
 
         def replace_title(m):
             ret = m.group(0)
 
-            title = m.group(3)
+            title = m.group(4)
             title = strip_tags(title).strip()
             slug = slugify(title)
 
-            if title:
+            if title and NOT_IN_TOC not in m.group(3):
                 toc.append({
                     'title': title,
                     'slug': slug
                 })
 
             if slug:
-                ret = '%s id="%s"%s%s%s' % (
+                ret = '%s%s id="%s"%s%s%s' % (
                     m.group(1),
-                    slug,
                     m.group(2),
+                    slug,
                     m.group(3),
                     m.group(4),
+                    m.group(5),
                 )
 
             return ret
 
-        output = re.sub(r'(<h\d)(>)(.*?)(</h\d>)', replace_title, output)
+        output = re.sub(r'(?s)(<h)(\d)([^>]*>)(.*?)(</h\2>)', replace_title, output)
 
         context['toc'] = toc
 

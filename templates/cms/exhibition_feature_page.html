@@ -17,8 +17,9 @@
                     <div class="content-padding">
                         <h2>
                             {{ self.feature_number|stringformat:"02d" }}
-                            {{ self.title }}
+                            {{ self.short_title }}
                         </h2>
+                        <h3 class="not-in-toc">{{ self.subtitle }}</h3>
 
                         {% if self.artworks.count == 2 %}
                             <div>
@@ -45,9 +46,6 @@
                 <li>
                     {# TODO: name-active: JS? #}
                     <a href="#{{ entry.slug }}" class="name-active2">
-                        {# TODO: img #}
-                        <!-- img src="https://pbs.twimg.com/media/EbQfeKJXQAEtsYk.jpg:large" alt="reworked" / -->
-                        {# TODO: bullet vs no-bullet #}
                         {% if forloop.first %}
                             {% image self.get_any_thumbnail width-50 class="toc-thumb" %}
                             <h5 class="no-bullet">{{ entry.title }}</h5>
