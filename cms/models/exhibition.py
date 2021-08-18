@@ -117,7 +117,10 @@ class ExhibitionGalleryPage(ExhibitionBasePage):
 
 class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):
     side_bar_text = RichTextField(blank=True, default='')
-    feature_number = models.IntegerField(blank=True, null=True, default=None)
+    feature_number = models.IntegerField(
+        blank=True, null=True, default=None,
+        help_text='This number should match the one used in the physical exhibition and the map.'
+    )
 
     class Meta:
         ordering = ['feature_number']
