@@ -1,69 +1,134 @@
 {% extends "cms/exhibition_base.html" %}
 {% load cms_tags %}
 {% load wagtailimages_tags %}
-
 {% block main %}
-
 {% toc %}
- <!-- artwork prototype - static content-->
+<!-- artwork prototype - static content-->
 <input id="switch" type="checkbox" />
 <div class="page-wrap">
     <label for="switch" id="menu-toggle"> Page Content</label>
-
+    <div class="row">
+        <div class="col-1-6 tab-1-4 mob-full">
+            <h2>
+                {{ self.feature_number|stringformat:"02d" }}
+                {{ self.short_title }}
+            </h2>
+            <h3 class="not-in-toc">{{ self.subtitle }}</h3>
+            {% if self.artworks.count == 2 %}
+        </div>
+        <div class="col-5-6 tab-3-4 mob-full">
+            {% image self.artworks.all.0.image width-400 class="artwork-img" %}
+        </div>
+    </div><!-- row -->
     <div class="row">
         <div class="col-full">
-            <div class="content-wrapper">
-                <div class="content">
-                    <div class="content-padding">
-                        <h2>
-                            {{ self.feature_number|stringformat:"02d" }}
-                            {{ self.short_title }}
-                        </h2>
-                        <h3 class="not-in-toc">{{ self.subtitle }}</h3>
-
-                        {% if self.artworks.count == 2 %}
-                            <div>
-                                {% include "cms/includes/feature_artworks_slider.html" with feature=self %}
-                                {# % include "cms/includes/feature_artworks_side_by_side.html" with feature=self % #}
-                            </div>
-                        {% endif %}
-
-                        {% include "cms/includes/streamfield.html" with blocks=self.body %}
-                    </div>
-                </div>
+            <div class="rich-text">
+                <p>This image of 'An African Drummer' was recorded by the Nuremberg merchant Christoph Weiditz in 1529 while he travelled through Spain.
+                </p>
             </div>
         </div>
-    </div>
+    </div><!-- row -->
+    <div class="row">
+        <div class="col-3-4 tab-3-4 mob-3-4">
+            <div class="rich-text">
+                <h3 id="who">Who</h3>
+                <p>Weiditz depicts “An African Drummer”, and the
+                    significance of his image rests partly in the occupation to which it
+                    testifies. There was a long tradition of African musicians playing at
+                    European courts and in processions such as this - Katherine of Aragon,
+                    Charles V’s aunt, famously brought Black trumpeters to England in her
+                    royal retinue.</p>
+            </div>
+            <div class="rich-text">
+                <h3 id="what">What</h3>It’s likely that Weiditz made this drawing himself, based
+                on first hand observations from a journey he undertook accompanying
+                Charles V through Spain. The image appeared as part of his Costume Book: a
+                manuscript (unpublished) set of drawings that Weiditz made to
+                illuminate the variety of dress, habits and customs of the peoples of
+                world.
+            </div>
+            <div class="rich-text">
+                <h3 id="why">Why</h3>Costume books were explicitly intended to catalogue
+                differences and Weiditz’s notebook reminds us that recording difference
+                was often a private and personal practice.&nbsp; What constituted difference
+                in the Renaissance? For Weiditz, piercings and featherwork, as much as
+                skin colour or ethnicity, were what signified the drummer as interesting
+                or exotic.
+            </div>
+        </div>
+        <div class="col-1-4 tab-1-4 mob-1-4">
+            <h3 id="original">Original Work</h3>
+            {% image self.artworks.all.1.image width-400 class="artwork-img" %}
+            <div class="rich-text">
+                <p>Christoph Weiditz, 'An African Drummer', 1529. Germanisches National Museum.
+                </p>
+            </div>
+        </div>
+    </div><!-- row -->
+    <div class="row">
+        <div class="col-full">
+            <div class="rich-text">
+                <h3 id="audio">Audio<br></h3>
+                <p>Hear the curator, Hannah Murphy, talk about this painting:</p>
+            </div>
+            <div class="iframe-container block.value.alignment">
+                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1090318624%3Fsecret_token%3Ds-pIzulpI4AtY&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-686017831" title="Renaissance Skin" target="_blank" style="color: #cccccc; text-decoration: none;">Renaissance Skin</a> · <a href="https://soundcloud.com/user-686017831/african-drummer/s-pIzulpI4AtY" title="An African Drummer" target="_blank" style="color: #cccccc; text-decoration: none;">An African Drummer</a></div>
+            </div>
+        </div>
+    </div><!-- row -->
+    <div class="row">
+        <div class="col-full">
+        	<h3 id="location">Location</h3>
+        </div>
+    </div><!-- row -->
+    <div class="row">
+        <div class="col-3-4 tab-full mob-full">
+            <div class="rich-text">
+                <p><img class="richtext-image full-width" src="/media/images/MicrosoftTeams-image.width-800.png" width="800" height="835" alt="Map"><br></p>
+            </div>
+        </div>
+        <div class="col-1-4 tab-full mob-full">
+            <div class="rich-text">
+                <p>Strand Campus, Strand, London WC2R 2LS</p>
+            </div>
+        </div>
+    </div><!-- row -->
+    <!-- 
+    <div class="row">
+        <div class="col-full">
+            {% endif %}
+            {% include "cms/includes/streamfield.html" with blocks=self.body %}
+        </div>
+    </div><!-- row -->
 </div> <!-- page-wrap -->
 {% endtoc %}
-
 <!-- sidebar -->
 {% if toc %}
-    <div id="sidebar" role="navigation">
-        <h3>CONTENT NAVIGATION</h3>
-        <ul>
-            {% for entry in toc %}
-                <li>
-                    {# TODO: name-active: JS? #}
-                    <a href="#{{ entry.slug }}" class="name-active2">
-                        {% if forloop.first %}
-                            {% image self.get_any_thumbnail width-50 class="toc-thumb" %}
-                            <h5 class="no-bullet">{{ entry.title }}</h5>
-                        {% elif 'audio' in entry.slug %}
-                            <img src="https://cdn2.vectorstock.com/i/1000x1000/84/41/sound-wave-concept-outline-icon-vector-20978441.jpg" alt="After" />
-                            <h5 class="no-bullet">{{ entry.title }}</h5>
-                        {% elif 'location' in entry.slug %}
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQutAu0ob712xjnofIZsRBOfPFMAa6lGD_fiw&usqp=CAU" alt="After" />
-                            <h5 class="no-bullet">{{ entry.title }}</h5>
-                        {% else  %}
-                            <h5 class="bullet">{{ entry.title }}</h5>
-                        {% endif %}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div> <!-- end .sidebar -->
+<div id="sidebar" role="navigation">
+    <h3>CONTENT NAVIGATION</h3>
+    <ul>
+        {% for entry in toc %}
+        <li>
+            {# TODO: name-active: JS? #}
+            <a href="#{{ entry.slug }}" class="name-active2">
+                {% if forloop.first %}
+                {% image self.get_any_thumbnail width-50 class="toc-thumb" %}
+                <h5 class="no-bullet">{{ entry.title }}</h5>
+                {% elif 'audio' in entry.slug %}
+                <img src="https://cdn2.vectorstock.com/i/1000x1000/84/41/sound-wave-concept-outline-icon-vector-20978441.jpg" alt="After" />
+                <h5 class="no-bullet">{{ entry.title }}</h5>
+                {% elif 'location' in entry.slug %}
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQutAu0ob712xjnofIZsRBOfPFMAa6lGD_fiw&usqp=CAU" alt="After" />
+                <h5 class="no-bullet">{{ entry.title }}</h5>
+                {% else %}
+                <h5 class="bullet">{{ entry.title }}</h5>
+                {% endif %}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div> <!-- end .sidebar -->
 {% endif %}
 <!-- end artwork prototype -->
-
 {% endblock %}

@@ -1530,6 +1530,15 @@ footer {
 
 
 /* Artwork child page */
+.ex-feature-page{
+    .row{
+        background:$black;
+        color: $white;
+    }
+    img.richtext-image.full-width{
+        width:100%;
+    }
+}
 
 /* Main content */
 .page-wrap {
