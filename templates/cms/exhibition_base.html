@@ -6,9 +6,12 @@
 {% block main %}
 
     {% comment %}
-        <ul id="exhibition-menu">
-            {% flat_menu 'visibleskin' use_specific=True %}
-        </ul>
+        {# GN: TODO: breadcrumb, here showing the immediate parent page ony #}
+        <h3 class="breadcrumb-parent not-in-toc">
+            <a href="{{ self.get_parent.url }}">
+                {{ self.get_parent.title }}
+            </a>
+        </h3>
     {% endcomment %}
 
     <h2>{{ self.title }}</h2>
