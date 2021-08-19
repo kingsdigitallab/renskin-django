@@ -2,22 +2,14 @@ from __future__ import unicode_literals
 
 import logging
 import re
-from django.conf import settings
-from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.db import models
-from django.shortcuts import render
 from modelcluster.fields import ParentalKey
-from modelcluster.tags import ClusterTaggableManager
-from taggit.models import TaggedItemBase
-from wagtail.contrib.wagtailroutablepage.models import RoutablePageMixin, route
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, StreamFieldPanel, \
     InlinePanel, MultiFieldPanel
 from wagtail.wagtailcore.models import Page, Orderable
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from wagtail.wagtailsearch import index
-from django.shortcuts import redirect
 from .behaviours import WithFeedImage, WithStreamField, WithOptionalStreamField
-from datetime import date
 from wagtail.wagtailcore.fields import RichTextField
 
 logger = logging.getLogger(__name__)
@@ -127,11 +119,19 @@ class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):
 
     content_panels = [
         FieldPanel('feature_number'),
-    ] + ExhibitionBasePage.content_panels + [
-        # FieldPanel('side_bar_text'),
         InlinePanel('artworks', label='Artworks'),
-        # ImageChooserPanel('static_map'),
+    ] + ExhibitionBasePage.content_panels[1:]
+
+    promote_panels = ExhibitionBasePage.promote_panels + [
+        FieldPanel('title'),
     ]
+    
+    def full_clean(self, *args, **kwargs):
+        self.title = self.short_title
+        super(ExhibitionFeaturePage, self).full_clean(*args, **kwargs)
+
+    def get_admin_display_title(self):
+        return '{:02d} - {}'.format(self.feature_number, self.title)
 
     def get_any_thumbnail(self):
         '''return the page thumb, or the first artwork image
@@ -159,43 +159,50 @@ class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):
     Conventions:
     long_title = 'short_title: sub_title'
     long_title comes from first artwork's title
-    short_title is the Feature page title
     '''
 
-    short_title = property(lambda self: self.title)
+    def _get_title_parts(self):
+        '''Return [short_title, subtitle]'''
+        long_title = self.long_title
+        match = re.match(r'^(.*?)([,.;:-])(.*)$', long_title)
+        if match:
+            ret = [match.group(1).strip(), match.group(3).strip()]
+        else:
+            ret = [long_title, '']
+
+        return ret
+
+    def get_short_title(self):
+        return self._get_title_parts()[0]
+
+    short_title = property(get_short_title)
+
+    def get_subtitle(self):
+        return self._get_title_parts()[1]
+
+    subtitle = property(get_subtitle)
 
     def get_long_title(self):
-        ret = None
+        ret = self.title
         reworked = self.reworked
         if reworked:
             ret = reworked.title
 
-        return ret or self.short_title
+        return (ret or '').strip()
 
     long_title = property(get_long_title)
-
-    def get_subtitle(self):
-        ret = re.sub(
-            r'^.*'+re.escape(self.short_title.strip())+'(.+)$',
-            r'\1',
-            self.long_title or ''
-        ).lstrip(' ,:;.').strip()
-
-        return ret
-
-    subtitle = property(get_subtitle)
 
 
 class Artwork(Orderable):
     feature = ParentalKey(ExhibitionFeaturePage, related_name='artworks')
     title = models.CharField(
         max_length=255, blank=True, default='',
-        help_text='The complete title of the artwork.'
+        help_text='The complete title of the artwork. Without author name, date or any other information.'
     )
     dimensions = models.CharField(max_length=255, blank=True, default='')
-    credit = models.TextField(
+    credit = models.TextField('Credit line',
         blank=True, default='',
-        help_text = "The credit line: author, 'full title', year, owner."
+        help_text = "e.g. Chistoph Weiditz, TITLE, 1529, Germanisches National Museum. TITLE will be substituted by the title field."
     )
     copyright = models.TextField(blank=True, default='')
     image = models.ForeignKey(
@@ -210,7 +217,12 @@ class Artwork(Orderable):
     panels = [
         ImageChooserPanel('image'),
         FieldPanel('title'),
-        FieldPanel('dimensions'),
+        # FieldPanel('dimensions'),
         FieldPanel('credit'),
-        FieldPanel('copyright'),
+        # FieldPanel('copyright'),
     ]
+
+    def get_credit_line(self):
+        return (self.credit or '').replace('TITLE', "'{}'".format(self.title))
+
+    credit_line = property(get_credit_line)
