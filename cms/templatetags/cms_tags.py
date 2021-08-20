@@ -205,20 +205,21 @@ def fragment(context, sectionid, part='all'):
     fragmented = context['fragmented']
 
     if sectionid == 'intro':
-        pattern = r'^(?s)(.)(.*?)($|<h\d)'
+        pattern = r'^(?s)(.)(.)(.)(.*?)($|<h\d)'
     else:
-        pattern = r'(?s)(<h\d)([^>]+id="[^"]*' + re.escape(sectionid) + r'[^"]*"[^>]*>)(.*?)($|\1)'
+        # (<)(h2)( id="c">)(C)(</h2)
+        pattern = r'(?s)(<)(h\d)([^>]+id="[^"]*' + re.escape(sectionid) + r'[^"]*".*?/\2>)(.*?)($|<\2)'
 
     match = re.search(
         pattern,
         fragmented
     )
     if match:
-        ret = match.group(1) + match.group(2)
+        ret = match.group(1) + match.group(2) + match.group(3)
         if part == 'all':
-            ret += match.group(3)
+            ret += match.group(4)
         if part == 'body':
-            ret = match.group(3)
+            ret = match.group(4)
         # let's remove all the parent divs tags
         ret = re.sub(r'</?div[^>]*>', r'', ret)
         ret = mark_safe('%s' % ret)
