@@ -2,7 +2,8 @@ import re
 
 from django import template
 from django.conf import settings
-
+from django.utils.text import slugify
+from django.utils.safestring import mark_safe
 from cms.models.pages import BlogPost, Event, NewsPost
 from datetime import date
 
@@ -172,6 +173,52 @@ dynamic table of content.
 Use class="not-in-toc" to exclude a heading from the toc.
 '''
 
+@register.tag(name="fragmentation")
+def do_fragmentation(parser, token):
+    nodelist = parser.parse(('endfragmentation',))
+    parser.delete_first_token()
+    return FragmentationNode(nodelist)
+
+class FragmentationNode(template.Node):
+    def __init__(self, nodelist):
+        self.nodelist = nodelist
+
+    def render(self, context):
+        context['fragmented'] = self.nodelist.render(context)
+        return 'FRAGGED'
+
+@register.simple_tag(takes_context=True)
+def fragment(context, sectionid):
+    '''
+    {% fragment 'X' %}:
+        render the HTML fragment from the body streamfield
+        starting at <h1 id="X">
+    {% fragment 'INTRO' %}:
+        render the HTML fragment from the body streamfield
+        before any heading
+    '''
+    sectionid = slugify(sectionid)
+    ret = '[Fragment not found: {}]'.format(sectionid)
+
+    fragmented = context['fragmented']
+
+    if sectionid == 'intro':
+        pattern = r'^(?s)(.)(.*?)($|<h\d)'
+    else:
+        pattern = r'(?s)(<h\d)([^>]+id="[^"]*' + re.escape(sectionid) + r'[^"]*".*?)($|\1)'
+
+    match = re.search(
+        pattern,
+        fragmented
+    )
+    if match:
+        ret = match.group(1) + match.group(2)
+        # let's remove all the parent divs tags
+        ret = re.sub(r'</?div[^>]*>', r'', ret)
+        ret = mark_safe('%s' % ret)
+
+    return ret
+
 
 @register.tag(name="toc")
 def do_table_of_contents(parser, token):
@@ -186,7 +233,6 @@ class TableOfContentsNode(template.Node):
         self.nodelist = nodelist
 
     def render(self, context):
-        from django.utils.text import slugify
         from django.utils.html import strip_tags
 
         output = self.nodelist.render(context)
@@ -223,3 +269,5 @@ class TableOfContentsNode(template.Node):
         context['toc'] = toc
 
         return output
+
+
