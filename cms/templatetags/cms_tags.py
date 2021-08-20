@@ -185,7 +185,7 @@ class FragmentationNode(template.Node):
 
     def render(self, context):
         context['fragmented'] = self.nodelist.render(context)
-        return 'FRAGGED'
+        return ''
 
 @register.simple_tag(takes_context=True)
 def fragment(context, sectionid):
