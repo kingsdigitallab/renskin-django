@@ -152,6 +152,74 @@ def footer_menu(context, root, current_page=None):
     return {'request': context['request'], 'root': root,
             'current_page': current_page, 'menu_pages': menu_pages}
 
+
+@register.tag(name="fragmentation")
+def do_fragmentation(parser, token):
+    nodelist = parser.parse(('endfragmentation',))
+    parser.delete_first_token()
+    return FragmentationNode(nodelist)
+
+
+class FragmentationNode(template.Node):
+    def __init__(self, nodelist):
+        self.nodelist = nodelist
+
+    def render(self, context):
+        context['fragmented'] = self.nodelist.render(context)
+        return ''
+
+
+@register.simple_tag(takes_context=True)
+def fragment(context, sectionid, part='all'):
+    '''
+    {% fragment 'X' %}:
+        render the HTML fragment from the body streamfield
+        starting at <h1 id="X">
+    {% fragment 'INTRO' %}:
+        render the HTML fragment from the body streamfield
+        before any heading
+
+    part: all|head|body
+    '''
+    sectionid = slugify(sectionid)
+    ret = '[Fragment not found: {}]'.format(sectionid)
+
+    fragmented = context['fragmented']
+
+    '''TODO: extract the html using DOM processor instead of regexes.
+    Why?
+        . regex will include closing div tags which are parents of the section
+            We remove all div tags at the moment as a quick & dirty fix
+        . regex extract from h2 to next h2, or h3 to next h3
+            That simplistic. What if h3 is followed by h2?
+    '''
+
+    if sectionid == 'intro':
+        pattern = r'^(?s)(.)(.)(.)(.*?)($|<h\d)'
+    else:
+        # (<)(h2)( id="c">C</h2>)(<p>...)(<h2)
+        pattern = r'(?s)(<)(h\d)([^>]+id="[^"]*' + re.escape(sectionid) + r'[^"]*".*?/\2>)(.*?)($|<\2)'
+
+    match = re.search(
+        pattern,
+        fragmented
+    )
+    if match:
+        ret = match.group(1) + match.group(2) + match.group(3)
+        if part == 'all':
+            ret += match.group(4)
+        if part == 'body':
+            ret = match.group(4)
+
+        print(ret)
+
+        # let's remove all the parent divs tags
+        ret = re.sub(r'</?div[^>]*>', r'', ret)
+        ret = mark_safe('%s' % ret)
+
+    return ret
+
+
 '''GN: 
 
 {% toc %}
@@ -172,59 +240,6 @@ dynamic table of content.
 
 Use class="not-in-toc" to exclude a heading from the toc.
 '''
-
-@register.tag(name="fragmentation")
-def do_fragmentation(parser, token):
-    nodelist = parser.parse(('endfragmentation',))
-    parser.delete_first_token()
-    return FragmentationNode(nodelist)
-
-class FragmentationNode(template.Node):
-    def __init__(self, nodelist):
-        self.nodelist = nodelist
-
-    def render(self, context):
-        context['fragmented'] = self.nodelist.render(context)
-        return ''
-
-@register.simple_tag(takes_context=True)
-def fragment(context, sectionid, part='all'):
-    '''
-    {% fragment 'X' %}:
-        render the HTML fragment from the body streamfield
-        starting at <h1 id="X">
-    {% fragment 'INTRO' %}:
-        render the HTML fragment from the body streamfield
-        before any heading
-
-    part: all|head|body
-    '''
-    sectionid = slugify(sectionid)
-    ret = '[Fragment not found: {}]'.format(sectionid)
-
-    fragmented = context['fragmented']
-
-    if sectionid == 'intro':
-        pattern = r'^(?s)(.)(.)(.)(.*?)($|<h\d)'
-    else:
-        # (<)(h2)( id="c">)(C)(</h2)
-        pattern = r'(?s)(<)(h\d)([^>]+id="[^"]*' + re.escape(sectionid) + r'[^"]*".*?/\2>)(.*?)($|<\2)'
-
-    match = re.search(
-        pattern,
-        fragmented
-    )
-    if match:
-        ret = match.group(1) + match.group(2) + match.group(3)
-        if part == 'all':
-            ret += match.group(4)
-        if part == 'body':
-            ret = match.group(4)
-        # let's remove all the parent divs tags
-        ret = re.sub(r'</?div[^>]*>', r'', ret)
-        ret = mark_safe('%s' % ret)
-
-    return ret
 
 
 @register.tag(name="toc")
