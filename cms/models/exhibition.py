@@ -120,7 +120,9 @@ class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):
     content_panels = [
         FieldPanel('feature_number'),
         InlinePanel('artworks', label='Artworks'),
-    ] + ExhibitionBasePage.content_panels[1:]
+    ] + ExhibitionBasePage.content_panels[1:] + [
+        ImageChooserPanel('static_map'),
+    ]
 
     promote_panels = ExhibitionBasePage.promote_panels + [
         FieldPanel('title'),

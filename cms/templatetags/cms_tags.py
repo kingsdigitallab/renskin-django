@@ -188,7 +188,7 @@ class FragmentationNode(template.Node):
         return ''
 
 @register.simple_tag(takes_context=True)
-def fragment(context, sectionid):
+def fragment(context, sectionid, part='all'):
     '''
     {% fragment 'X' %}:
         render the HTML fragment from the body streamfield
@@ -196,6 +196,8 @@ def fragment(context, sectionid):
     {% fragment 'INTRO' %}:
         render the HTML fragment from the body streamfield
         before any heading
+
+    part: all|head|body
     '''
     sectionid = slugify(sectionid)
     ret = '[Fragment not found: {}]'.format(sectionid)
@@ -205,7 +207,7 @@ def fragment(context, sectionid):
     if sectionid == 'intro':
         pattern = r'^(?s)(.)(.*?)($|<h\d)'
     else:
-        pattern = r'(?s)(<h\d)([^>]+id="[^"]*' + re.escape(sectionid) + r'[^"]*".*?)($|\1)'
+        pattern = r'(?s)(<h\d)([^>]+id="[^"]*' + re.escape(sectionid) + r'[^"]*"[^>]*>)(.*?)($|\1)'
 
     match = re.search(
         pattern,
@@ -213,6 +215,10 @@ def fragment(context, sectionid):
     )
     if match:
         ret = match.group(1) + match.group(2)
+        if part == 'all':
+            ret += match.group(3)
+        if part == 'body':
+            ret = match.group(3)
         # let's remove all the parent divs tags
         ret = re.sub(r'</?div[^>]*>', r'', ret)
         ret = mark_safe('%s' % ret)
