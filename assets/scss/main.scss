@@ -25,11 +25,11 @@
 
 /* 1. Imports  */
 
+@import 'fonts';
 
 /* FontAwesome */
 
 @import 'font-awesome';
-
 .icons {
     font-family: "FontAwesome";
 }
@@ -39,7 +39,7 @@
 
 /* Webfonts */
 
-@import url("https://fonts.googleapis.com/css2?family=BenchNine&https://fonts.googleapis.com/css?family=Alegreya");
+@import url("https://fonts.googleapis.com/css?family=Alegreya");
 
 
 /*skip to main content option */
@@ -1468,18 +1468,63 @@ footer {
 
 
 /*** Exhibition Styles ***/
-.ex-base{
-    .row{
+
+.ex-base {
+.breadcrumb-parent{
+    padding: 0.5em;
+    //background:$black;
+    color:$white;
+    font-family: "KingsBureauGrot", sans-serif;
+    text-transform: uppercase;
+    ul{
+        margin:0;
+        border-bottom:1px solid $gold;
+        display: inline;
+        li{
+            list-style-type: none;
+            display: inline-block;
+            margin: 0 0 0 -40px;
+            font-size: 0.8rem;
+            line-height: 1;
+            a{
+                color:$gold;
+                text-decoration: none;
+                &:hover{
+                  
+                    border:none;
+                }
+            }
+            &:after{
+                content:"▸";
+                padding-left:0.3rem;
+                color:$gold;
+            }
+        }
+    }
+    h2{
+        margin: 0;
+        padding:0.1em 0 0.3rem 0;
+        font-size: 1.6rem;
+        color: $white;
+        font-weight: bold;
+       
+    }//ul
+}// breacrumb
+}// .ex-base
+.ex-about{
+    .page-content{
         background:$black;
         color:$white;
         a{
             color:$gold;
         }
     }
-}
+}// .ex-about
 
 
 /* Artwork index page (Gallery page)*/
+
+
 .artwork {
     position: relative;
     display: inline-block;
@@ -1518,23 +1563,26 @@ footer {
     }
 
     //hover
-
 }
 
 //artwork
+
+
 .ex-gallery h3 {
-    background: $white;
-    color: $black;
+
+    color: $white;
     margin-top: 0;
     text-align: center;
     opacity: 1;
-    padding: 0.2em;
-
+    padding: 0.5em 0.2em 0.2em 0.2em;
+    font-family: "KingsBureauGrot", sans-serif;
+    font-size:1.5em;
     &:hover {
         opacity: 0.8;
 
     }
-}
+}// page-content
+
 
 
 
@@ -1593,17 +1641,31 @@ footer {
 
     // #menu-toggle
     h2 {
-        font-family: 'BenchNine', sans-serif;
+        font-family: "KingsBureauGrot", sans-serif;
         text-transform: uppercase;
-    }
-
-    h3 {
-        margin: 2em 0 0.2em 0 !important;
+        color:$white;
+        padding: 2em 0 0 0;
+        span {
+        margin: 2em -1em 0 0;
+        padding: 0;
         border: none;
-        text-transform: uppercase;
-        font-size: 1.2em !important;
-        font-family: 'BenchNine', sans-serif;
+        display: block;
+        text-align:right;
+        text-transform: initial;
+        font-family: 'Alegreya', serif;
+        font-size: 0.7em;
+        font-weight: normal;
+        line-height: 1.1; 
+        
+        }
     }
+    h3{
+        font-family: "KingsBureauGrot", sans-serif;
+        text-transform: uppercase;
+        font-size:1.2em;
+        margin:1.5em 0 0.2em 0;
+    }
+    
 
     p {
         margin: 0;

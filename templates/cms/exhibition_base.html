@@ -4,17 +4,20 @@
 {% block body-class %}ex-base {{body_classes}}{% endblock %}
 
 {% block main %}
-
-    {% comment %}
-        {# GN: TODO: breadcrumb, here showing the immediate parent page ony #}
-        <h3 class="breadcrumb-parent not-in-toc">
-            <a href="{{ self.get_parent.url }}">
-                {{ self.get_parent.title }}
-            </a>
-        </h3>
-    {% endcomment %}
-
+	<div class="row">
+		<div class="col-full mob-full">
+			  <div class="breadcrumb-parent not-in-toc" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="{{ self.get_parent.url }}">{{ self.get_parent.title }}</a></li>
+    </ul>
     <h2>{{ self.title }}</h2>
+  </div>
+
+
+        </div>
+   </div>
+
+    
 
     <div class="row">
         {% block excontent %}
