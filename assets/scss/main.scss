@@ -30,6 +30,7 @@
 /* FontAwesome */
 
 @import 'font-awesome';
+
 .icons {
     font-family: "FontAwesome";
 }
@@ -1470,56 +1471,71 @@ footer {
 /*** Exhibition Styles ***/
 
 .ex-base {
-.breadcrumb-parent{
-    padding: 0.5em;
-    //background:$black;
-    color:$white;
-    font-family: "KingsBureauGrot", sans-serif;
-    text-transform: uppercase;
-    ul{
-        margin:0;
-        border-bottom:1px solid $gold;
-        display: inline;
-        li{
-            list-style-type: none;
-            display: inline-block;
-            margin: 0 0 0 -40px;
-            font-size: 0.8rem;
-            line-height: 1;
-            a{
-                color:$gold;
-                text-decoration: none;
-                &:hover{
-                  
-                    border:none;
+    .breadcrumb-parent {
+        padding: 0.5em;
+        //background:$black;
+        color: $white;
+        font-family: "KingsBureauGrot", sans-serif;
+        text-transform: uppercase;
+
+        ul {
+            margin: 0;
+            border-bottom: 1px solid $gold;
+            display: inline;
+
+            li {
+                list-style-type: none;
+                display: inline-block;
+                margin: 0 0 0 -40px;
+                font-size: 0.8rem;
+                line-height: 1;
+
+                a {
+                    color: $gold;
+                    text-decoration: none;
+
+                    &:hover {
+
+                        border: none;
+                    }
+                }
+
+                &:after {
+                    content: "▸";
+                    padding-left: 0.3rem;
+                    color: $gold;
                 }
             }
-            &:after{
-                content:"▸";
-                padding-left:0.3rem;
-                color:$gold;
-            }
         }
+
+        h2 {
+            margin: 0;
+            padding: 0.1em 0 0.3rem 0;
+            font-size: 1.6rem;
+            color: $white;
+            font-weight: bold;
+
+        }
+
+        //ul
     }
-    h2{
-        margin: 0;
-        padding:0.1em 0 0.3rem 0;
-        font-size: 1.6rem;
+
+    // breacrumb
+}
+
+// .ex-base
+.ex-about {
+    .page-content {
+        background: $black;
         color: $white;
-        font-weight: bold;
-       
-    }//ul
-}// breacrumb
-}// .ex-base
-.ex-about{
-    .page-content{
-        background:$black;
-        color:$white;
-        a{
-            color:$gold;
+
+        a {
+            color: $gold;
         }
     }
-}// .ex-about
+}
+
+// .ex-about
 
 
 /* Artwork index page (Gallery page)*/
@@ -1576,25 +1592,29 @@ footer {
     opacity: 1;
     padding: 0.5em 0.2em 0.2em 0.2em;
     font-family: "KingsBureauGrot", sans-serif;
-    font-size:1.5em;
+    font-size: 1.5em;
+
     &:hover {
         opacity: 0.8;
 
     }
-}// page-content
+}
+
+// page-content
 
 
 
 
 
 /* Artwork child page (Feature page) */
-.ex-feature-page{
-    .row{
-        background:$black;
+.ex-feature-page {
+    .row {
+        background: $black;
         color: $white;
     }
-    img.richtext-image.full-width{
-        width:100%;
+
+    img.richtext-image.full-width {
+        width: 100%;
     }
 }
 
@@ -1643,32 +1663,49 @@ footer {
     h2 {
         font-family: "KingsBureauGrot", sans-serif;
         text-transform: uppercase;
-        color:$white;
+        color: $white;
         padding: 2em 0 0 0;
-        span {
-        margin: 2em -1em 0 0;
-        padding: 0;
-        border: none;
-        display: block;
-        text-align:right;
-        text-transform: initial;
-        font-family: 'Alegreya', serif;
-        font-size: 0.7em;
-        font-weight: normal;
-        line-height: 1.1; 
-        
+
+        span.feature-number {
+            display: block;
+            margin-bottom: 0.5em;
+
+            &:after {
+                position: absolute;
+                content: ".";
+            }
+        }
+
+        span.not-in-toc {
+            margin: 2em -1em 0 0;
+            padding: 0;
+            border: none;
+            display: block;
+            text-align: right;
+            text-transform: initial;
+            font-family: 'Alegreya', serif;
+            font-size: 0.7em;
+            font-weight: normal;
+            line-height: 1.1;
+
         }
     }
-    h3{
+
+    h3 {
         font-family: "KingsBureauGrot", sans-serif;
         text-transform: uppercase;
-        font-size:1.2em;
-        margin:1.5em 0 0.2em 0;
+        font-size: 1.2em;
+        margin: 1.5em 0 0.2em 0;
     }
-    
+
 
     p {
         margin: 0;
+    }
+
+    .intro {
+        margin: 2em 0;
+        font-family: "KingsBureauGrot", sans-serif;
     }
 }
 

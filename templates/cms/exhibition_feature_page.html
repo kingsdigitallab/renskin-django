@@ -17,11 +17,12 @@
     <div class="row">
         <div class="col-1-6 tab-1-4 mob-full">
             <h2>
-                {{ self.feature_number|stringformat:"02d" }}
+                <span class="feature-number">{{ self.feature_number|stringformat:"02d" }}
+                </span>
                 {{ self.short_title }}
                 <span class="not-in-toc">
                 	{{ self.subtitle }}
-                </span>
+                </span> 
             </h2>
         </div>
         <div class="col-5-6 tab-3-4 mob-full">
@@ -30,7 +31,7 @@
     </div><!-- row -->
     <div class="row">
         <div class="col-full">
-            <div class="rich-text">
+            <div class="rich-text intro">
                 {% fragment 'INTRO' %}
             </div>
         </div>
