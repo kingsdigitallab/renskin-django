@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block meta_title %}{% endblock %} | Renaissance Skin</title>
 
+    {% block metatwitter %}
+    {% endblock %}
+
     <!-- favicons -->
     {% include 'includes/favicon.html' %}
     <link rel="icon" href="{% static 'images/renskin-favicon.png' %}" type="image/png">
@@ -30,13 +33,6 @@
 
     {# Leave this out of compress block #}
     <link rel="stylesheet" href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
-
-    {% compress js %}
-        <script src="{% static 'vendor/jquery/dist/jquery.js' %}"></script>
-        <script src="{% static 'vendor/js-cookie/src/js.cookie.js' %}"></script>
-        <script src="{% static 'js/cookie.js' %}"></script>
-        <script src="{% static 'js/main.js' %}"></script>
-    {% endcompress %}
 
 </head>
 
@@ -63,6 +59,13 @@
         {% include 'includes/footer.html' %}
         {% endblock %}
     </footer>
+
+    {% compress js %}
+        <script src="{% static 'vendor/jquery/dist/jquery.js' %}"></script>
+        <script src="{% static 'vendor/js-cookie/src/js.cookie.js' %}"></script>
+        <script src="{% static 'js/cookie.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+    {% endcompress %}
 
     {% block footer_scripts %}{% endblock %}
 </body>

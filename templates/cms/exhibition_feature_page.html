@@ -1,6 +1,16 @@
 {% extends "cms/exhibition_base.html" %}
 {% load cms_tags %}
 {% load wagtailimages_tags %}
+
+{% block metatwitter %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@RenSkinKCL">
+    <meta name="twitter:creator" content="@PeterBrathwaite">
+    <meta name="twitter:title" content="{{ self.short_title }} (P. Brathwaite, Visible Skin)">
+    <meta name="twitter:description" content="Renaissance Skin introduces Peter Brathwaite's '{{ self.long_title }}'">
+    <meta name="twitter:image" content="{{ self.reworked.image.full_url }}">
+{% endblock %}
+
 {% block main %}
 {% fragmentation %}
 {% toc %}
@@ -21,7 +31,7 @@
                 {{ self.short_title }}
                 <span class="not-in-toc">
                     {{ self.subtitle }}
-                </span> 
+                </span>
             </h2>
         </div>
         <div class="col-5-6 tab-3-4 mob-full">
