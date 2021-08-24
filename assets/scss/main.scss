@@ -1590,14 +1590,25 @@ footer {
     margin-top: 0;
     text-align: center;
     opacity: 1;
-    padding: 0.5em 0.2em 0.2em 0.2em;
+    //padding: 0.5em 0.2em 0.2em 1.7em;
     font-family: "KingsBureauGrot", sans-serif;
     font-size: 1.5em;
-
+    text-transform: uppercase;
     &:hover {
         opacity: 0.8;
 
     }
+            span.feature-number {
+            display: block;
+            padding-right:0.5em;
+            //position: absolute;
+            //margin:-1em 0 0 -1.5em;
+            &:after {
+                position: absolute;
+                content: ".";
+
+            }
+        }
 }
 
 // page-content

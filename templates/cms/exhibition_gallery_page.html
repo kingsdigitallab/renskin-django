@@ -16,7 +16,9 @@
                     {% endif %}
                 </div>
                 <h3 class="ex-gallery">
-                    {{ feature.feature_number|stringformat:"02d" }}
+                    <span class="feature-number">
+                    	{{ feature.feature_number|stringformat:"02d" }}
+                    </span>
                     {{ feature.short_title }}
                 </h3>
             </a>
