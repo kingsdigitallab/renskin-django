@@ -1,14 +1,18 @@
 {% extends "cms/exhibition_base.html" %}
 {% load cms_tags %}
 {% load wagtailimages_tags %}
+{% load static %}
 
 {% block metatwitter %}
+    {# https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image #}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@RenSkinKCL">
     <meta name="twitter:creator" content="@PeterBrathwaite">
     <meta name="twitter:title" content="{{ self.short_title }} (P. Brathwaite, Visible Skin)">
     <meta name="twitter:description" content="Renaissance Skin introduces Peter Brathwaite's '{{ self.long_title }}'">
-    <meta name="twitter:image" content="{{ self.reworked.image.full_url }}">
+    {% image self.reworked.image fill-1000x500 as twitter_image %}
+    <meta name="twitter:image" content="https://{{ request.get_host }}{{ twitter_image.url }}">
+    <meta name="twitter:image:alt" content="{{ self.reworked.image.title }}">
 {% endblock %}
 
 {% block main %}
