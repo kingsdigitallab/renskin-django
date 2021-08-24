@@ -170,7 +170,7 @@ class FragmentationNode(template.Node):
 
 
 @register.simple_tag(takes_context=True)
-def fragment(context, sectionid, part='all'):
+def fragment(context, sectionid, part='all', default=None):
     '''
     {% fragment 'X' %}:
         render the HTML fragment from the body streamfield
@@ -182,7 +182,10 @@ def fragment(context, sectionid, part='all'):
     part: all|head|body
     '''
     sectionid = slugify(sectionid)
-    ret = '[Fragment not found: {}]'.format(sectionid)
+    if default is None:
+        ret = '[Fragment not found: {}]'.format(sectionid)
+    else:
+        ret = default
 
     fragmented = context['fragmented']
 
@@ -210,8 +213,6 @@ def fragment(context, sectionid, part='all'):
             ret += match.group(4)
         if part == 'body':
             ret = match.group(4)
-
-        print(ret)
 
         # let's remove all the parent divs tags
         ret = re.sub(r'</?div[^>]*>', r'', ret)
