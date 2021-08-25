@@ -266,6 +266,7 @@ class TableOfContentsNode(template.Node):
             ret = m.group(0)
 
             title = m.group(4)
+            title = re.sub(r'(?s)<(\w+)[^>]+class="not-in-toc"[^>]*>.*?</\1>', '', title)
             title = strip_tags(title).strip()
             slug = slugify(title)
 
