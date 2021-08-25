@@ -39,7 +39,7 @@
             </h2>
         </div>
         <div class="col-5-6 tab-3-4 mob-full">
-            {% image self.reworked.image width-1000 class="artwork-img" %}
+            {% resimg self.reworked.image '1000, 800,400' 'class="artwork-img"' %}
         </div>
     </div><!-- row -->
     <div class="row">
@@ -63,7 +63,7 @@
         </div>
         <div class="col-1-4 tab-1-4 mob-1-4">
             <h3 id="original">Original Work</h3>
-            {% image self.original.image width-400 class="artwork-img" %}
+            {% resimg self.original.image '400,300,200' 'class="artwork-img"' %}
             <div class="rich-text">
                 <p>{{ self.original.credit_line }}</p>
             </div>
@@ -82,7 +82,7 @@
     <div class="row">
         <div class="col-3-4 tab-full mob-full">
             <div class="rich-text">
-                {% image self.static_map width-1000 class="richtext-image full-width" %}
+                {% resimg self.static_map '1000,800,400' 'class="richtext-image full-width"' %}
             </div>
         </div>
         <div class="col-1-4 tab-full mob-full">

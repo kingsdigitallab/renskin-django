@@ -295,3 +295,75 @@ class TableOfContentsNode(template.Node):
         return output
 
 
+'''
+Responsive Images.
+
+Usage:
+    {% resimg image_object source_widths other_attributes %}
+
+Outputs an <img> element with a srcset generated from a Wagtail image.
+
+    image_object: a Wagtail image object
+    source_width: comma separated list of image widths, e.g. '1000,800,400'
+    other_attributes: e.g. 'class="my-image"'
+'''
+
+
+@register.tag(name="resimg")
+def do_responsive_image(parser, token):
+    bits = token.split_contents()[1:]
+    image_expr = parser.compile_filter(bits[0])
+    bits = bits[1:]
+    return ResponsiveImageNode(image_expr, bits)
+
+
+class ResponsiveImageNode(template.Node):
+
+    def __init__(self, image_expr, bits):
+        self.image_expr = image_expr
+        self.bits = bits
+
+    def render(self, context):
+        from django.template.loader import render_to_string
+        from wagtail.wagtailimages.templatetags.wagtailimages_tags import ImageNode
+
+        widths = self.bits[0].strip("'").split(',')
+        other_attributes = ''
+        if len(self.bits) > 1:
+            other_attributes = self.bits[1].strip("'")
+
+        sources = []
+
+        i = 0
+        for width in widths:
+            width = width.strip()
+            if not width:
+                continue
+            # Let Wagttail image tag fill generate the renditions
+            # and attach them to the context.
+            var_name = 'img_src_{}'.format(i)
+            ImageNode(
+                self.image_expr,
+                'width-{}'.format(width),
+                output_var_name=var_name
+            ).render(context)
+
+            # context[var_name] is a Wagtail Rendition
+            sources.append({
+                'url': context[var_name].url,
+                'width': width
+            })
+
+            i += 1
+
+        subcontext = {
+            'image': self.image_expr.resolve(context),
+            'other_attributes': mark_safe(other_attributes),
+            'sources': sources,
+        }
+
+        output = render_to_string('cms/includes/resimg.html', subcontext)
+
+        # print(output)
+
+        return output

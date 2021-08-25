@@ -1,0 +1,21 @@
+{% comment %}
+Renders an <img> with 3 sources for 3 screen widths.
+
+Context: {
+    image: Wagtail image object to be displayed,
+    sources: [{
+            'url': ,
+            'width': '400',
+        },
+        ...
+    ],
+    other_attributes: 'class="x y z"',
+}
+{% endcomment %}
+
+{# TODO: move the breakpoints (1200px, 786px) to settings.py #}
+<img srcset="{% for source in sources %}{{ source.url }} {{ source.width }}w{% if not forloop.last %},{% endif %}{% endfor %}"
+     sizes="(min-width: 1200px) {{ sources.0.width }}px, (min-width: 786px) {{ sources.1.width }}px, 400px"
+     src="{{ sources.2.url }}" alt="{{ image.title }}"
+     {{ other_attributes }}
+>
