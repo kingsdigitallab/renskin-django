@@ -7,8 +7,8 @@
             <a href="{{ feature.url }}">
                 <div class="artwork">
                     {% if feature.artworks.count %}
-                        {% resimg feature.reworked.image '800,600,400' 'class="artwork-img img-before"' %}
-                        {% resimg feature.original.image '800,600,400' 'class="artwork-img img-after restaged"' %}
+                        {% resimg feature.reworked.image '800,600,400' 'class="artwork-img img-before" loading="lazy"' %}
+                        {% resimg feature.original.image '800,600,400' 'class="artwork-img img-after restaged" loading="lazy"' %}
                     {% else %}
                         {# Fallback in case no artwork image has been uploaded to the Feature page #}
                         <img src="https://cdn.theatlantic.com/thumbor/m5wttEp1DkkbBIArlxU2oPY-dPI=/0x1:2400x1351/1536x864/media/img/2017/09/28/WEL_Isaacson_MonaLisa_Web_Art/original.jpg" alt="before" />
