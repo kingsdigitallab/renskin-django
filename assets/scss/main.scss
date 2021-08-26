@@ -1521,9 +1521,37 @@ footer {
     }
 
     // breacrumb
+
+    .exhibition-nav{
+        background:$black;
+        color:$white;
+        font-family: "KingsBureauGrot", sans-serif;
+        font-weight: bold;
+        font-size: 1em;
+        text-transform: uppercase;
+        ul{
+            padding:1em;
+            li{
+            list-style-type: none;
+            display: inline-block;
+            margin-right:2em;
+            a{
+                color: white;
+                padding-bottom:0.2em;
+                &.active{
+                    border-bottom:1px solid $white;
+                }
+            }
+            }
+        }
+
+    }
+
 }
 
 // .ex-base
+
+
 
 .ex-home-page {
     .page-content {
@@ -1555,7 +1583,7 @@ footer {
     }
 }
 
-// .ex-about
+// .ex-page
 
 
 /* Artwork index page (Gallery page)*/
@@ -2102,6 +2130,11 @@ footer {
             }
         }
     }
+
+    /*** EXBITION **/
+    .ex-base{
+        margin-top:5em;
+    }// .ex-base
 /*** AUDIO PAGE ***/
 .ex-audio-clips{
     .rich-text{
