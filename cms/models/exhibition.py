@@ -106,6 +106,9 @@ class ExhibitionGalleryPage(ExhibitionBasePage):
     def get_feature_pages(self):
         return self.get_children().type(ExhibitionFeaturePage).specific()
 
+    def get_other_pages(self):
+        return self.get_children().not_type(ExhibitionFeaturePage).specific()
+
 
 class ExhibitionFeaturePage(ExhibitionBasePage, WithStaticMap):
     side_bar_text = RichTextField(blank=True, default='')

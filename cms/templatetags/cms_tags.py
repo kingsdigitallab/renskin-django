@@ -327,6 +327,11 @@ class ResponsiveImageNode(template.Node):
         from django.template.loader import render_to_string
         from wagtail.wagtailimages.templatetags.wagtailimages_tags import ImageNode
 
+        image = self.image_expr.resolve(context)
+
+        if image is None:
+            return '<!-- Image not found -->'
+
         widths = self.bits[0].strip("'").split(',')
         other_attributes = ''
         if len(self.bits) > 1:
@@ -357,7 +362,7 @@ class ResponsiveImageNode(template.Node):
             i += 1
 
         subcontext = {
-            'image': self.image_expr.resolve(context),
+            'image': image,
             'other_attributes': mark_safe(other_attributes),
             'sources': sources,
         }
