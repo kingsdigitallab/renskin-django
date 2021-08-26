@@ -1524,13 +1524,29 @@ footer {
 }
 
 // .ex-base
-.ex-about {
+
+.ex-home-page{
     .page-content {
         background: $black;
         color: $white;
-
+        padding:0.7em;
         a {
             color: $gold;
+        }
+    }
+
+
+}
+.ex-page {
+    .page-content {
+        background: $black;
+        color: $white;
+        padding:0.7em;
+        a {
+            color: $gold;
+        }
+        h2{
+            padding: 0;
         }
     }
 }
@@ -1594,6 +1610,7 @@ footer {
     font-family: "KingsBureauGrot", sans-serif;
     font-size: 1.5em;
     text-transform: uppercase;
+    min-height: 3em;
     &:hover {
         opacity: 0.8;
 
