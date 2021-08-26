@@ -2,19 +2,17 @@
 {% load cms_tags %}
 {% load wagtailimages_tags %}
 {% load static %}
-
 {% block metatwitter %}
-    {# https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image #}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@RenSkinKCL">
-    <meta name="twitter:creator" content="@PeterBrathwaite">
-    <meta name="twitter:title" content="{{ self.short_title }} (P. Brathwaite, Visible Skin)">
-    <meta name="twitter:description" content="Renaissance Skin introduces Peter Brathwaite's '{{ self.long_title }}'">
-    {% image self.reworked.image fill-1000x500 as twitter_image %}
-    <meta name="twitter:image" content="https://{{ request.get_host }}{{ twitter_image.url }}">
-    <meta name="twitter:image:alt" content="{{ self.reworked.image.title }}">
+{# https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image #}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@RenSkinKCL">
+<meta name="twitter:creator" content="@PeterBrathwaite">
+<meta name="twitter:title" content="{{ self.short_title }} (P. Brathwaite, Visible Skin)">
+<meta name="twitter:description" content="Renaissance Skin introduces Peter Brathwaite's '{{ self.long_title }}'">
+{% image self.reworked.image fill-1000x500 as twitter_image %}
+<meta name="twitter:image" content="https://{{ request.get_host }}{{ twitter_image.url }}">
+<meta name="twitter:image:alt" content="{{ self.reworked.image.title }}">
 {% endblock %}
-
 {% block main %}
 {% fragmentation %}
 {% toc %}
@@ -22,25 +20,21 @@
 {% endtoc %}
 {% endfragmentation %}
 <!-- artwork prototype - static content-->
-<input id="switch" type="checkbox" />
-{% toc %}
-<div class="page-wrap">
-    <label for="switch" id="menu-toggle"> Page Content</label>
-    <div class="row">
-        <div class="col-1-6 tab-1-4 mob-full">
-            <h2>
-                <span class="feature-number">
-                	{{ self.feature_number|stringformat:"02d" }}
-                </span>
-                {{ self.short_title }}
-                <span class="not-in-toc">
-                    {{ self.subtitle }}
-                </span>
-            </h2>
-        </div>
-        <div class="col-5-6 tab-3-4 mob-full">
-            {% resimg self.reworked.image '1000, 800,400' 'class="artwork-img"' %}
-        </div>
+< {% toc %} <div class="row">
+    <div class="col-1-6 tab-1-4 mob-full">
+        <h2>
+            <span class="feature-number">
+                {{ self.feature_number|stringformat:"02d" }}
+            </span>
+            {{ self.short_title }}
+            <span class="not-in-toc">
+                {{ self.subtitle }}
+            </span>
+        </h2>
+    </div>
+    <div class="col-5-6 tab-3-4 mob-full">
+        {% resimg self.reworked.image '1000, 800,400' 'class="artwork-img"' %}
+    </div>
     </div><!-- row -->
     <div class="row">
         <div class="col-full">
@@ -92,34 +86,8 @@
             </div>
         </div>
     </div><!-- row -->
-</div> <!-- page-wrap -->
-{% endtoc %}
-<!-- sidebar -->
-{% if toc %}
-<div id="sidebar" role="navigation">
-    <h3>CONTENT NAVIGATION</h3>
-    <ul>
-        {% for entry in toc %}
-        <li>
-            {# TODO: name-active: JS? #}
-            <a href="#{{ entry.slug }}" class="name-active2">
-                {% if forloop.first %}
-                {% image self.get_any_thumbnail width-50 class="toc-thumb" %}
-                <h5 class="no-bullet">{{ entry.title }}</h5>
-                {% elif 'audio' in entry.slug %}
-                <img src="https://cdn2.vectorstock.com/i/1000x1000/84/41/sound-wave-concept-outline-icon-vector-20978441.jpg" alt="After" />
-                <h5 class="no-bullet">{{ entry.title }}</h5>
-                {% elif 'location' in entry.slug %}
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQutAu0ob712xjnofIZsRBOfPFMAa6lGD_fiw&usqp=CAU" alt="After" />
-                <h5 class="no-bullet">{{ entry.title }}</h5>
-                {% else %}
-                <h5 class="bullet">{{ entry.title }}</h5>
-                {% endif %}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-</div> <!-- end .sidebar -->
-{% endif %}
-<!-- end artwork prototype -->
-{% endblock %}
+    <div class="back-button"><a href="{{ gallery.url }}">Back to Gallery</a>
+    </div><!-- row -->
+    {% endtoc %}
+    <!-- end artwork prototype -->
+    {% endblock %}
