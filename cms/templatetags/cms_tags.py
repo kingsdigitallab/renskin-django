@@ -353,10 +353,13 @@ class ResponsiveImageNode(template.Node):
                 output_var_name=var_name
             ).render(context)
 
+            rendition = context[var_name]
+
             # context[var_name] is a Wagtail Rendition
             sources.append({
-                'url': context[var_name].url,
-                'width': width
+                'url': rendition.url,
+                'width': width,
+                'height': rendition.height,
             })
 
             i += 1
