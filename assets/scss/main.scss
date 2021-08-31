@@ -1522,26 +1522,30 @@ footer {
 
     // breacrumb
 
-    .exhibition-nav{
-        background:$black;
-        color:$white;
+    .exhibition-nav {
+        background: $black;
+        color: $white;
         font-family: "KingsBureauGrot", sans-serif;
         font-weight: bold;
         font-size: 1em;
         text-transform: uppercase;
-        ul{
-            padding:1em;
-            li{
-            list-style-type: none;
-            display: inline-block;
-            margin-right:2em;
-            a{
-                color: white;
-                padding-bottom:0.2em;
-                &.active{
-                    border-bottom:1px solid $white;
+
+        ul {
+            padding: 1em;
+
+            li {
+                list-style-type: none;
+                display: inline-block;
+                margin-right: 2em;
+
+                a {
+                    color: white;
+                    padding-bottom: 0.2em;
+
+                    &.active {
+                        border-bottom: 1px solid $white;
+                    }
                 }
-            }
             }
         }
 
@@ -1746,6 +1750,7 @@ footer {
         line-height: 2.5;
         padding-top: 0.3em;
         text-align: center;
+
         &:hover {
             background: $gold;
             color: $black;
@@ -1756,24 +1761,30 @@ footer {
             opacity: 1;
         }
     }
-}// .ex-feature-page 
+}
+
+// .ex-feature-page 
 
 /*** AUDIO PAGE ***/
-.ex-audio-clips{
-    .rich-text{
-        width:68%;
-        padding-left:2%;
-        float:right;
-        h3{
+.ex-audio-clips {
+    .rich-text {
+        width: 68%;
+        padding-left: 2%;
+        float: right;
+
+        h3 {
             font-family: "KingsBureauGrot", sans-serif;
-            font-size:1.4em;
+            font-size: 1.4em;
         }
     }
-    .iframe-container{
-        width:30%;
+
+    .iframe-container {
+        width: 30%;
         margin-bottom: 2em;
     }
-}// .ex-audio-clips
+}
+
+// .ex-audio-clips
 
 
 /**** MEDIA QUERIES *****/
@@ -2132,23 +2143,30 @@ footer {
     }
 
     /*** EXBITION **/
-    .ex-base{
-        margin-top:5em;
-    }// .ex-base
-/*** AUDIO PAGE ***/
-.ex-audio-clips{
-    .rich-text{
-        width:100%;
-        padding:0;
+    .ex-base {
+        margin-top: 5em;
     }
-    .iframe-container{
-        width:100%;
-        margin-bottom: 5em;
+
+    // .ex-base
+    /*** AUDIO PAGE ***/
+    .ex-audio-clips {
+        .rich-text {
+            width: 100%;
+            padding: 0;
+        }
+
+        .iframe-container {
+            width: 100%;
+            margin-bottom: 5em;
+        }
     }
-}// .ex-audio-clips
+
+    // .ex-audio-clips
 
 
-}// end @media screen and (max-width: 700px)
+}
+
+// end @media screen and (max-width: 700px)
 
 @media screen and (max-width: 600px) {
     .viewport .imgcrop {
