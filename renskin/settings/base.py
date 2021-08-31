@@ -350,3 +350,6 @@ ITEMS_PER_PAGE = 10
 # -----------------------------------------------------------------------------
 
 WAGTAILSEARCH_RESULTS_TEMPLATE = 'cms/search_results.html'  # Really wagtail?
+
+# the slug of the Visible Skin exhibition landing page
+VISIBLE_SKIN_SLUG = 'visibleskin'

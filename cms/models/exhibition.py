@@ -11,6 +11,7 @@ from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from wagtail.wagtailsearch import index
 from .behaviours import WithFeedImage, WithStreamField, WithOptionalStreamField
 from wagtail.wagtailcore.fields import RichTextField
+from django.conf import settings
 
 logger = logging.getLogger(__name__)
 
@@ -68,6 +69,8 @@ class ExhibitionBasePage(Page, WithOptionalStreamField, WithThumbnailField):
         ).strip('-').replace('exhibition-', 'ex-')
 
         context['body_classes'] += ' ex-' + slugify(self.title)
+
+        context['visible_skin_page'] = Page.objects.get(slug=settings.VISIBLE_SKIN_SLUG)
 
         return context
 
