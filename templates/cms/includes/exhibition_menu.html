@@ -2,7 +2,7 @@
     <div class="col-full">
         <div class="exhibition-nav">
             <ul>
-                <li><a href="{{ visible_skin_page.url }}">{{ visible_skin_page.title }}</a></li>
+                <li><a href="{{ visible_skin_page.url }}" {% if request.path == visible_skin_page.url %}class="active"{% endif %}>{{ visible_skin_page.title }}</a></li>
                 {% for child in visible_skin_page.get_children.live.in_menu %}
                     <li><a href="{{ child.url }}" {% if child.url in request.path %}class="active"{% endif %}>
                         {% if child.seo_title %}{{ child.seo_title }}{% else %}{{ child.title }}{% endif %}
