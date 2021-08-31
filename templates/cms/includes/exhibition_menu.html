@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-full">
+        <div class="exhibition-nav">
+            <ul>
+                <li><a href="{{ visible_skin_page.url }}">{{ visible_skin_page.title }}</a></li>
+                {% for child in visible_skin_page.get_children.live.in_menu %}
+                    <li><a href="{{ child.url }}" {% if child.url in request.path %}class="active"{% endif %}>{{child.title}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

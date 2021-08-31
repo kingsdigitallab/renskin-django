@@ -14,6 +14,9 @@
 <meta name="twitter:image:alt" content="{{ self.reworked.image.title }}">
 {% endblock %}
 {% block main %}
+
+{% include "cms/includes/exhibition_menu.html" %}
+
 {% fragmentation %}
 {% toc %}
 {% include "cms/includes/streamfield.html" with blocks=self.body %}
