@@ -1531,7 +1531,7 @@ footer {
         text-transform: uppercase;
 
         ul {
-            padding: 1em;
+            padding: 1em 0 0.9em 0;
 
             li {
                 list-style-type: none;
@@ -1539,11 +1539,17 @@ footer {
                 margin-right: 2em;
 
                 a {
-                    color: white;
-                    padding-bottom: 0.2em;
-
+                    color: $white;
+                    padding-bottom: 0;
+                                                transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -webkit-transition: 0.5s ease-in-out;
+                    &:hover{
+                        color: $gold;
+                        opacity: 1;
+                    }
                     &.active {
-                        border-bottom: 1px solid $white;
+                        border-bottom: 1px solid $gold;
                     }
                 }
             }
@@ -1561,7 +1567,8 @@ footer {
     .page-content {
         background: $black;
         color: $white;
-        padding: 0.7em;
+        padding: 1em;
+        text-align: justify;
 
         a {
             color: $gold;
@@ -1575,7 +1582,8 @@ footer {
     .page-content {
         background: $black;
         color: $white;
-        padding: 0.7em;
+        padding: 1em;
+        text-align: justify;
 
         a {
             color: $gold;
@@ -1646,7 +1654,7 @@ footer {
     font-family: "KingsBureauGrot", sans-serif;
     font-size: 1.5em;
     text-transform: uppercase;
-    min-height: 3em;
+    min-height: 4em;
 
     &:hover {
         opacity: 0.8;
@@ -1707,7 +1715,7 @@ footer {
         }
 
         span.not-in-toc {
-            margin: 2em -1em 0 0;
+            margin: 2em -1em 1em 0;
             padding: 0;
             border: none;
             display: block;
@@ -1732,6 +1740,16 @@ footer {
     p {
         margin: 0;
     }
+    .audio a{
+        color: $white !important;
+        font-family: "KingsBureauGrot", sans-serif;
+        font-style: italic;
+        font-weight:normal;
+        &:hover{
+            color: $gold !important;
+            opacity: 1 !important;
+        }
+    }
 
     .intro {
         margin: 2em 0;
@@ -1744,23 +1762,31 @@ footer {
         display: block;
         font-family: "KingsBureauGrot", sans-serif;
         font-size: 1.1em;
-        background: $white;
+        background: $gold;
         color: $black;
         text-transform: uppercase;
         line-height: 2.5;
         padding-top: 0.3em;
         text-align: center;
-
+        cursor: pointer;
+                            transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -webkit-transition: 0.5s ease-in-out;
         &:hover {
-            background: $gold;
+            background: $white;
             color: $black;
             opacity: 1;
+
         }
 
         a:hover {
             opacity: 1;
         }
     }
+    iframe{
+        padding:0.5em 0;
+    }
+
 }
 
 // .ex-feature-page 
@@ -2162,7 +2188,12 @@ footer {
     }
 
     // .ex-audio-clips
-
+    .ex-feature-page{
+        .location{
+            padding-bottom:3em;
+            text-align: center;
+        }
+    }
 
 }
 
@@ -2180,7 +2211,16 @@ footer {
     }
 
     // .page-wrap
-
+    .ex-feature-page{
+        h2{
+            span.not-in-toc{
+              margin: 1em 0 1em 4em;
+            }
+        }
+        .intro{
+            margin:1em 0;
+        }
+    }// .ex-feature-page
 }
 
 // end @media screen and (max-width: 600px)
@@ -2293,7 +2333,21 @@ footer {
             padding-top: 0;
         }
     }
+
+    .ex-feature-page{
+        h2{
+            padding: 0.7em;
+        }
+                h3,p{
+            padding:0 1em;
+        }
+        .audio a {
+    text-align: center;
+    display: block;
+    line-height: 0.2;
 }
+    }
+}// end @media screen and (max-width: 400px)
 
 // GN
 
