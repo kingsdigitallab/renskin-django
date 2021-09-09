@@ -1572,6 +1572,8 @@ footer {
 
         a {
             color: $gold;
+            font-family: "KingsBureauGrot",sans-serif;
+            font-weight: bold;
         }
     }
 
@@ -1714,7 +1716,9 @@ footer {
             opacity: 1;
         }
     }
-
+    .rich-text.justify{
+        text-align: justify;
+    }
     h2 {
         font-family: "KingsBureauGrot", sans-serif;
         text-transform: uppercase;
