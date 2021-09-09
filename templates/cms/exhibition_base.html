@@ -4,20 +4,10 @@
 {% block body-class %}ex-base {{body_classes}}{% endblock %}
 
 {% block main %}
-    {% if 0 %}
-        <div class="row">
-            <div class="col-full mob-full">
-                <div class="breadcrumb-parent not-in-toc" aria-label="breadcrumbs">
-                    <ul>
-                        <li><a href="{{ self.get_parent.url }}">{{ self.get_parent.title }}</a></li>
-                    </ul>
-                    <h2>{{ self.title }}</h2>
-                </div>
-            </div>
-        </div>
-    {% endif %}
-
     {% include "cms/includes/exhibition_menu.html" %}
+
+    {% block exintro %}
+    {% endblock %}
 
     <div class="row">
         {% block excontent %}
