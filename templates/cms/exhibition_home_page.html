@@ -1,9 +1,13 @@
 {% extends "cms/exhibition_base.html" %}
 
 {% block exintro %}
-    <div class="fullscreen-bg">
-        <video loop muted autoplay poster="/static/images/VS_Website_Static_2000x1125px.png" class="fullscreen-bg__video">
-            <source src="/static/images/VS_Website_2000px.mp4" type="video/mp4">
-        </video>
-    </div>
+<div class="row">
+	<div class="col-full">
+		<div class="fullscreen-bg">
+		    <video loop muted autoplay poster="/static/images/VS_Website_Static_2000x1125px.png" class="fullscreen-bg__video">
+		        <source src="/static/images/VS_Website_2000px.mp4" type="video/mp4">
+		    </video>
+		</div>
+	</div>
+</div>
 {% endblock %}
