@@ -18,4 +18,12 @@
       </div>
     </div>
   </div>
+  <script>
+    $(function() {
+      $v = $('video').first();
+      if ($v.length) {
+        $v[0].play();
+      }
+    });
+  </script>
 {% endblock %}
