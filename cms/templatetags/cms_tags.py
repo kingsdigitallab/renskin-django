@@ -6,7 +6,7 @@ from django.utils.text import slugify
 from django.utils.safestring import mark_safe
 from cms.models.pages import BlogPost, Event, NewsPost
 from datetime import date
-
+from wagtail.core.models import Site
 register = template.Library()
 
 # <h1 class="NOT_IN_TOC"> => ignored by the toc tag
@@ -43,7 +43,7 @@ def are_comments_allowed():
     return getattr(settings, 'ALLOW_COMMENTS', False)
 
 
-@register.assignment_tag
+@register.simple_tag
 def get_homepage_events():
     """Returns 3 latest news posts"""
     today = date.today()
@@ -55,7 +55,7 @@ def get_homepage_events():
         return events[:4]
 
 
-@register.assignment_tag
+@register.simple_tag
 def get_news_preview():
     """Returns 3 latest news posts"""
     today = date.today()
@@ -66,7 +66,7 @@ def get_news_preview():
         return pages[:3]
 
 
-@register.assignment_tag
+@register.simple_tag
 def get_blog_posts_preview():
     """Returns 3 latest blog posts"""
     today = date.today()
@@ -82,22 +82,22 @@ def get_site_root(context):
     """Returns the site root Page, not the implementation-specific model used.
     Object-comparison to self will return false as objects would differ.
 
-    :rtype: `wagtail.wagtailcore.models.Page`
+    :rtype: `wagtail.core.models.Page`
     """
-    return context['request'].site.root_page
+    return Site.find_for_request(context['request']).root_page
 
 
-@register.assignment_tag(takes_context=False)
+@register.simple_tag(takes_context=False)
 def get_twitter_name():
     return getattr(settings, 'TWITTER_NAME')
 
 
-@register.assignment_tag(takes_context=False)
+@register.simple_tag(takes_context=False)
 def get_twitter_url():
     return getattr(settings, 'TWITTER_URL')
 
 
-@register.assignment_tag(takes_context=False)
+@register.simple_tag(takes_context=False)
 def get_twitter_widget_id():
     return getattr(settings, 'TWITTER_WIDGET_ID')
 
@@ -325,7 +325,7 @@ class ResponsiveImageNode(template.Node):
 
     def render(self, context):
         from django.template.loader import render_to_string
-        from wagtail.wagtailimages.templatetags.wagtailimages_tags import ImageNode
+        from wagtail.images.templatetags.wagtailimages_tags import ImageNode
 
         image = self.image_expr.resolve(context)
 

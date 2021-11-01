@@ -1,5 +1,5 @@
 -r ddhldap/requirements.txt
-django<2
+django
 django-compressor
 django-grappelli<=2.14.2
 django-libsass
@@ -8,8 +8,8 @@ django-redis
 django-require
 psycopg2-binary
 redis
-elasticsearch>=2.0.0,<3.0.0
-django-appconf<=1.0.2
+elasticsearch>=7.0.0,<8.0.0
+django-appconf
 django-taggit
-wagtail<2
+wagtail
 # wagtailmenus<3
