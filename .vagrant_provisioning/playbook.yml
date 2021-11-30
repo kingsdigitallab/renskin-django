@@ -5,47 +5,6 @@
   become: true
 
   tasks:
-#  - name: update sources.list
-#    copy: src=sources.list dest=/etc/apt/sources.list
-#    tags:
-#      - system
-#
-#  - name: apt-get update
-#    command: "apt-get update"
-
-#  - name: fix debian sudoers file
-#    become: yes
-#    lineinfile:
-#      dest: /etc/sudoers
-#      backup: yes
-#      regexp: "^%sudo\\s+ALL=\\(ALL:ALL\\)\\s+ALL$"
-#      line: "%sudo   ALL=(ALL) NOPASSWD: ALL"
-#    tags:
-#      - system
-
-#  - name: apt | install https transport for apt
-#    apt:
-#      pkg: apt-transport-https
-#      state: present
-#      # update_cache: yes
-#    tags:
-#      -system
-
-#  - name: apt | add elasticsearch key
-#    become: yes
-#    apt_key:
-#      url: https://packages.elastic.co/GPG-KEY-elasticsearch
-#      state: present
-#    tags:
-#      - system
-#
-#  - name: apt | add elasticsearch sources
-#    apt_repository:
-#      repo: 'deb http://packages.elastic.co/elasticsearch/1.6/debian stable main'
-#      state: present
-#    tags:
-#      - system
-
   - name: apt | install required system packages
     apt:
       pkg: '{{ system_packages }}'
@@ -74,17 +33,11 @@
     - vars.yml
   gather_facts: false
 
-#  - name: python | install setuptools
-#    become: yes
-#    pip: name=setuptools state=latest
-#    tags:
-#      - python
-
   tasks:
   - name: pip | update pip
     command: "{{ item }}"
     loop:
-      - python2 -m virtualenv "{{ python.virtualenv_location }}"
+      - python3 -m virtualenv "{{ python.virtualenv_location }}"
       - curl -sSL https://bootstrap.pypa.io/pip/2.7/get-pip.py -o /tmp/get-pip.py
       - python /tmp/get-pip.py
       - "{{ python.virtualenv_location }}/bin/pip install -r {{ project_root  }}/{{ python.requirements }}"
