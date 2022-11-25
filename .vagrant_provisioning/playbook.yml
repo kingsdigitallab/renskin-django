@@ -33,11 +33,35 @@
     - vars.yml
   gather_facts: false
 
+
   tasks:
+  - name: python | make python3 default version
+    become: true
+    alternatives:
+      link: /usr/bin/python
+      name: python
+      path: /usr/bin/python3
+      priority: 10
+
+  - name: pip | install virtualenv
+    become: true
+    pip:
+      name: virtualenv
+      state: latest
+    tags:
+      - python
+
+  - name: pip | setup virtualenv
+    file: path={{ python.virtualenv_location }} state=directory
+  - command: python -m venv {{ python.virtualenv_location }}
+    tags:
+      - python
+
   - name: pip | update pip
-    command: "{{ item }}"
-    loop:
-      - pip3 install -U pip
+    pip:
+      # ubuntu 16 => python 3.5 => pip 20
+      name: "pip>=20,<21"
+      virtualenv: "{{ python.virtualenv_location }}"
     tags:
       - python
 

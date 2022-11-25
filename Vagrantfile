@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 5432, host: 5432
   config.vm.network "forwarded_port", guest: 9200, host: 9200
 
-  config.vm.network "private_network", ip: "192.168.33.99"
+  # config.vm.network "private_network", ip: "192.168.33.99"
 
   config.vm.provider "virtualbox" do |provider|
     provider.customize ["modifyvm", :id, "--memory", "1024"]
@@ -33,6 +33,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "renskin" do |machine|
     machine.vm.box = "bento/ubuntu-18.04"
     machine.vm.hostname = "renskin.vagrant"
-    machine.vm.network "private_network", ip: "192.168.33.99"
+    # machine.vm.network "private_network", ip: "192.168.33.99"
   end
 end

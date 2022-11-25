@@ -153,7 +153,7 @@ LOGGING = {
 }
 
 
-MIDDLEWARE = (
+MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -164,7 +164,7 @@ MIDDLEWARE = (
 
 
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
-)
+]
 
 ROOT_URLCONF = PROJECT_NAME + '.urls'
 
