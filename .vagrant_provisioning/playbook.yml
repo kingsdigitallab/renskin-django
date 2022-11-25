@@ -37,19 +37,16 @@
   - name: pip | update pip
     command: "{{ item }}"
     loop:
-      - python3 -m virtualenv "{{ python.virtualenv_location }}"
-      - curl -sSL https://bootstrap.pypa.io/pip/2.7/get-pip.py -o /tmp/get-pip.py
-      - python /tmp/get-pip.py
-      - "{{ python.virtualenv_location }}/bin/pip install -r {{ project_root  }}/{{ python.requirements }}"
+      - pip3 install -U pip
     tags:
       - python
 
-#  - name: pip | ensure python requirements are installed to latest version
-#    pip:
-#      requirements: "{{ project_root }}/{{ python.requirements }}"
-#      virtualenv: "{{ python.virtualenv_location }}"
-#    tags:
-#      - python
+  - name: pip | ensure python requirements are installed to latest version
+    pip:
+      requirements: "{{ project_root }}/{{ python.requirements }}"
+      virtualenv: "{{ python.virtualenv_location }}"
+    tags:
+      - python
 
 - hosts: all
   vars_files:
