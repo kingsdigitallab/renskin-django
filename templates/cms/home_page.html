@@ -4,6 +4,17 @@
 
 {% block main %}
 
+<div class="row">
+    <div class="col-full">
+        <div class="note">
+            <p>The Renaissance Skin project ran from December 2016 until September 2022 and has now finished. </p>
+            
+            <p>This website is being retained as an archive of the project but is no longer being updated.
+            </p>
+        </div>
+    </div>
+</div>
+
     <div class="row viewport" role="complementary" aria-label="viewport">
         {% for chapter in self.get_chapters %}
         <div class="item col-1-3 tab-1-2 mob-full">
@@ -19,7 +30,8 @@
         {% endfor %}
     </div>
 
-    <div class="row" role="complementary" aria-label="content for events and updates">
+
+    <!--<div class="row" role="complementary" aria-label="content for events and updates">
         <div class="col-2-3 tab-full">
             <div class="content-wrapper">
                 <div class="content">
@@ -68,8 +80,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-1-3 tab-full">
+        </div>-->
+        <!--<div class="col-1-3 tab-full">
             <div class="content-wrapper">
                 <div class="content">
                     <div class="content-padding">
@@ -78,6 +90,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 {% endblock %}

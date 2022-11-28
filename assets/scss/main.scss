@@ -355,7 +355,7 @@ body {
 }
 
 .viewport .imgcrop {
-    max-height: 200px;
+    max-height: 300px;
 
     &:before {
         content: "";
@@ -368,8 +368,14 @@ body {
             padding: 33%;
         }
     }
+    
 }
 
+.item .overlay {
+    h2{
+        padding: 12vh 2vw;
+    }
+}
 .hide {
     display: none;
 }
@@ -407,6 +413,7 @@ h2 {
     color: $gold;
     margin: 0;
     padding: 2vh 2vw;
+    text-shadow: 1px 2px 2px black;
 }
 
 h1,
@@ -968,7 +975,20 @@ input:focus {
 
 
 
+/* Note */
 
+.note{
+    background:rgba(0,0,0,0.6);
+    padding:1px 5%;
+    color:white;
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    width:100%;
+    margin-bottom:2em;
+    line-height: 0.8;
+    opacity: 0.8;
+}
 
 
 
@@ -1850,7 +1870,7 @@ footer {
         margin: 0 auto;
 
         .imgcrop {
-            max-height: none;
+                max-height: 400px;
 
             &:before {
                 padding: 15vh;
@@ -1864,16 +1884,6 @@ footer {
 
 }
 
-
-
-/* ----------- iPad Pro 12.9" ----------- */
-/* Portrait and Landscape */
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {}
-
-/* style for span clas asterisk */
-.asterisk {
-    color: #a62b1d !important;
-}
 
 
 
@@ -1910,8 +1920,14 @@ footer {
 
 @media screen and (max-width: 1024px) {
     .viewport .imgcrop {
+        max-height: 160px;
         &:before {
             padding: 12vh;
+        }
+    }
+    .item .overlay {
+        h2{
+            padding: 9vh 2vw;
         }
     }
 }
@@ -2069,7 +2085,6 @@ footer {
     }
 
     .viewport .imgcrop {
-
         &:before {
             padding: 11vh;
         }
@@ -2082,7 +2097,11 @@ footer {
             padding: 0 40px;
         }
     }
-
+    .note{
+        margin-top:70px;
+        margin-bottom:0;
+        line-height: 1.3;
+    }
     .item {
         position: relative;
         margin: 4% 0;
@@ -2127,6 +2146,8 @@ footer {
             opacity: 1;
         }
     }
+
+    
 
     .content-wrapper {
         margin: 60px 0 1rem 0;
@@ -2211,11 +2232,12 @@ footer {
 
 }
 
-// end @media screen and (max-width: 700px)
+// end @media screen and (max-width: 768x)
 
 @media screen and (max-width: 600px) {
     .viewport .imgcrop {
-        min-height: 275px;
+        max-height: 275px;
+
     }
 
 
