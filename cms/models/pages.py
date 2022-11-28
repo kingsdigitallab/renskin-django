@@ -374,9 +374,11 @@ class EventIndexPage(RoutablePageMixin, Page, WithStreamField):
     @property
     def events(self):
         # Events that have not ended.
-        today = date.today()
-        events = Event.objects.live().filter(date_from__gte=today).order_by(
-            'date_from')
+        # today = date.today()
+        # events = Event.objects.live().filter(date_from__gte=today).order_by(
+        #     'date_from')
+        # GN: ALL events
+        events = Event.objects.live().order_by('-date_from')
         return events
 
     @route(r'^$')
@@ -482,7 +484,6 @@ class AllEventIndexPage(RoutablePageMixin, Page, WithStreamField):
                 'filter_type': 'tag', 'filter': tag
             }
         )
-
 
 PastEventIndexPage.content_panels = [
     FieldPanel('title', classname='full title'),

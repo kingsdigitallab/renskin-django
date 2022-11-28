@@ -66,7 +66,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'ddhldap',
     'compressor',
-
+    'require',
     'taggit',
 )
 
