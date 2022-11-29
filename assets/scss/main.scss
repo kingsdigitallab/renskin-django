@@ -2390,3 +2390,10 @@ footer {
 .hidden {
     display: none;
 }
+
+// GN home home video
+.row.kaltura-long-video div.col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

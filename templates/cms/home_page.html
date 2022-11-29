@@ -4,16 +4,16 @@
 
 {% block main %}
 
-<div class="row">
-    <div class="col-full">
-        <div class="note">
-            <p>The Renaissance Skin project ran from December 2016 until September 2022 and has now finished. </p>
-            
-            <p>This website is being retained as an archive of the project but is no longer being updated.
-            </p>
+    <div class="row">
+        <div class="col-full">
+            <div class="note">
+                <p>The Renaissance Skin project ran from December 2016 until September 2022 and has now finished. </p>
+
+                <p>This website is being retained as an archive of the project but is no longer being updated.
+                </p>
+            </div>
         </div>
     </div>
-</div>
 
     <div class="row viewport" role="complementary" aria-label="viewport">
         {% for chapter in self.get_chapters %}
@@ -92,4 +92,11 @@
             </div>
         </div>-->
     </div>
+
+    <div class="row kaltura-long-video">
+        <div class="col">
+            <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2368101/sp/236810100/embedIframeJs/uiconf_id/42876062/partner_id/2368101?iframeembed=true&playerId=kaltura_player&entry_id=1_1ab38d0j&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_jeco8bno" width="608" height="402" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Written on Skin"></iframe>
+        </div>
+    </div>
+
 {% endblock %}
