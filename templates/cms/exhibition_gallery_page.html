@@ -1,0 +1,43 @@
+{% extends "cms/exhibition_base.html" %}
+{% load wagtailimages_tags cms_tags %}
+{% block excontent %}
+    {% include "cms/includes/streamfield.html" with blocks=self.body %}
+    {% for feature in self.get_feature_pages %}
+        <div class="col-1-3 tab-1-2 mob-full">
+            <a href="{{ feature.url }}">
+                <div class="artwork">
+                    {% if feature.artworks.count %}
+                        {% resimg feature.reworked.image '800,600,400' 'class="artwork-img img-before" loading="lazy"' %}
+                        {% resimg feature.original.image '800,600,400' 'class="artwork-img img-after restaged" loading="lazy"' %}
+                    {% else %}
+                        {# Fallback in case no artwork image has been uploaded to the Feature page #}
+                        <img src="https://cdn.theatlantic.com/thumbor/m5wttEp1DkkbBIArlxU2oPY-dPI=/0x1:2400x1351/1536x864/media/img/2017/09/28/WEL_Isaacson_MonaLisa_Web_Art/original.jpg" alt="before" />
+                        <img src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1045,c_fill,g_auto,h_588,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190906133333-isleworth-mona-lisa-crop.jpg" class="restaged" alt="After" />
+                    {% endif %}
+                </div>
+                <h3 class="ex-gallery">
+                    <span class="feature-number">
+                    	{{ feature.feature_number|stringformat:"02d" }}
+                    </span>
+                    {{ feature.short_title }}
+                </h3>
+            </a>
+        </div>
+    {% endfor %}
+
+    {# Last tile for the Audio Page #}
+    {% for feature in self.get_other_pages %}
+        <div class="col-1-3 tab-1-2 mob-full">
+            <a href="{{ feature.url }}">
+                <div class="artwork">
+                    {% resimg feature.thumbnail '800,600,400' 'class="artwork-img img-before" loading="lazy"' %}
+                </div>
+                <h3 class="ex-gallery">
+                    {{ feature.title }}
+                </h3>
+            </a>
+        </div>
+    {% endfor %}
+
+
+{% endblock excontent %}

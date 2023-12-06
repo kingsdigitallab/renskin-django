@@ -64,34 +64,34 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'ddhldap',
     'compressor',
 
     'taggit',
-    'require',
 )
 
 
 INSTALLED_APPS += (
-    'wagtail.wagtailcore',
-    'wagtail.wagtailadmin',
-    'wagtail.wagtaildocs',
-    'wagtail.wagtailsnippets',
-    'wagtail.wagtailusers',
-    'wagtail.wagtailimages',
-    'wagtail.wagtailembeds',
-    'wagtail.wagtailsearch',
-    'wagtail.wagtailredirects',
-    'wagtail.wagtailforms',
-    'wagtail.wagtailsites',
-    'wagtail.contrib.wagtailroutablepage',
+    'wagtail.core',
+    'wagtail.admin',
+    'wagtail.documents',
+    'wagtail.snippets',
+    'wagtail.users',
+    'wagtail.images',
+    'wagtail.embeds',
+    'wagtail.search',
+    'wagtail.contrib.redirects',
+    'wagtail.contrib.forms',
+    'wagtail.sites',
+    'wagtail.contrib.routable_page',
 )
 
 
 INSTALLED_APPS += (
     # your project apps here
     'cms',
+    # 'wagtail.contrib.modeladmin',  # for wagtailmenus
+    # 'wagtailmenus',
 )
 
 INTERNAL_IPS = ('127.0.0.1', )
@@ -149,28 +149,21 @@ LOGGING = {
             'level': LOGGING_LEVEL,
             'propagate': True
         },
-        'elasticsearch': {
-            'handlers': ['file'],
-            'level': LOGGING_LEVEL,
-            'propagate': True
-        },
     }
 }
 
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
 
-    'wagtail.wagtailcore.middleware.SiteMiddleware',
-    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
+    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 )
 
 ROOT_URLCONF = PROJECT_NAME + '.urls'
@@ -193,6 +186,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.template.context_processors.static',
                 'django.contrib.messages.context_processors.messages',
+                # 'wagtailmenus.context_processors.wagtailmenus',
             ],
             'debug': False,
         },
@@ -239,13 +233,16 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
-STATICFILES_STORAGE = 'require.storage.OptimizedStaticFilesStorage'
+# STATICFILES_STORAGE = 'require.storage.OptimizedStaticFilesStorage'
 
-MEDIA_URL = STATIC_URL + 'media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_URL.strip('/'))
 
 if not os.path.exists(MEDIA_ROOT):
     os.makedirs(MEDIA_ROOT)
+
+if not os.path.exists(os.path.join(MEDIA_ROOT, 'original_images')):
+    print('WARNING: the media folder is now under /media instead of /static/media, did forget to move the content?')
 
 # -----------------------------------------------------------------------------
 # EMAIL SETTINGS
@@ -300,42 +297,42 @@ GRAPPELLI_ADMIN_TITLE = PROJECT_TITLE
 # https://github.com/etianen/django-require
 # -----------------------------------------------------------------------------
 
-# The baseUrl to pass to the r.js optimizer, relative to STATIC_ROOT.
-REQUIRE_BASE_URL = 'js'
-
-# The name of a build profile to use for your project, relative to
-# REQUIRE_BASE_URL. A sensible value would be 'app.build.js'.
-# Leave blank to use the built-in default build profile. Set to False to
-# disable running the default profile (e.g. if only using it to build
-# Standalone Modules)
-REQUIRE_BUILD_PROFILE = False
-
-# The name of the require.js script used by your project, relative to
-# REQUIRE_BASE_URL.
-REQUIRE_JS = '../vendor/requirejs/require.js'
-
-# A dictionary of standalone modules to build with almond.js.
-# See the section on Standalone Modules, below.
-REQUIRE_STANDALONE_MODULES = {
-    'config': {
-        # Where to output the built module, relative to REQUIRE_BASE_URL.
-        'out': 'config-built.js',
-
-        # Optional: A build profile used to build this standalone module.
-        'build_profile': 'config.build.js',
-    }
-}
-
-# Whether to run django-require in debug mode.
-REQUIRE_DEBUG = DEBUG
-
-# A tuple of files to exclude from the compilation result of r.js.
-REQUIRE_EXCLUDE = ('build.txt', )
-
-# The execution environment in which to run r.js: auto, node or rhino.
-# auto will autodetect the environment and make use of node if available and
-# rhino if not.
-REQUIRE_ENVIRONMENT = 'node'
+# # The baseUrl to pass to the r.js optimizer, relative to STATIC_ROOT.
+# REQUIRE_BASE_URL = 'js'
+#
+# # The name of a build profile to use for your project, relative to
+# # REQUIRE_BASE_URL. A sensible value would be 'app.build.js'.
+# # Leave blank to use the built-in default build profile. Set to False to
+# # disable running the default profile (e.g. if only using it to build
+# # Standalone Modules)
+# REQUIRE_BUILD_PROFILE = False
+#
+# # The name of the require.js script used by your project, relative to
+# # REQUIRE_BASE_URL.
+# REQUIRE_JS = '../vendor/requirejs/require.js'
+#
+# # A dictionary of standalone modules to build with almond.js.
+# # See the section on Standalone Modules, below.
+# REQUIRE_STANDALONE_MODULES = {
+#     'config': {
+#         # Where to output the built module, relative to REQUIRE_BASE_URL.
+#         'out': 'config-built.js',
+#
+#         # Optional: A build profile used to build this standalone module.
+#         'build_profile': 'config.build.js',
+#     }
+# }
+#
+# # Whether to run django-require in debug mode.
+# REQUIRE_DEBUG = DEBUG
+#
+# # A tuple of files to exclude from the compilation result of r.js.
+# REQUIRE_EXCLUDE = ('build.txt', )
+#
+# # The execution environment in which to run r.js: auto, node or rhino.
+# # auto will autodetect the environment and make use of node if available and
+# # rhino if not.
+# REQUIRE_ENVIRONMENT = 'node'
 
 # -----------------------------------------------------------------------------
 # FABRIC
@@ -349,7 +346,7 @@ ITEMS_PER_PAGE = 10
 # GLOBALS FOR JS
 # -----------------------------------------------------------------------------
 
-# Google Analytics ID
-GA_ID = 'UA-107591427-1'
-
 WAGTAILSEARCH_RESULTS_TEMPLATE = 'cms/search_results.html'  # Really wagtail?
+
+# the slug of the Visible Skin exhibition landing page
+VISIBLE_SKIN_SLUG = 'visibleskin'

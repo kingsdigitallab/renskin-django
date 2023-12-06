@@ -1,7 +1,7 @@
-from __future__ import unicode_literals
+
 
 from django.db import models
-from wagtail.wagtailcore.fields import StreamField
+from wagtail.core.fields import StreamField
 
 from .streamfield import CMSStreamBlock
 
@@ -18,6 +18,13 @@ class WithFeedImage(models.Model):
 
 class WithStreamField(models.Model):
     body = StreamField(CMSStreamBlock())
+
+    class Meta:
+        abstract = True
+
+
+class WithOptionalStreamField(models.Model):
+    body = StreamField(CMSStreamBlock(), blank=True, default='')
 
     class Meta:
         abstract = True

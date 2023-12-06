@@ -1,0 +1,20 @@
+{% extends "cms/base.html" %}
+{# % load menu_tags % #}
+
+{% block body-class %}ex-base {{body_classes}}{% endblock %}
+
+{% block main %}
+    {% include "cms/includes/exhibition_menu.html" %}
+
+    {% block exintro %}
+    {% endblock %}
+
+    <div class="row">
+        {% block excontent %}
+             <div class="col-full mob-full">
+                {% include "cms/includes/streamfield.html" with blocks=self.body %}
+            </div>
+        {% endblock excontent %}
+    </div>
+
+{% endblock %}

@@ -1,4 +1,4 @@
-from __future__ import unicode_literals
+
 
 import logging
 
@@ -9,11 +9,11 @@ from django.shortcuts import render
 from modelcluster.fields import ParentalKey
 from modelcluster.tags import ClusterTaggableManager
 from taggit.models import TaggedItemBase
-from wagtail.contrib.wagtailroutablepage.models import RoutablePageMixin, route
-from wagtail.wagtailadmin.edit_handlers import FieldPanel, StreamFieldPanel
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
-from wagtail.wagtailsearch import index
+from wagtail.contrib.routable_page.models import RoutablePageMixin, route
+from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
+from wagtail.core.models import Page
+from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.search import index
 from django.shortcuts import redirect
 from .behaviours import WithFeedImage, WithStreamField
 from datetime import date
@@ -54,7 +54,8 @@ class Person(Page, WithStreamField):
     ]
     image = models.ForeignKey(
         'wagtailimages.Image',
-        on_delete=models.PROTECT,
+        on_delete=models.SET_NULL,
+        null=True
     )
     subpage_types = ['ImagePage', ]
 
@@ -107,7 +108,8 @@ class ImagePage(Page, WithStreamField):
 
     image = models.ForeignKey(
         'wagtailimages.Image',
-        on_delete=models.PROTECT,
+        on_delete=models.SET_NULL,
+        null=True
     )
     subpage_types = []
 
@@ -129,7 +131,7 @@ class HomePage(Page, WithStreamField):
     subpage_types = [
         'BlogIndexPage', 'EventIndexPage', 'IndexPage',
         'NewsIndexPage', 'PastEventIndexPage', 'RichTextPage',
-        'ChapterIndexPage', 'PersonIndexPage'
+        'ChapterIndexPage', 'PersonIndexPage', 'ExhibitionHomePage'
     ]
 
     def get_chapters(self):
@@ -326,7 +328,7 @@ class NewsPost(Page, WithStreamField, WithFeedImage):
 
     image = models.ForeignKey(
         'wagtailimages.Image',
-        on_delete=models.PROTECT,
+        on_delete=models.SET_NULL,
         null=True
     )
 
@@ -498,7 +500,8 @@ class Event(Page, WithStreamField, WithFeedImage):
 
     image = models.ForeignKey(
         'wagtailimages.Image',
-        on_delete=models.PROTECT,
+        on_delete=models.SET_NULL,
+        null=True
     )
     date_from = models.DateField(verbose_name="Start Date")
     date_to = models.DateField(verbose_name="End Date (Leave blank if\

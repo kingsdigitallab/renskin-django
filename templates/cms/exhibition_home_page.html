@@ -1,0 +1,33 @@
+{% extends "cms/exhibition_base.html" %}
+
+{% block exintro %}
+  <div class="row">
+    <div class="col-full">
+      <div class="fullscreen-bg">
+        <video loop muted autoplay poster="/static/images/VS_Website_Static_2000x1125px.png" class="fullscreen-bg__video">
+          <source src="/static/images/vs_animation_nov_1280.mp4" type="video/mp4">
+          <source src="/static/images/vs_animation_nov_1280.webm" type="video/webm">
+<!--          <source src="/static/images/vs_animation_1920.mp4" type="video/mp4" media="screen and (min-width: 1300px)">-->
+<!--          <source src="/static/images/vs_animation_1920.webm" type="video/webm" media="screen and (min-width: 1300px)">-->
+<!--          <source src="/static/images/vs_animation_1280.mp4" type="video/mp4"  media="screen and (min-width: 1000px)">-->
+<!--          <source src="/static/images/vs_animation_1280.webm" type="video/webm" media="screen and (min-width: 1000px)">-->
+<!--          <source src="/static/images/vs_animation_720.mp4" type="video/mp4" media="screen and (max-width: 999px)">-->
+<!--          <source src="/static/images/vs_animation_720.webm" type="video/webm" media="screen and (max-width: 999px)">-->
+          <!-- source src="/static/images/VS_Website_2000px.mp4" type="video/mp4" -->
+        </video>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer_scripts %}
+  {{ block.super }}
+  <script>
+    $(function() {
+      $v = $('video').first();
+      if ($v.length) {
+        $v[0].play();
+      }
+    });
+  </script>
+{% endblock %}

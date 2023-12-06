@@ -3,7 +3,7 @@
 
 {% block main %}
 
-<div class="row">
+<div class="row" role="complementary" aria-label="about">
     <div class="content-wrapper">
         <div class="content">
             <div class="content-padding">
@@ -35,7 +35,7 @@
                             </div>
                         </div>-->
                     
-                        <a href="#page" class="expand-close">╳</a>
+                        <a href="#page{{p.id}}" class="expand-close" aria-label="close {{p.id}} modal box, back to about page">╳</a>
                     </div>
                 </div>
                 {% endfor %}
