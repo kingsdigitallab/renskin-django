@@ -49,6 +49,9 @@
     
     <link rel="stylesheet" href="/static/vendor/font-awesome/css/font-awesome.min.css">
 
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+    <script src="/pagefind/pagefind-ui.js"></script>
+
 </head>
 
 <body class="">
@@ -146,34 +149,31 @@
     <div id="maincontent" tabindex="0"></div>
 
     
-
-    
-
-<div class="row" role="complementary" aria-label="search list">
-    <div class="content-wrapper">
-        <div class="content">
-            <div class="content-padding">
-                <h2>Search Results:  () </h2>
-                
-                
-                    <div class="rich-text">
-                        <p>No results found.</p>
-                    </div>
-
-                
-               
+    <div class="row" role="complementary" aria-label="search list">
+        <div class="content-wrapper">
+            <div class="content">
+                <div class="content-padding">
+                    <h2>Search Results</h2>
+                    <div id="search"></div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </div>              
 
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            let pageFind = new PagefindUI({ element: "#search", showSubResults: true });
 
-
+            const params = new URLSearchParams(window.location.search);
+            const userQuery = params.get('q');
+            if (userQuery) {
+                pageFind.triggerSearch(userQuery)
+            }
+        });
+    </script>
  
-    <footer>
+<footer>
         
-        
-
 <div class="row">
     <div class="col-full">
         <p>
@@ -218,7 +218,6 @@
   <p><button class="button reverse closeme" aria-label="Dismiss alert" type="button">Accept</button></p>
   <p><a href="/privacy-policy/" class="small">Privacy &amp; cookie policy</a></p>
 </div>
-
         
     </footer>
 
