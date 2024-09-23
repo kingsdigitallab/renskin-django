@@ -104,3 +104,4 @@ renskin/settings/local.py
 /static
 /media
 /logs
+.vscode
