@@ -60,7 +60,7 @@
     </div>
     <div role="complementary" class="skip-main" aria-label="option to skip to main content"><a href="#maincontent">Skip to main content</a></div>
         
-            <nav id="nav">
+            <nav id="nav" data-pagefind-ignore>
                 
     <div class="logo">
         <h1><a href="/">Renaissance Skin</a></h1>
@@ -146,14 +146,14 @@
 
             </nav>
         
-    <div id="maincontent" tabindex="0"></div>
+    <div id="maincontent"  tabindex="0"></div>
 
     
     <div class="row" role="complementary" aria-label="search list">
         <div class="content-wrapper">
             <div class="content">
                 <div class="content-padding">
-                    <h2>Search Results</h2>
+                    <h2 data-pagefind-weight="10.0" data-pagefind-meta="title">Search Results</h2>
                     <div id="search"></div>
                 </div>
             </div>
@@ -162,7 +162,11 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
-            let pageFind = new PagefindUI({ element: "#search", showSubResults: true });
+            let pageFind = new PagefindUI({ 
+                element: "#search", 
+                showSubResults: false,
+                pageSize: 10,
+            });
 
             const params = new URLSearchParams(window.location.search);
             const userQuery = params.get('q');
